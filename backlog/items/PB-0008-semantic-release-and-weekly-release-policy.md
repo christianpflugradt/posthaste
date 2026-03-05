@@ -27,7 +27,7 @@ Semantic-release workflow is integrated with:
 - 3
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -37,7 +37,7 @@ Semantic-release workflow is integrated with:
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0008 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Implemented snapshot-on-main workflow plus PO-controlled semantic-release formal channel with weekly-default policy enforcement. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -65,3 +65,5 @@ Semantic-release workflow is integrated with:
 | 2026-03-05 15:29 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions for this slice: skipped weekly windows defer by default unless PO explicitly authorizes midweek release, and snapshot publication runs on every `main` merge. Assumptions documented in RFC-0008. | None |
 | 2026-03-05 15:29 | Requirements Engineer | status | Completed PB-0008 requirements package in `docs/03-engineering/rfcs/RFC-0008-pb-0008-semantic-release-and-weekly-policy.md` with explicit scope, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
 | 2026-03-05 15:29 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0008 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 15:37 | Implementing Developer | status | Transitioned PB-0008 from `ready` to `in-progress` and started implementation work. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 15:37 | Implementing Developer | handoff | Implemented release-orchestration automation artifacts: `.releaserc.json` for semver formal releases and `.github/workflows/release-policy.yml` with channel separation. Snapshot channel now runs on every `main` merge, builds native target binaries, and publishes traceable snapshot artifacts/checksums. Formal release channel is workflow-dispatch only with required PO approval input, weekly-default Sunday/Monday UTC enforcement, and explicit midweek-override mode before semantic-release execution. Validation evidence: `make check` passed. | Implementing Developer: done |

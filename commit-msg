@@ -1,4 +1,8 @@
-docs: PB-0006 complete security gate review
+ci: PB-0008 implement semantic-release policy and snapshot channel
 
-Record Security Engineer transition and pass decision for PB-0006
-with CI matrix workflow security evidence and residual-risk notes.
+Complete PB-0008 implementing developer work unit.
+- Add semantic-release configuration for formal semver releases on main.
+- Add release-policy workflow that separates snapshot and formal channels.
+- Publish traceable snapshot artifacts on every main merge across supported targets.
+- Enforce PO-approved workflow-dispatch formal releases with weekly-default policy and explicit midweek override path.
+- Record PB-0008 status transition and implementation handoff evidence in backlog artifacts.

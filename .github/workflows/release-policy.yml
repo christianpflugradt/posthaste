@@ -1,0 +1,134 @@
+name: Release Policy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      po_approved:
+        description: "Product Owner approval confirmed"
+        required: true
+        default: false
+        type: boolean
+      release_mode:
+        description: "Formal release mode"
+        required: true
+        default: weekly
+        type: choice
+        options:
+          - weekly
+          - midweek-override
+
+jobs:
+  snapshot:
+    if: github.event_name == 'push'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target_name: linux-x86_64
+            runs_on: ubuntu-latest
+            binary_suffix: ""
+          - target_name: windows-x86_64
+            runs_on: windows-latest
+            binary_suffix: ".exe"
+          - target_name: macos-arm64
+            runs_on: macos-14
+            binary_suffix: ""
+    runs-on: ${{ matrix.runs_on }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build snapshot binary
+        run: cargo build --release
+
+      - name: Capture snapshot id
+        id: snapshot_id
+        shell: bash
+        run: |
+          short_sha="$(echo "${GITHUB_SHA}" | cut -c1-12)"
+          echo "value=snapshot-${short_sha}" >> "$GITHUB_OUTPUT"
+
+      - name: Package snapshot binary (non-Windows)
+        if: runner.os != 'Windows'
+        run: |
+          mkdir -p snapshot-dist
+          cp "target/release/posthaste${{ matrix.binary_suffix }}" \
+            "snapshot-dist/posthaste-${{ matrix.target_name }}-${{ steps.snapshot_id.outputs.value }}${{ matrix.binary_suffix }}"
+
+      - name: Package snapshot binary (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path snapshot-dist -Force | Out-Null
+          Copy-Item "target/release/posthaste${{ matrix.binary_suffix }}" `
+            "snapshot-dist/posthaste-${{ matrix.target_name }}-${{ steps.snapshot_id.outputs.value }}${{ matrix.binary_suffix }}"
+
+      - name: Generate checksum (non-Windows)
+        if: runner.os != 'Windows'
+        run: |
+          cd snapshot-dist
+          sha256sum * > checksums.txt
+
+      - name: Generate checksum (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Set-Location snapshot-dist
+          $file = Get-ChildItem -File | Select-Object -First 1
+          $hash = Get-FileHash $file.FullName -Algorithm SHA256
+          "$($hash.Hash.ToLower())  $($file.Name)" | Out-File checksums.txt
+
+      - name: Upload snapshot artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshot-${{ matrix.target_name }}-${{ steps.snapshot_id.outputs.value }}
+          path: snapshot-dist/*
+          retention-days: 14
+
+  formal-release:
+    if: github.event_name == 'workflow_dispatch' && inputs.po_approved == true
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce weekly default policy
+        run: |
+          mode="${{ inputs.release_mode }}"
+          if [ "${mode}" = "weekly" ]; then
+            day="$(date -u +%u)"
+            if [ "${day}" -ne 7 ] && [ "${day}" -ne 1 ]; then
+              echo "Weekly formal release mode is restricted to Sunday/Monday UTC." >&2
+              exit 1
+            fi
+          fi
+          if [ "${mode}" = "midweek-override" ]; then
+            echo "PO override mode selected: midweek formal release allowed."
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run semantic-release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          semantic_version: 24
+          extra_plugins: |
+            @semantic-release/changelog@6
+            @semantic-release/git@10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
