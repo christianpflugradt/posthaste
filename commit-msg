@@ -1,8 +1,17 @@
-docs: PB-0011 transition reviewed item to done
+feat: add go all runtime command and go-all-ready precheck
 
-Record Reviewing Developer closeout after stakeholder confirmation.
-- Move PB-0011 status from review to done.
-- Add issue-log entry for stakeholder-confirmed completion.
-- Remove PB-0011 from open backlog index.
+Implement continuous active-context execution semantics for `go all`
+across governance docs and contributor guidance.
 
-Role: Reviewing Developer
+- define `go all` as repeated single work-unit `go` iterations
+- document deterministic stop conditions for loop execution
+- add `make go-all-ready ROLE=...` helper and script
+- update runtime/prompt/readme guidance for new command
+- append policy changelog entry for the governance update
+
+Validation:
+- make governance-guard (pass)
+- make tasks ROLE="Implementing Developer" LIMIT=5 (pass)
+- make go-all-ready ROLE="Implementing Developer" (fails due empty open backlog index)
+
+Role: Implementing Developer

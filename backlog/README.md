@@ -157,9 +157,9 @@ Use one entry per update:
 
 ## Agent Pickup Rule
 Before acting, an agent must:
-1. Read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md` on each `go`.
-2. Run `make preflight ROLE="<Current Role>"` on each `go`.
-3. Re-read `backlog/index.md` on each `go` to get the latest ordering/eligibility state.
+1. Read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md` on each `go` and on each `go all` iteration.
+2. Run `make preflight ROLE="<Current Role>"` on each `go` and on each `go all` iteration.
+3. Re-read `backlog/index.md` on each `go` and on each `go all` iteration to get the latest ordering/eligibility state.
 4. Select the candidate item by `Next Eligible Role(s)` in index order for the current role.
 5. Re-read the selected issue file and its latest role gate matrix/comments before acting.
 6. Confirm their role is `in-progress` or transition it from `pending`.
@@ -172,6 +172,7 @@ Recommended reusable workflow: `skills/pickup-preflight/SKILL.md`.
 - Work unit definition: one role completing its contribution for one issue.
 - Role completion must satisfy that role's gate expectations before moving to another issue.
 - Proactive review work units are valid scheduled work units and should run first when overdue per `docs/00-governance/proactive-review-schedule.md`.
+- `go all` is a loop of single work units; each iteration must satisfy this rule independently and auto-commit before the next iteration starts.
 
 ## Processing Order Rule
 - Next eligible work unit is selected from `backlog/index.md` order.
@@ -184,7 +185,10 @@ Recommended reusable workflow: `skills/pickup-preflight/SKILL.md`.
 
 ## Interaction Commands
 - `go`: execute the next eligible work unit.
+- `go all`: continuously execute `go` work units until no eligible work remains.
+- `go all` stop conditions: no eligible work, hard blocker requiring stakeholder input, or failing required checks.
 - `tasks`: return a brief, concise list of the next 5 tasks (backlog items and/or overdue proactive reviews).
 - `make tasks ROLE="<Current Role>"`: deterministic top-5 backlog tasks for current role from `backlog/index.md`.
 - `make go-ready ROLE="<Current Role>"`: one-command active-context pre-check before `go`.
+- `make go-all-ready ROLE="<Current Role>"`: one-command active-context pre-check before `go all`.
 - `make governance-guard`: validate policy-file changes include required changelog updates.

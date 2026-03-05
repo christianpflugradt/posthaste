@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test tasks tasks-test index-sync go-ready
+.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test tasks tasks-test index-sync go-ready go-all-ready
 
 fmt:
 	cargo fmt --check
@@ -34,3 +34,6 @@ index-sync:
 
 go-ready:
 	./scripts/go_ready.sh
+
+go-all-ready:
+	./scripts/go_all_ready.sh

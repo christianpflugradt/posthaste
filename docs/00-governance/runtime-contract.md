@@ -1,18 +1,21 @@
 # Runtime Contract
 
-This is the compact operational contract for active execution (`go`) in existing contexts.
+This is the compact operational contract for active execution (`go`, `go all`) in existing contexts.
 Use this as the first reference before working; full governance docs remain authoritative.
 If wording conflicts with canonical governance sources (`AGENTS.md`, `backlog/README.md`, `prompt.txt`), canonical sources win.
 
 ## Active Context Rules
 - Keep the current role unless stakeholder explicitly switches roles.
-- One work unit per prompt.
-- On every `go`, read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md`.
+- One work unit per prompt, except `go all` which executes multiple single-unit iterations in one continuous run.
+- `go`: execute one eligible work unit for the current role.
+- `go all`: execute a loop of `go` work units for the current role.
+- On every `go` and every `go all` iteration, read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md`.
 - If policy-changelog has entries newer than your session last-seen, re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`).
-- On every `go`, re-read `backlog/index.md`.
-- On every `go`, run `make preflight ROLE="<Current Role>"`.
+- On every `go` and every `go all` iteration, re-read `backlog/index.md`.
+- On every `go` and every `go all` iteration, run `make preflight ROLE="<Current Role>"`.
 - Select candidate by `Next Eligible Role(s)` in index order for the current role.
 - Re-read selected issue file (`backlog/items/PB-*.md`) before acting.
+- `go all` stop conditions: no eligible work, hard blocker requiring stakeholder input, or failing required checks.
 
 ## State and Sync Rules
 - If you change issue gate/status, sync `backlog/index.md` row in the same work unit:
@@ -27,6 +30,7 @@ If wording conflicts with canonical governance sources (`AGENTS.md`, `backlog/RE
 - Update `commit-msg` only after work unit completion.
 - Commit message must follow conventional format and include `Role: <Role Name>` trailer.
 - Run `./commit.sh` at work unit completion.
+- In `go all`, each iteration must fully complete and auto-commit before next iteration.
 
 ## Escalation Rules
 - If boundary/requirements are unclear, consult stakeholder before proceeding.
@@ -40,3 +44,4 @@ If wording conflicts with canonical governance sources (`AGENTS.md`, `backlog/RE
   - `skills/openspec-change-bootstrap/SKILL.md`
 - For deterministic backlog listing, run `make tasks ROLE="<Current Role>"`.
 - For one-command active pre-check, run `make go-ready ROLE="<Current Role>"`.
+- For one-command loop pre-check, run `make go-all-ready ROLE="<Current Role>"`.

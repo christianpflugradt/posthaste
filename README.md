@@ -98,7 +98,15 @@ go
 ```
 
 to start the next eligible work unit for the current role (no implicit role switch).
+- To run continuously until work is exhausted, prompt:
+
+```text
+go all
+```
+
+`go all` repeats `go` units and stops on no eligible work, hard blocker requiring stakeholder input, or failing required checks.
 - For active pickup checks, prefer `make go-ready ROLE="<Current Role>"` (runtime references + preflight + governance guard + deterministic tasks preview).
+- Before loop execution, prefer `make go-all-ready ROLE="<Current Role>"`.
 - For a deterministic top-5 backlog list, use `make tasks ROLE="<Current Role>"`.
 - Prompt:
 

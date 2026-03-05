@@ -30,6 +30,7 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - The agent must complete the unit end-to-end, including required checks for that role.
 - Example: Implementing Developer work unit is complete only when implementation is finished and required quality checks for that implementation pass.
 - After completion and auto-commit, stakeholder command `go` starts the next eligible work unit.
+- Exception: stakeholder command `go all` runs a continuous loop of `go` work units; each loop iteration must still complete as a full single work unit including required checks and auto-commit.
 
 ## Unblock Priority Rule
 - If a high-priority item is blocked due to missing evidence/deliverable from an upstream role, and that role is currently able to provide it, that role must prioritize the unblocking work unit before starting unrelated items.
@@ -52,8 +53,11 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
 - After a work unit is complete, agent auto-commits per commit policy.
 - After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
+- Stakeholder command `go all` means: repeatedly execute `go` work units for the current role until no eligible work remains.
+- `go all` must stop immediately on: no eligible work, hard blocker requiring stakeholder input, or failing required checks.
 - Active `go` execution steps are defined in `docs/00-governance/runtime-contract.md`.
 - Preferred one-command pre-check: `make go-ready ROLE="<Current Role>"`.
+- Preferred one-command pre-check before `go all`: `make go-all-ready ROLE="<Current Role>"`.
 - For changes to pickup/preflight behavior, run `make preflight-test` before completion.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).

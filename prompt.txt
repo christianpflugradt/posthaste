@@ -18,8 +18,10 @@ Replace `<ROLE>` with one of:
 ## Session Commands
 - Fresh context: `follow prompt.txt as <ROLE>`.
 - In active context: `go` means continue with the next eligible work unit for the current role after the previous one is complete.
+- In active context: `go all` means repeatedly execute `go` work units for the current role until no eligible work remains.
 - Active `go` execution steps are defined in `docs/00-governance/runtime-contract.md`.
 - Prefer `make go-ready ROLE="<Current Role>"` for one-command active-context pre-check.
+- Prefer `make go-all-ready ROLE="<Current Role>"` for one-command active-context pre-check before loop execution.
 - Do not switch roles implicitly in active context; switch only on explicit stakeholder instruction.
 - If the agent asks a question mid-work, respond and the agent should resume the same work unit.
 
@@ -59,6 +61,8 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector for your curren
 
 ## Interaction Commands
 - `go`: execute the next eligible work unit.
+- `go all`: continuously execute `go` work units until no eligible work remains.
+- `go all` stop conditions: no eligible work, hard blocker requiring stakeholder input, or failing required checks.
 - `tasks`: return a brief, concise list of the next 5 tasks (backlog items and/or overdue proactive reviews).
 - For deterministic backlog output, use `make tasks ROLE="<Current Role>"` (optionally `LIMIT=5`).
 
