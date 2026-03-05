@@ -23,7 +23,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 - 2
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -34,7 +34,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: macOS-compatible checksum generation fix is validated with normalized cross-platform output contract preserved. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; checksum portability fix introduces no blocking security findings. |
 | Implementing Developer | done | 2026-03-05 | Replaced non-portable checksum command with OS-specific Linux/macOS logic and preserved normalized output contract. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-05 | Review completed with approved disposition; no findings. |
 
 ## Constraints
 - Must resolve macOS `sha256sum` command absence.
@@ -78,3 +78,5 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 18:43 | Quality Engineer | status | Started QE gate evaluation for PB-0011 from pending state; validated RFC-0011 acceptance intent against workflow checksum-step implementation and independent local parity evidence. | Quality Engineer: in-progress |
 | 2026-03-05 18:43 | Quality Engineer | decision | Quality gate decision: `pass`. Independent verification passed via `make check`, and workflow inspection confirms macOS checksum generation now uses native `shasum -a 256` with normalized lower-case `sha256  filename` output, while Linux/Windows branches preserve expected behavior and checksum generation remains hard-blocking before snapshot artifact upload. AI evaluation report not required because this is CI workflow portability infrastructure only. | Quality Engineer: done |
 | 2026-03-05 18:43 | Quality Engineer | handoff | QE handoff to Reviewing Developer: no blocking quality evidence gaps found for PB-0011; item is quality-ready for downstream review sequencing. | None |
+| 2026-03-05 18:51 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0011; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0011 traceability. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-05 18:51 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0011-review-report.md`. | Reviewing Developer: done |
