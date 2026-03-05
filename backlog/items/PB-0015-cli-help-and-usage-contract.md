@@ -30,7 +30,7 @@ CLI exposes a clear `--help` path and stable usage/error semantics.
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and RE handoff completed. |
 | Architect | pending | 2026-03-05 | Not started. |
-| Requirements Engineer | pending | 2026-03-05 | Next: define help/error contract and acceptance criteria. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0015 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -59,3 +59,7 @@ CLI exposes a clear `--help` path and stable usage/error semantics.
 | 2026-03-05 19:04 | Product Owner | status | Created PB-0015 as UX-focused CLI baseline follow-up. | Product Owner: in-progress |
 | 2026-03-05 19:04 | Product Owner | status | Completed intake framing and moved PB-0015 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 19:04 | Product Owner | handoff | Handoff package ready for RE refinement on help/usage contract scope. | None |
+| 2026-03-05 19:25 | Requirements Engineer | status | Picked up PB-0015 refinement and transitioned role gate from `pending` to `in-progress` to define CLI help/usage contract requirements. | Requirements Engineer: in-progress |
+| 2026-03-05 19:25 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: include `-h` alias and standard exit-code semantics now; keep help scope to concise examples plus core usage contract (full exhaustive matrix deferred). | None |
+| 2026-03-05 19:25 | Requirements Engineer | status | Completed PB-0015 requirements package in `docs/03-engineering/rfcs/RFC-0015-pb-0015-cli-help-and-usage-contract.md` with explicit scope, FR/NFR, assumptions, AC mapping, and traceability. | Requirements Engineer: done |
+| 2026-03-05 19:25 | Requirements Engineer | blocker | Cannot transition PB-0015 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |

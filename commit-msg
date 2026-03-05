@@ -1,6 +1,6 @@
-docs: PB-0020 refine hybrid-ranking requirements and log blocker
+docs: PB-0015 refine cli help-contract requirements and log blocker
 
-Add RFC-0020 with hybrid ranking requirements, assumptions,
-acceptance mapping, and traceability for NLP+popularity scoring.
+Add RFC-0015 defining CLI help/usage requirements, assumptions,
+acceptance mapping, and traceability for UX contract baseline.
 Mark Requirements Engineer done and keep item shaped pending Architect.
 Role: Requirements Engineer
