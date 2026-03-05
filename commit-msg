@@ -1,8 +1,8 @@
-ci: PB-0011 fix macos snapshot checksum command portability
+docs: PB-0006 record reviewing developer approved disposition
 
-Complete PB-0011 implementing developer work unit.
-- Replace non-portable checksum step in release-policy workflow with OS-specific Linux/macOS commands.
-- Preserve normalized checksum output format (`sha256  filename`) and hard-blocking checksum behavior before artifact upload.
-- Update PB-0011 role gate/status logs and index eligibility for QE/Security handoff.
+Complete Reviewing Developer work unit for PB-0006.
+- Add PB-0006 review report with no findings and approved disposition.
+- Transition PB-0006 status to review and mark Reviewing Developer gate done.
+- Sync backlog index row for PB-0006 review eligibility state.
 
-Role: Implementing Developer
+Role: Reviewing Developer
