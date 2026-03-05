@@ -23,14 +23,14 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 - 2
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing, urgent prioritization, and RE handoff completed. |
 | Architect | done | 2026-03-05 | Portable checksum architecture policy finalized (ADR-010) with RFC + implementation-plan handoff artifacts. |
-| Requirements Engineer | pending | 2026-03-05 | Next: refine portable checksum behavior and acceptance criteria. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package finalized in RFC-0011 with FR/NFR, assumptions, acceptance criteria mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -67,3 +67,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 18:23 | Architect | decision | Recorded portable checksum architecture policy in `docs/03-engineering/decision-records/ADR-010-portable-checksum-command-strategy-ci.md` including OS-specific command strategy, normalized output contract, and failure semantics. | None |
 | 2026-03-05 18:23 | Architect | handoff | Published architect artifacts for downstream work: `docs/03-engineering/rfcs/RFC-0011-pb-0011-macos-snapshot-checksum-portability.md` and `docs/03-engineering/implementation-plans/PLAN-0011-pb-0011-macos-snapshot-checksum-fix.md` with constraints, interface assumptions, and verification intent. | None |
 | 2026-03-05 18:23 | Architect | status | Architect gate complete for PB-0011 with no unresolved architecture ambiguity; Requirements Engineer can proceed with refinement and `ready` transition ownership when complete. | Architect: done |
+| 2026-03-05 18:29 | Requirements Engineer | status | Picked up PB-0011 refinement and transitioned role gate from `pending` to `in-progress` to finalize portable checksum requirements/verification mapping. | Requirements Engineer: in-progress |
+| 2026-03-05 18:29 | Requirements Engineer | decision | Resolved intake questions with minimal-risk assumptions: checksum file format parity across OS targets is a hard requirement, and fix scope is PB-0011 snapshot path first with broader rollout as follow-up if needed. | None |
+| 2026-03-05 18:29 | Requirements Engineer | status | Finalized RE requirements in `docs/03-engineering/rfcs/RFC-0011-pb-0011-macos-snapshot-checksum-portability.md` with FR/NFR, assumptions, verification intent mapping, and requirement traceability notes. | Requirements Engineer: done |
+| 2026-03-05 18:29 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0011 from `shaped` to `ready`. | item status: ready |

@@ -15,6 +15,18 @@ Define architecture and implementation constraints to remove macOS checksum comm
 - Preserve deterministic checksum artifact format for downstream verification.
 - Minimize workflow complexity and dependency surface.
 
+## Functional Requirements
+- FR-001: Snapshot checksum step must succeed on macOS runners without relying on unavailable `sha256sum`.
+- FR-002: Checksum generation logic must preserve successful behavior on non-macOS runners.
+- FR-003: Checksum output format must be normalized to a single cross-platform line contract (`sha256  filename`) for downstream use.
+- FR-004: Checksum generation remains hard-blocking for snapshot artifact publication.
+- FR-005: Implementation scope is limited to workflow/configuration behavior needed for checksum portability in this slice.
+
+## Non-Functional Requirements
+- NFR-001: Solution remains dependency-light and uses runner-available native tooling only.
+- NFR-002: Output behavior is deterministic and auditable across supported runner types.
+- NFR-003: Requirement and acceptance traceability is maintained from PB-0011 intake through ADR-010 and implementation evidence.
+
 ## Non-Goals
 - Redesign release cadence or artifact publication model.
 - Introduce external checksum tooling dependencies.
@@ -59,10 +71,30 @@ Define architecture and implementation constraints to remove macOS checksum comm
 ## Open Questions
 - None blocking for architecture handoff.
 
+## Assumptions
+- Assumption A1: Matching checksum file format across all OS targets is a hard requirement for this fix.
+- Assumption A2: This fix applies first to snapshot workflow path as scoped by PB-0011; broader workflow rollout can be follow-up if needed.
+
 ## Acceptance Criteria
 - Architected solution removes dependency on unavailable checksum commands per runner.
 - Output contract remains stable for downstream release/snapshot verification.
 - No unresolved architecture ambiguity for RE/implementation handoff.
+
+## Verification Intent Mapping
+| Acceptance Criterion | Verification Intent |
+| --- | --- |
+| Removes unavailable command dependency per runner | CI evidence confirms macOS snapshot step no longer fails with missing `sha256sum`, while other runners still pass checksum step. |
+| Output contract remains stable | Artifact sample review confirms normalized checksum line format consistency across runner branches. |
+| No unresolved architecture ambiguity | PB-0011 gate/comment review confirms Architect and Requirements Engineer handoff completeness for implementation start. |
+
+## Requirement Traceability Notes
+| Requirement | Traceability |
+| --- | --- |
+| FR-001, FR-002, NFR-002 | PB-0011 intake problem statement and desired outcome |
+| FR-003, A1 | PB-0011 intake question on checksum format consistency |
+| FR-004, NFR-001 | ADR-010 strategy and implementation-plan hard-blocking constraint |
+| FR-005, A2 | PB-0011 intake question on fix scope (snapshot-only vs wider rollout) |
+| NFR-003 | PB-0011 backlog item, ADR-010, PLAN-0011 verification notes |
 
 ## Architect Handoff Notes
 - Implementation constraints and verification intent are detailed in `docs/03-engineering/implementation-plans/PLAN-0011-pb-0011-macos-snapshot-checksum-fix.md`.
