@@ -1,11 +1,8 @@
-docs: enforce index sync on gate and status updates
+docs: PB-0010 record reviewing developer approved disposition
 
-Fix PB-0010 eligibility drift and harden process rules so backlog index
-state stays aligned with per-issue gate transitions.
+Complete Reviewing Developer work unit for PB-0010.
+- Add PB-0010 review report with no findings and approved disposition.
+- Transition PB-0010 status to review and mark Reviewing Developer gate done.
+- Sync backlog index row for PB-0010 review eligibility state.
 
-- update PB-0010 next-eligible role to Reviewing Developer
-- require index row sync when issue gate/status changes
-- enforce sync fields: Status, Next Eligible Role(s), Blocker, Updated
-- align AGENTS, backlog operating model, and bootstrap prompt
-
-Role: Product Owner
+Role: Reviewing Developer

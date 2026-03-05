@@ -23,7 +23,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 - 3
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -34,7 +34,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: path-scoped workflow triggers preserve required coverage while suppressing irrelevant-directory-only runs for in-scope workflows. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; trigger filtering and workflow updates introduce no blocking security risk. |
 | Implementing Developer | done | 2026-03-05 | Implemented per-workflow path-scoped triggers with fail-safe inclusions and validated local quality gates. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-05 | Review completed with approved disposition; no findings. |
 
 ## Constraints
 - Directory-level exclusions requested by stakeholder: `backlog/`, `eval/`, `docs/`.
@@ -77,3 +77,5 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | 2026-03-05 16:19 | Quality Engineer | handoff | QE handoff to Reviewing Developer: no blocking quality evidence gaps found for PB-0010; item is quality-ready for downstream security/review sequencing. | None |
 | 2026-03-05 16:20 | Security Engineer | status | Started Security Engineer gate evaluation for PB-0010 from pending state; reviewed RFC-0010 scope plus workflow changes in `.github/workflows/qa-gates.yml` and `.github/workflows/release-policy.yml`, and validated local parity evidence with `make check`. | Security Engineer: in-progress |
 | 2026-03-05 16:20 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: path filters reduce redundant executions without weakening required trigger coverage for source/build/workflow-critical files, no new runtime dependencies or secret-exposure paths were introduced, and workflow permissions remain scoped to release job context only. Residual low risk: third-party GitHub Action supply-chain exposure via version-tag references (`actions/*`, `dtolnay/rust-toolchain`, `cycjimmy/semantic-release-action`) persists and should be hardened later with commit-SHA pinning. | Security Engineer: done |
+| 2026-03-05 15:49 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0010; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0010 traceability. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-05 15:49 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0010-review-report.md`. | Reviewing Developer: done |
