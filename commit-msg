@@ -1,7 +1,7 @@
-docs: PB-0011 finalize requirements and set ready
+docs: PB-0009 complete quality gate pass and handoff
 
-Expand RFC-0011 with explicit FR/NFR requirements, assumptions,
-verification mapping, and requirement traceability for checksum
-portability behavior. Mark Requirements Engineer done and transition
-PB-0011 from shaped to ready after Architect completion.
-Role: Requirements Engineer
+Record Quality Engineer pass decision for PB-0009 after validating README
+baseline coverage against RFC-0009 and confirming local QA parity via
+independent make check evidence.
+
+Role: Quality Engineer
