@@ -3,6 +3,7 @@
 ## Source
 - Parent item: PB-0002.
 - Derived from Step-3 delivery expectations.
+- Intake brief: `docs/01-product/intake/PB-0009-stakeholder-intake.md`.
 
 ## Parent Link
 - PB-0002
@@ -27,12 +28,12 @@ README includes:
 - 2
 
 ## Status
-- intake.
+- shaped.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
-| Product Owner | pending | 2026-03-05 | Awaiting prioritization. |
+| Product Owner | done | 2026-03-05 | Intake framing and handoff completed. |
 | Architect | done | 2026-03-05 | Content scope identified. |
 | Requirements Engineer | pending | 2026-03-05 | Not started. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
@@ -59,3 +60,5 @@ README includes:
 | Time | Role | Type | Note | Status Impact |
 | --- | --- | --- | --- | --- |
 | 2026-03-05 11:45 | Architect | status | Derived documentation slice from architecture and delivery expectations. | Architect: done |
+| 2026-03-05 13:00 | Product Owner | status | Completed PB-0009 intake framing and recommendation; moved item from `intake` to `shaped`. | Product Owner: done; item status: shaped |
+| 2026-03-05 13:00 | Product Owner | handoff | Handoff package ready for Requirements Engineer specification work (architectural constraints already satisfied). | None |
