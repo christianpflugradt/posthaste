@@ -1,11 +1,11 @@
-docs: add policy changelog and delta refresh workflow
+docs: add governance sync map for canonical policy sources
 
-Reduce repeated full-document reloads in active contexts by introducing
-an incremental policy refresh mechanism.
+Harden policy consistency by defining canonical governance files and
+derived summaries, with a required sync checklist for policy-changing work.
 
-- add docs/00-governance/policy-changelog.md with usage rules and entries
-- require runtime-contract + policy-changelog read on each go
-- limit full governance re-read to new changelog entries or explicit request
-- align AGENTS, prompt, backlog model, docs index, and README guidance
+- add governance source map and sync rules/checklist
+- reference sync contract from AGENTS
+- index sync map in docs/README
+- append policy changelog entry for this governance update
 
 Role: Product Owner

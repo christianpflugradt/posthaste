@@ -7,6 +7,7 @@ It defines roles, handoffs, constraints, and mandatory quality gates.
 ## Scope
 Applies to all repository work: product decisions, design, implementation, review, and release.
 Operational quick-reference for active contexts: `docs/00-governance/runtime-contract.md`.
+Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 
 ## Hybrid Development Model
 - Backlog remains the execution source of truth (`backlog/index.md` + issue files).
