@@ -61,6 +61,7 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector; treat `Role Ow
 - Follow backlog size policy: target `1-3 SP`, max `5 SP`; split if larger.
 - On completed work unit: update `commit-msg` (repo root) only when fully done.
 - Commit message content must follow `docs/03-engineering/commit-message-guidelines.md`.
+- Commit message body must include `Role: <Role Name>` trailer.
 - Then run `./commit.sh` automatically (commit + push to `origin/main`).
 - If questions interrupt work, do not update `commit-msg` yet.
 

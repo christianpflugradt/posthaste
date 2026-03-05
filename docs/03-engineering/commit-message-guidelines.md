@@ -32,6 +32,8 @@ Use common conventional types:
 - Subject line should be concise and present tense.
 - Body should describe what changed and why.
 - Body may use bullet points for clarity.
+- Keep role metadata in trailers (not in subject) for tooling compatibility.
+- Required trailer: `Role: <Role Name>`.
 
 ## Suggested Template
 `<type>: <PB-xxxx> <short present-tense summary>`
@@ -41,3 +43,5 @@ Use common conventional types:
 `Detailed description of changes and intent.`
 `- Optional bullet point`
 `- Optional bullet point`
+`<blank line>`
+`Role: <Role Name>`

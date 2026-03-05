@@ -36,6 +36,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - If agent asks questions during the work unit, it does not update `commit-msg` until completion.
 - Script `./commit.sh` performs commit and push to `origin/main` using `commit-msg`.
 - Commit message content must follow `docs/03-engineering/commit-message-guidelines.md`.
+- Commit message body must include trailer `Role: <Role Name>`.
 - At end of a completed work unit, agent runs `./commit.sh` automatically.
 - This policy applies to all roles.
 
