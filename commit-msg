@@ -1,8 +1,8 @@
-docs: PB-0008 complete quality gate pass and handoff
+docs: PB-0010 add high-priority ci trigger filtering backlog item
 
-Record Quality Engineer pass decision for PB-0008 after validating
-semantic-release and release-policy automation against RFC-0008,
-including snapshot/formal channel separation and weekly-default
-policy enforcement with PO-controlled formal releases.
+Capture stakeholder-reported CI workflow over-triggering as highest-priority work.
+- Add PB-0010 intake brief and backlog item with Product Owner handoff
+- Add DEC-0001 stakeholder priority override decision record
+- Reorder backlog index with PB-0010 at top and RE as next eligible role
 
-Role: Quality Engineer
+Role: Product Owner
