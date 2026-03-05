@@ -27,7 +27,7 @@ Semantic-release workflow is integrated with:
 - 3
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -38,7 +38,7 @@ Semantic-release workflow is integrated with:
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: snapshot/formal channel separation, PO-control and weekly policy enforcement, and semantic-release configuration evidence are sufficient. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; release-policy workflow and semantic-release configuration introduce no blocking security risk. |
 | Implementing Developer | done | 2026-03-05 | Implemented snapshot-on-main workflow plus PO-controlled semantic-release formal channel with weekly-default policy enforcement. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-05 | Review completed with approved disposition; no findings. |
 
 ## Constraints
 - formal releases are not on every push.
@@ -74,3 +74,5 @@ Semantic-release workflow is integrated with:
 | 2026-03-05 18:32 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: formal release path is manually gated (`workflow_dispatch`) with explicit PO approval input and weekly-policy enforcement, snapshot/formal channels are separated, and no new runtime dependencies or secret-handling expansion were introduced beyond standard `GITHUB_TOKEN` usage in release automation. Residual low risk: third-party GitHub Action supply-chain exposure remains via version-tag references (`actions/*`, `dtolnay/rust-toolchain`, `cycjimmy/semantic-release-action`), and `GITHUB_TOKEN` write permissions in formal-release job should remain tightly scoped/reviewed. | Security Engineer: done |
 | 2026-03-05 18:40 | Security Engineer | status | In-order `go` check against `Next Eligible Role(s)` selected PB-0008 first, but Security gate is already `done` and no new blocker/deliverable is present; moved to next eligible item (PB-0009) per processing-order rule. | None |
 | 2026-03-05 18:42 | Security Engineer | status | In-order `go` check selected PB-0008 again from index, but Security gate remains `done` with no new blocker owned by Security; proceeded to next eligible item per processing-order rule. | None |
+| 2026-03-05 18:48 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0008; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0008 traceability. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-05 18:48 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0008-review-report.md`. | Reviewing Developer: done |
