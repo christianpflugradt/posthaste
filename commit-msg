@@ -1,8 +1,6 @@
-docs: PB-0005 transition reviewed item to done
+docs: PB-0007 complete security gate review
 
-Record Reviewing Developer closeout after stakeholder confirmation.
-- Move PB-0005 status from review to done.
-- Add issue-log entry for stakeholder-confirmed completion.
-- Remove PB-0005 from open backlog index.
+Record Security Engineer transition and pass decision for PB-0007
+with release workflow and checksum security evidence.
 
-Role: Reviewing Developer
+Role: Security Engineer
