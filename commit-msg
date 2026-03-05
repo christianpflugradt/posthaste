@@ -1,6 +1,6 @@
-docs: PB-0012 refine sha pinning requirements and log architect blocker
+docs: PB-0013 refine trigger-regression requirements and log blocker
 
-Add RFC-0012 with explicit security-hardening requirements, assumptions,
-acceptance mapping, and traceability for GitHub Actions SHA pinning.
+Add RFC-0013 with deterministic trigger regression requirements,
+assumptions, acceptance mapping, and traceability for PB-0010 follow-up.
 Mark Requirements Engineer done and keep item shaped pending Architect.
 Role: Requirements Engineer
