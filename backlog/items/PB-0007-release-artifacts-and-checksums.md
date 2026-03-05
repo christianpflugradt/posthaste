@@ -24,7 +24,7 @@ GitHub release artifacts include per-target binaries and checksum files.
 - 3
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -34,7 +34,7 @@ GitHub release artifacts include per-target binaries and checksum files.
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0007 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Signing deferred by policy. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Implemented release workflow publishing per-target binaries and consolidated checksums with verification instructions. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -61,3 +61,5 @@ GitHub release artifacts include per-target binaries and checksum files.
 | 2026-03-05 14:59 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions for this slice: publish one consolidated checksum file per release and require checksum verification instructions in release notes for MVP. Assumptions documented in RFC-0007. | None |
 | 2026-03-05 14:59 | Requirements Engineer | status | Completed PB-0007 requirements package in `docs/03-engineering/rfcs/RFC-0007-pb-0007-release-artifacts-and-checksums.md` with explicit scope, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
 | 2026-03-05 14:59 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0007 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 15:09 | Implementing Developer | status | Transitioned PB-0007 from `ready` to `in-progress` and started implementation work. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 15:09 | Implementing Developer | handoff | Implemented release artifact pipeline in `.github/workflows/release-artifacts.yml`: native matrix release builds for Linux x86_64, Windows x86_64, and macOS arm64; deterministic per-target binary names; consolidated `checksums.txt`; and GitHub release publication with checksum verification instructions in release notes. Signing remains intentionally absent per policy. Validation evidence: `make check` passed. | Implementing Developer: done |

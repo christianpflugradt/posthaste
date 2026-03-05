@@ -1,7 +1,7 @@
-docs: PB-0009 complete product owner intake framing
+ci: PB-0007 add release artifact and checksum publishing workflow
 
-Finalize Product Owner framing outputs for PB-0009.
-- Add stakeholder intake brief artifact for PB-0009
-- Transition PB-0009 status from intake to shaped
-- Mark Product Owner gate done and log handoff for Requirements Engineer
-- Sync backlog index role owner/status for PB-0009
+Complete PB-0007 implementing developer work unit.
+- Add GitHub Actions release workflow that builds native binaries for Linux x86_64, Windows x86_64, and macOS arm64.
+- Publish deterministic per-target binaries plus consolidated checksums.txt in GitHub Releases.
+- Include checksum verification instructions in generated release notes.
+- Record PB-0007 status transition and implementation handoff evidence in backlog artifacts.
