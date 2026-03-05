@@ -1,7 +1,8 @@
-docs: PB-0006 log product owner in-order eligibility check
+docs: PB-0006 log architect in-order ineligibility check
 
-Record Product Owner go-processing outcome for PB-0006.
-- Add issue-log note that no Product Owner action is currently eligible
-- Document dependency on Reviewing Developer eligibility for next progress
+Record Architect pickup check for top index item PB-0006.
+- Note Architect gate is already done
+- Note `Next Eligible Role(s)` is Reviewing Developer
+- Keep processing-order evidence in issue comment log
 
-Role: Product Owner
+Role: Architect
