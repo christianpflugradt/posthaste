@@ -1,8 +1,4 @@
-docs: switch agent workflow to automatic commit execution
+docs: PB-0003 complete security gate review
 
-Update general agent interaction and commit policies so completed work
-units auto-run ./commit.sh without stakeholder y/n confirmation.
-
-- AGENTS.md: commit automation and go-flow wording updated
-- README.md: active-context behavior updated to auto-commit
-- prompt.txt: execution rule updated to run ./commit.sh automatically
+Record Security Engineer transition and pass decision for PB-0003
+with independent stdlib/dependency and input-handling evidence.
