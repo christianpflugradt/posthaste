@@ -28,7 +28,7 @@ README includes:
 - 2
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -39,7 +39,7 @@ README includes:
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: README baseline content is complete, policy-aligned, and executable for user/developer onboarding. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; README baseline changes introduce no blocking security findings. |
 | Implementing Developer | done | 2026-03-05 | Updated README with user-first quick start, contributor setup, QA pre-flight, and release channel overview links. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-05 | Review completed with approved disposition; no findings. |
 
 ## Constraints
 - markdown-only doc work can run outside explicit backlog, but item is kept for delivery visibility.
@@ -74,3 +74,5 @@ README includes:
 | 2026-03-05 18:40 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: changes are documentation-only, introduce no code/dependency/runtime surface expansion, and do not expose secrets or unsafe operational instructions; command guidance aligns with current local QA baseline. Residual low risk: docs can drift from implementation over time, so periodic doc-to-runtime consistency checks remain advisable. | Security Engineer: done |
 | 2026-03-05 18:42 | Security Engineer | status | In-order `go` check moved past PB-0009 because Security gate is already `done` and no new blocker/deliverable is pending for Security on this item. | None |
 | 2026-03-05 18:43 | Quality Engineer | status | In-order `go` check moved past PB-0009 because Quality Engineer gate is already `done` and no new blocker/deliverable is pending for Quality on this item. | None |
+| 2026-03-05 18:50 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0009; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, README content, and RFC-0009 traceability. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-05 18:50 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0009-review-report.md`. | Reviewing Developer: done |
