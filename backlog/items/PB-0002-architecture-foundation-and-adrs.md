@@ -23,7 +23,7 @@ A completed architecture discussion record that can be transformed into concrete
 - 3
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -96,3 +96,4 @@ A completed architecture discussion record that can be transformed into concrete
 | 2026-03-05 12:30 | Implementing Developer | handoff | Completed Implementing Developer work unit for PB-0002 as architecture-only scope: validated no source/build/test artifacts are required by approved requirements (RFC-0001, PLAN-0001) and no dependency/runtime changes were introduced. Handoff package to Reviewing Developer: no code diff expected for PB-0002; implementation evidence is artifact traceability already present in ADR/RFC/plan documents and role-gate logs. | Implementing Developer: done |
 | 2026-03-05 12:38 | Reviewing Developer | status | Started Reviewing Developer work unit; transitioned issue to review and began independent validation of RFC-0001, PLAN-0001, ADR-001..ADR-008, and QE/Security/Implementing evidence. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 12:38 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Review evidence recorded in `docs/04-quality/review-reports/PB-0002-review-report.md`; no follow-up backlog items required. | Reviewing Developer: done |
+| 2026-03-05 12:55 | Reviewing Developer | status | Stakeholder confirmation received (post-review `go`); transitioned PB-0002 from `review` to `done`. Product Owner archive move is now pending per backlog archive ownership policy. | item status: done |

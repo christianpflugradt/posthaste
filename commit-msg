@@ -1,6 +1,6 @@
-docs: PB-0001 finalize mvp requirements and set ready
+docs: PB-0002 transition reviewed architecture item to done
 
-Add a dedicated PB-0001 requirements RFC with explicit scope boundaries,
-functional/non-functional requirements, acceptance criteria, verification
-intent mapping, and traceability links. Mark Requirements Engineer done
-and transition PB-0001 from shaped to ready.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0002 status from review to done.
+- Add issue-log entry capturing stakeholder-confirmed closure and status impact.
+- Note Product Owner follow-up ownership for archive move.
