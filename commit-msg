@@ -1,4 +1,6 @@
-docs: PB-0002 complete security gate for architecture baseline
+chore: PB-0002 complete implementing developer architecture-only handoff
 
-Record Security Engineer status transition and security-gate pass
-for PB-0002 after ADR/RFC/plan dependency and release risk review.
+Record Implementing Developer completion for PB-0002.
+- Transition PB-0002 status to in-progress and mark Implementing Developer gate done.
+- Add implementation-role status and handoff evidence entries for architecture-only scope.
+- Update backlog index to reflect PB-0002 in-progress state.
