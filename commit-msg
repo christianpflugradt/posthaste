@@ -1,6 +1,7 @@
-docs: PB-0001 reaffirm review blockage on unresolved QE gate
+docs: PB-0007 complete product owner intake framing
 
-Record Reviewing Developer in-order blocker check for PB-0001.
-- Add latest issue-log note confirming review remains ineligible.
-- Capture that QE evaluation-evidence blocker is still unresolved.
-- Note Security gate is done but insufficient to enter review.
+Finalize Product Owner framing outputs for PB-0007.
+- Add stakeholder intake brief artifact for PB-0007
+- Transition PB-0007 status from intake to shaped
+- Mark Product Owner gate done and log handoff for Requirements Engineer
+- Sync backlog index role owner/status for PB-0007
