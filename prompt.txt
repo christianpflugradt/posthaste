@@ -25,6 +25,7 @@ Replace `<ROLE>` with one of:
 
 ## Mandatory Startup Steps
 1. Read these files first:
+- `docs/00-governance/runtime-contract.md`
 - `AGENTS.md`
 - `backlog/README.md`
 - `openspec/README.md`

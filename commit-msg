@@ -1,8 +1,10 @@
-docs: PB-0005 record reviewing developer approved disposition
+docs: add compact runtime contract for active execution
 
-Complete Reviewing Developer work unit for PB-0005.
-- Add PB-0005 review report with no findings and approved disposition.
-- Transition PB-0005 status to review and mark Reviewing Developer gate done.
-- Sync backlog index row for PB-0005 review eligibility state.
+Introduce a short operational contract to reduce repeated context load
+while preserving full governance references.
 
-Role: Reviewing Developer
+- add docs/00-governance/runtime-contract.md
+- index runtime contract in docs/README
+- reference runtime contract from AGENTS and prompt startup list
+
+Role: Product Owner
