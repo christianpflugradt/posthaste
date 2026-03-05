@@ -1,6 +1,5 @@
-docs: PB-0002 finalize requirements package and set ready
+docs: PB-0002 complete quality gate review and handoff
 
-Complete Requirements Engineer output for PB-0002 by updating RFC-0001
-with explicit FR/NFR definitions, acceptance criteria, verification intent,
-and traceability notes. Mark PB-0002 Requirements Engineer gate done and
-transition item status to ready after confirming Architect is done.
+Record Quality Engineer gate pass for PB-0002 architecture artifacts,
+including evidence-based decision and review handoff notes.
+Also log PB-0001 ineligibility note per processing-order rules.
