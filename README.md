@@ -49,6 +49,7 @@ go
 ```
 
 to start the next eligible work unit for the current role (no implicit role switch).
+- Agents should run `make preflight ROLE="<Current Role>"` as part of `go` pickup.
 - Prompt:
 
 ```text

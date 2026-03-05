@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check
+.PHONY: fmt clippy test check preflight
 
 fmt:
 	cargo fmt --check
@@ -10,3 +10,6 @@ test:
 	cargo test
 
 check: fmt clippy test
+
+preflight:
+	./scripts/preflight.sh $(if $(ROLE),--role "$(ROLE)",)

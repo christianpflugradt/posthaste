@@ -52,6 +52,7 @@ Operational quick-reference for active contexts: `docs/00-governance/runtime-con
 - After a work unit is complete, agent auto-commits per commit policy.
 - After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
 - On every `go`, agents must re-read `backlog/index.md` before selecting the next work unit.
+- On every `go`, agents must run `make preflight ROLE="<Current Role>"` before selecting the next work unit.
 - After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).

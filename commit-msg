@@ -1,10 +1,11 @@
-docs: add compact runtime contract for active execution
+chore: add preflight consistency checks for backlog pickup
 
-Introduce a short operational contract to reduce repeated context load
-while preserving full governance references.
+Add deterministic preflight validation to catch stale or inconsistent
+work-selection state before each go work unit.
 
-- add docs/00-governance/runtime-contract.md
-- index runtime contract in docs/README
-- reference runtime contract from AGENTS and prompt startup list
+- add scripts/preflight.sh for index/item consistency checks
+- add Makefile preflight target with optional ROLE filter
+- require preflight in AGENTS, backlog pickup rules, prompt, and README guidance
+- sync existing index drifts so preflight passes on current backlog
 
 Role: Product Owner
