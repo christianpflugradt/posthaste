@@ -1,8 +1,7 @@
-ci: PB-0012 pin workflow actions to immutable commit SHAs
+docs: PB-0012 complete quality gate pass and handoff
 
-Complete PB-0012 implementing developer work unit.
-- Replace moving-tag GitHub Action references with immutable commit SHAs across in-scope workflows.
-- Preserve existing workflow behavior and gate semantics while reducing action supply-chain drift risk.
-- Update PB-0012 role/status logs and index eligibility for QE and Security handoff.
+Record Quality Engineer pass decision for PB-0012 after validating
+GitHub Actions SHA pinning coverage in-scope and confirming behavior
+parity with independent make check evidence.
 
-Role: Implementing Developer
+Role: Quality Engineer
