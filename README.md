@@ -1,15 +1,36 @@
 # posthaste
 
-`posthaste` is a Rust-based CLI project that will suggest relevant LinkedIn hashtags from post text.
+`posthaste` is an offline-first Rust CLI that suggests relevant LinkedIn hashtags from post text.
 
-The product is designed to be:
-- offline-first,
-- low-overhead on average developer machines,
-- distributed as native binaries,
-- developed through role-based agentic workflows.
+## Quick Start (Users)
+1. Put your draft post text in a file.
+2. Run:
 
-## Current Goal
-Build a reliable technical foundation first (hello-world app + CI/CD + quality gates + release/snapshot pipeline), then iterate toward full hashtag intelligence.
+```bash
+cargo run -- path/to/post.txt
+```
+
+The CLI prints an ordered hashtag list (plain text, one hashtag per line).
+
+Baseline invocation (no args):
+
+```bash
+cargo run
+```
+
+returns `hello from posthaste`.
+
+## Contributor Setup
+Prerequisites:
+- Rust toolchain (`rustup`, `cargo`)
+- Git
+
+Typical setup flow:
+
+```bash
+cargo build
+cargo test
+```
 
 ## Architecture Baseline
 - Language: Rust
@@ -20,6 +41,34 @@ Build a reliable technical foundation first (hello-world app + CI/CD + quality g
 
 See ADRs in:
 - `docs/03-engineering/decision-records/`
+
+## QA Pre-Flight
+Required local command order:
+
+```bash
+cargo fmt --check
+cargo clippy -- -D warnings
+cargo test
+```
+
+Equivalent shortcut:
+
+```bash
+make check
+```
+
+## Snapshot and Formal Releases
+- Snapshots:
+  - Published continuously from `main` with traceable identifiers.
+  - Intended to provide verifiable working artifacts between formal releases.
+- Formal releases:
+  - Semver-tagged and Product Owner controlled.
+  - Weekly default window is Sunday night to Monday, with explicit override path.
+
+Reference docs:
+- `docs/05-operations/release-playbook.md`
+- `docs/03-engineering/decision-records/ADR-007-release-and-snapshot-orchestration.md`
+- `docs/03-engineering/decision-records/ADR-005-build-and-artifact-matrix.md`
 
 ## How To Work With Agents
 

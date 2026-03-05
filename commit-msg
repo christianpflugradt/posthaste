@@ -1,10 +1,8 @@
-docs: PB-0011 complete architect checksum-portability design package
+docs: PB-0009 deliver user and contributor README baseline
 
-Finalize Architect work unit for PB-0011 macOS snapshot checksum portability.
-- Add ADR-010 defining portable checksum strategy and output contract
-- Add RFC-0011 architecture baseline for checksum portability fix
-- Add PLAN-0011 implementation plan with constraints, risks, and verification intent
-- Mark Architect gate done on PB-0011 and hand next eligibility to Requirements Engineer
-- Update ADR index and backlog eligibility metadata
+Complete PB-0009 implementing developer work unit.
+- Update README with user-first quick start, contributor setup, QA pre-flight order, and snapshot/formal release overview links.
+- Transition PB-0009 to in-progress and record implementation handoff evidence in the issue log.
+- Align backlog index eligibility for PB-0009 post-implementation and fix PB-0007 next-role drift found during go-ready preflight.
 
-Role: Architect
+Role: Implementing Developer
