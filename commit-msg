@@ -1,7 +1,5 @@
-docs: PB-0007 complete product owner intake framing
+docs: PB-0001 record implementing developer in-order blocker update
 
-Finalize Product Owner framing outputs for PB-0007.
-- Add stakeholder intake brief artifact for PB-0007
-- Transition PB-0007 status from intake to shaped
-- Mark Product Owner gate done and log handoff for Requirements Engineer
-- Sync backlog index role owner/status for PB-0007
+Record latest implementing developer processing-order blocker.
+- Add PB-0001 issue-log entry that no additional implementation unit is ready.
+- Note dependency on Requirements Engineer completion for PB-0007 through PB-0009.
