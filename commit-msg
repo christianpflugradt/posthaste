@@ -1,6 +1,7 @@
-docs: PB-0005 finalize requirements and set ready
+feat: PB-0003 add deterministic hello-world baseline path
 
-Add RFC-0005 for Rust QA gates with explicit scope, FR/NFR requirements,
-assumptions, acceptance criteria, verification mapping, and traceability
-notes. Mark Requirements Engineer done and transition PB-0005 from shaped
-to ready.
+Complete PB-0003 implementing developer work unit.
+- Add no-argument hello-world execution path with stable output string.
+- Add unit test locking hello-world output contract.
+- Record PB-0003 status transition and implementing handoff evidence.
+- Update backlog index to reflect PB-0003 in-progress state.

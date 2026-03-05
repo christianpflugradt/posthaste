@@ -25,8 +25,17 @@ fn run(args: &[String]) -> Result<Vec<String>, String> {
     ))
 }
 
+fn hello_message() -> &'static str {
+    "hello from posthaste"
+}
+
 fn main() {
     let args: Vec<String> = env::args().collect();
+    if args.len() == 1 {
+        println!("{}", hello_message());
+        return;
+    }
+
     match run(&args) {
         Ok(hashtags) => {
             for hashtag in hashtags {
@@ -39,7 +48,7 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    use super::run;
+    use super::{hello_message, run};
     use std::fs;
     use std::path::PathBuf;
     use std::time::{SystemTime, UNIX_EPOCH};
@@ -57,6 +66,11 @@ mod tests {
         let args = vec!["posthaste".to_string()];
         let err = run(&args).expect_err("expected missing argument to fail");
         assert_eq!(err, "expected exactly one file-path argument");
+    }
+
+    #[test]
+    fn hello_message_is_stable() {
+        assert_eq!(hello_message(), "hello from posthaste");
     }
 
     #[test]

@@ -24,7 +24,7 @@ A `posthaste` Rust binary compiles on local development environment and CI.
 - 2
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -34,7 +34,7 @@ A `posthaste` Rust binary compiles on local development environment and CI.
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0003 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Added deterministic hello-world baseline path and validated Rust build/test gates. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -63,3 +63,5 @@ A `posthaste` Rust binary compiles on local development environment and CI.
 | 2026-03-05 13:02 | Requirements Engineer | decision | Resolved intake open questions via minimal assumptions for this slice: hello-world text is treated as stable baseline contract and binary name is fixed to `posthaste` now; documented in RFC-0003 assumptions for downstream test consistency. | None |
 | 2026-03-05 13:02 | Requirements Engineer | status | Completed PB-0003 requirements package in `docs/03-engineering/rfcs/RFC-0003-pb-0003-rust-binary-foundation.md` with explicit scope boundaries, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
 | 2026-03-05 13:02 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0003 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 13:10 | Implementing Developer | status | Transitioned PB-0003 from `ready` to `in-progress` and started implementation work. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 13:10 | Implementing Developer | handoff | Implemented PB-0003 baseline execution contract by adding deterministic no-argument hello-world path (`hello from posthaste`) while preserving existing PB-0001 file-path workflow. Added stable-output unit test for hello message. Evidence package for QE/Security: `cargo fmt --check`, `cargo clippy -- -D warnings`, and `cargo test` all passed; no new dependencies introduced. | Implementing Developer: done |
