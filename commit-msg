@@ -1,6 +1,7 @@
-docs: PB-0002 transition reviewed architecture item to done
+feat: PB-0001 implement offline hashtag suggestion cli mvp
 
-Record Reviewing Developer closeout after stakeholder confirmation.
-- Move PB-0002 status from review to done.
-- Add issue-log entry capturing stakeholder-confirmed closure and status impact.
-- Note Product Owner follow-up ownership for archive move.
+Implement PB-0001 MVP runtime behavior and implementation evidence.
+- Add Rust CLI project scaffold with stdlib-only dependency policy.
+- Implement file-path input, deterministic hashtag ranking, plain-text hashtag output, and fail-fast error handling.
+- Add unit tests for determinism, count bounds, generic/specific balance behavior, and invalid/unreadable/empty input handling.
+- Record Implementing Developer status transition and QE/Security handoff evidence in PB-0001.

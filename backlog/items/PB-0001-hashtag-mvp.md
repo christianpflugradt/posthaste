@@ -17,7 +17,7 @@ Given post text input, output ordered hashtags that balance relevance with commo
 - P0.
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -27,7 +27,7 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0002 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Implemented offline Rust CLI, deterministic ranking, fail-fast input errors, and unit-test evidence package. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -66,3 +66,5 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | 2026-03-05 12:39 | Architect | status | Architect gate complete for PB-0001 with no unresolved architecture ambiguity; Requirements Engineer can proceed with testable acceptance criteria and `ready` transition gating when complete. | Architect: done |
 | 2026-03-05 12:51 | Requirements Engineer | status | Completed PB-0001 requirements package in `docs/03-engineering/rfcs/RFC-0002-pb-0001-mvp-hashtag-requirements.md` with explicit scope boundaries, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links to ADR-001..ADR-008. | Requirements Engineer: done |
 | 2026-03-05 12:51 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0001 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 12:58 | Implementing Developer | status | Transitioned PB-0001 from `ready` to `in-progress` and started implementation work per RFC-0002 scope. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 12:58 | Implementing Developer | handoff | Implemented MVP runtime artifacts: `Cargo.toml`, `src/main.rs`, and `src/lib.rs` with offline deterministic hashtag ranking, file-path input, plain-text hashtag output, and fail-fast non-zero error handling for invalid/unreadable/empty input. Added unit tests for determinism, count bounds, broad-vs-specific balance behavior, and CLI error boundaries. Evidence package for QE/Security: `cargo fmt --check`, `cargo clippy -- -D warnings`, and `cargo test` all passed. Dependency/security note: no external crates added (stdlib-only). | Implementing Developer: done |
