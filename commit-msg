@@ -1,7 +1,5 @@
-feat: PB-0001 add fixture-based evaluation evidence and align ranking constraints
+docs: PB-0001 refresh implementing developer in-order blocker status
 
-Resolve PB-0001 QE blocker by delivering executable AI-evaluation evidence and requirement-alignment fixes.
-- Add PB-0001 fixture corpus, baseline expectations, thresholds, evaluation runner, and latest run artifact under eval/.
-- Update PB-0001 evaluation report to pass with concrete metric outputs and threshold checks.
-- Adjust hashtag ranking fallback/mix behavior to satisfy count-bound and broad/specific balance requirements for sparse inputs.
-- Add regression coverage for sparse-input bounded output behavior and record implementing handoff evidence in PB-0001 issue log.
+Record current implementing developer eligibility status after PB-0001 evidence handoff.
+- Add PB-0001 issue-log note confirming no additional ready implementation work unit.
+- Capture dependency on Requirements Engineer completion for PB-0007 through PB-0009.
