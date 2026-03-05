@@ -1,10 +1,8 @@
-docs: clarify go is role-sticky in active contexts
+docs: PB-0008 complete quality gate pass and handoff
 
-Clarify pickup behavior to prevent implicit role switching after doc
-re-reads and go commands.
+Record Quality Engineer pass decision for PB-0008 after validating
+semantic-release and release-policy automation against RFC-0008,
+including snapshot/formal channel separation and weekly-default
+policy enforcement with PO-controlled formal releases.
 
-- define go as next eligible work unit for current role
-- require explicit stakeholder instruction for any role change
-- align AGENTS, backlog operating rules, prompt, and README wording
-
-Role: Product Owner
+Role: Quality Engineer
