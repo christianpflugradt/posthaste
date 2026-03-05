@@ -1,5 +1,6 @@
-docs: PB-0001 remove done item from open backlog index
+docs: PB-0003 transition reviewed item to done
 
-Fix backlog index consistency after PB-0001 completion.
-- Remove PB-0001 from open backlog index because item status is done.
-- Keep open index limited to non-done statuses per backlog operating model.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0003 status from review to done.
+- Add issue-log entry for stakeholder-confirmed completion.
+- Remove PB-0003 from open backlog index.

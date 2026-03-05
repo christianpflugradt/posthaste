@@ -4,7 +4,6 @@ Only open items are listed here.
 
 | ID | Title | Priority | Status | Role Owner | Updated | Item |
 | --- | --- | --- | --- | --- | --- | --- |
-| PB-0003 | Rust hello-world binary foundation | P0 | review | Reviewing Developer | 2026-03-05 | [PB-0003](./items/PB-0003-rust-hello-world-binary-foundation.md) |
 | PB-0004 | Hello-world unit test baseline | P0 | in-progress | Implementing Developer | 2026-03-05 | [PB-0004](./items/PB-0004-hello-world-unit-test-baseline.md) |
 | PB-0005 | Rust QA gates (fmt, clippy, test) | P0 | in-progress | Implementing Developer | 2026-03-05 | [PB-0005](./items/PB-0005-rust-qa-gates-fmt-clippy-test.md) |
 | PB-0006 | GitHub Actions CI target matrix builds | P0 | in-progress | Implementing Developer | 2026-03-05 | [PB-0006](./items/PB-0006-github-actions-ci-target-matrix-builds.md) |
