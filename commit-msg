@@ -1,11 +1,11 @@
-fix: enforce runtime-contract sync in governance guard
+fix: harden governance guard changed-file parsing
 
-Align automated governance checks with the sync-map contract by
-requiring runtime-contract updates whenever canonical governance files
-change.
+Improve governance guard reliability by replacing brittle whitespace-based
+file extraction with null-delimited porcelain parsing.
 
-- add guard failure for canonical changes without runtime-contract sync
-- keep changelog enforcement for policy/runtime updates
-- append policy changelog entry for this guard hardening
+- parse changed files via git status --porcelain=v1 -z
+- handle rename/copy records safely
+- keep canonical/runtime/changelog guard checks unchanged
+- append policy changelog entry for parser hardening
 
 Role: Product Owner
