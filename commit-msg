@@ -1,8 +1,6 @@
-docs: add PB-0018 through PB-0023 product-forward parent stories
+docs: PB-0012 refine sha pinning requirements and log architect blocker
 
-Create business-capability parent stories aligned to MVP direction.
-- Add PB-0018..PB-0023 backlog items and intake briefs
-- Prioritize NLP/popularity/ranking progression ahead of secondary P2 work
-- Encode explicit RE split expectation so large scopes are broken into 1-5 SP slices before ready
-
-Role: Product Owner
+Add RFC-0012 with explicit security-hardening requirements, assumptions,
+acceptance mapping, and traceability for GitHub Actions SHA pinning.
+Mark Requirements Engineer done and keep item shaped pending Architect.
+Role: Requirements Engineer

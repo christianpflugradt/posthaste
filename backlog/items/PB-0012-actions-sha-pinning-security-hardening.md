@@ -30,7 +30,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and RE handoff completed. |
 | Architect | pending | 2026-03-05 | Not started. |
-| Requirements Engineer | pending | 2026-03-05 | Next: define pinning scope/update policy acceptance criteria. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0012 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -59,3 +59,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 19:04 | Product Owner | status | Created PB-0012 from hardening backlog planning after baseline delivery. | Product Owner: in-progress |
 | 2026-03-05 19:04 | Product Owner | status | Completed intake framing and moved PB-0012 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 19:04 | Product Owner | handoff | Handoff package ready for RE refinement on action-pin scope and update policy. | None |
+| 2026-03-05 19:15 | Requirements Engineer | status | Picked up PB-0012 refinement and transitioned role gate from `pending` to `in-progress` for pinning scope/update-policy requirement definition. | Requirements Engineer: in-progress |
+| 2026-03-05 19:15 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: monthly pin refresh cadence by default, and pin-refresh automation handled as separate follow-up backlog item. | None |
+| 2026-03-05 19:15 | Requirements Engineer | status | Completed PB-0012 requirements package in `docs/03-engineering/rfcs/RFC-0012-pb-0012-actions-sha-pinning-security-hardening.md` with explicit scope, FR/NFR, AC mapping, and traceability. | Requirements Engineer: done |
+| 2026-03-05 19:15 | Requirements Engineer | blocker | Cannot transition PB-0012 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |
