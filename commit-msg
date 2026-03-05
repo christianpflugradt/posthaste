@@ -1,6 +1,6 @@
-docs: PB-0002 record reviewing developer approval disposition
+docs: PB-0001 complete architect technical handoff
 
-Finalize Reviewing Developer work unit for PB-0002 architecture scope.
-- Add formal review report with no findings and approved disposition.
-- Transition PB-0002 status to review and mark Reviewing Developer gate done.
-- Record review start/decision entries and sync backlog index ownership/status.
+Finalize Architect contribution for PB-0001 using approved architecture baseline.
+- Mark Architect gate done and log architecture handoff constraints
+- Reference ADR-001..ADR-008 and RFC/implementation-plan artifacts
+- Hand backlog role owner for PB-0001 to Requirements Engineer

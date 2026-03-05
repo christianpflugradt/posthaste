@@ -23,7 +23,7 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing, recommendation, and handoff package completed. |
-| Architect | pending | 2026-03-05 | Awaiting role-spec finalization and kickoff. |
+| Architect | done | 2026-03-05 | Architecture baseline finalized via ADR-001..ADR-008 and PB-0002 handoff artifacts. |
 | Requirements Engineer | pending | 2026-03-05 | Not started. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
@@ -61,3 +61,6 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | 2026-03-05 12:14 | Product Owner | status | Completed intake framing artifact and recommendation; moved PB-0001 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 12:14 | Product Owner | handoff | Provided intake brief package and proceed recommendation for Architect + Requirements Engineer specification workflow. | None |
 | 2026-03-05 12:21 | Quality Engineer | status | No QE gate action is currently eligible on PB-0001 because the item remains in shaping/specification flow (Architect and Requirements Engineer gates not complete); proceeding to next eligible backlog item per processing-order rule. | None |
+| 2026-03-05 12:39 | Architect | status | Started Architect PB-0001 work unit and validated architecture scope alignment to parent technical discovery item PB-0002. | Architect: in-progress |
+| 2026-03-05 12:39 | Architect | handoff | Architecture package for PB-0001 is complete and implementation-ready via ADR-001..ADR-008 plus `docs/03-engineering/rfcs/RFC-0001-mvp-cli-foundation.md` and `docs/03-engineering/implementation-plans/PLAN-0001-pb-0002-architecture-slices.md`; constraints include offline-first, Rust/Cargo baseline, stdlib-first dependencies, file-path input MVP, fail-fast errors, and GitHub-native CI/release. | None |
+| 2026-03-05 12:39 | Architect | status | Architect gate complete for PB-0001 with no unresolved architecture ambiguity; Requirements Engineer can proceed with testable acceptance criteria and `ready` transition gating when complete. | Architect: done |
