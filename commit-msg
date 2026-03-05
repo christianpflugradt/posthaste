@@ -1,7 +1,8 @@
-docs: PB-0008 complete product owner intake framing
+fix: sync PB-0002 backlog status with archive state
 
-Finalize Product Owner framing outputs for PB-0008.
-- Add stakeholder intake brief artifact for PB-0008
-- Transition PB-0008 status from intake to shaped
-- Mark Product Owner gate done and log handoff for Requirements Engineer
-- Sync backlog index role owner/status for PB-0008
+Archive PB-0002 in the done archive and remove its stale open entry
+from backlog/index.md so role selection and processing order use
+consistent data.
+
+- move PB-0002 item to backlog/archive/done/2026-03/
+- remove PB-0002 row from open backlog index
