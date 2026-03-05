@@ -1,11 +1,11 @@
-fix: harden governance guard changed-file parsing
+ci: add governance consistency workflow checks
 
-Improve governance guard reliability by replacing brittle whitespace-based
-file extraction with null-delimited porcelain parsing.
+Add a dedicated GitHub Actions workflow to enforce governance-related
+consistency checks on pull requests and main pushes.
 
-- parse changed files via git status --porcelain=v1 -z
-- handle rename/copy records safely
-- keep canonical/runtime/changelog guard checks unchanged
-- append policy changelog entry for parser hardening
+- run make preflight
+- run make preflight-test
+- run make governance-guard
+- trigger on governance/backlog/scripts/workflow changes
 
 Role: Product Owner

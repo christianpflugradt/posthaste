@@ -1,0 +1,39 @@
+name: Governance Checks
+
+on:
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - "prompt.txt"
+      - "backlog/**"
+      - "docs/00-governance/**"
+      - "scripts/**"
+      - "Makefile"
+      - ".github/workflows/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "AGENTS.md"
+      - "prompt.txt"
+      - "backlog/**"
+      - "docs/00-governance/**"
+      - "scripts/**"
+      - "Makefile"
+      - ".github/workflows/**"
+
+jobs:
+  governance-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run preflight checks
+        run: make preflight
+
+      - name: Run preflight regression tests
+        run: make preflight-test
+
+      - name: Run governance guard
+        run: make governance-guard
