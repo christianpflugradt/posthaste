@@ -1,4 +1,7 @@
-docs: PB-0001 complete security gate for implementation increment
+docs: PB-0006 complete product owner intake framing
 
-Record Security Engineer gate transition and pass decision for
-PB-0001 with evidence from code/dependency review and Rust checks.
+Finalize Product Owner framing outputs for PB-0006.
+- Add stakeholder intake brief artifact for PB-0006
+- Transition PB-0006 status from intake to shaped
+- Mark Product Owner gate done and log handoff for Requirements Engineer
+- Sync backlog index role owner/status for PB-0006
