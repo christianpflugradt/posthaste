@@ -1,5 +1,4 @@
-docs: PB-0001 block quality gate on missing AI evaluation evidence
+docs: PB-0001 complete security gate for implementation increment
 
-Record QE gate decision for PB-0001 as blocked after validating local
-Rust quality checks. Add evaluation report artifact documenting missing
-fixture/baseline metrics required by AI quality gate policy.
+Record Security Engineer gate transition and pass decision for
+PB-0001 with evidence from code/dependency review and Rust checks.
