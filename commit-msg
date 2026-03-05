@@ -1,5 +1,5 @@
-docs: PB-0001 log post-unblock implementing developer eligibility state
+docs: PB-0005 complete quality gate pass and handoff
 
-Record implementing developer go-check status after QE unblock.
-- Add issue-log entry confirming no remaining implementer-owned blocker on PB-0001.
-- Note that PB-0007 through PB-0009 remain ineligible until Requirements Engineer marks them ready.
+Record Quality Engineer pass decision for PB-0005 after independent
+validation of ordered blocking QA gates in Makefile and GitHub Actions,
+plus successful local make check evidence.
