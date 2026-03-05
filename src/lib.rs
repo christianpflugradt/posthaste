@@ -132,21 +132,18 @@ fn tokenize(input: &str) -> HashSet<String> {
 fn score_hashtags(tokens: &HashSet<String>) -> Vec<ScoredHashtag> {
     HASHTAGS
         .iter()
-        .filter_map(|hashtag| {
+        .map(|hashtag| {
             let relevance = hashtag
                 .keywords
                 .iter()
                 .filter(|keyword| tokens.contains(**keyword))
                 .count();
-            if relevance == 0 {
-                return None;
-            }
             let score = relevance * 100 + usize::from(hashtag.popularity);
-            Some(ScoredHashtag {
+            ScoredHashtag {
                 hashtag: *hashtag,
                 relevance,
                 score,
-            })
+            }
         })
         .collect()
 }
@@ -162,10 +159,16 @@ fn select_balanced(scored: Vec<ScoredHashtag>, count: usize) -> Vec<String> {
     }
 
     let broad_cap = (count / 3).max(1);
-    let mut selected = Vec::new();
+    let mut selected: Vec<&'static str> = Vec::new();
+
+    if let Some(item) = broad.iter().find(|item| item.relevance > 0) {
+        selected.push(item.hashtag.tag);
+    }
 
     for item in specific.iter().take(count) {
-        selected.push(item.hashtag.tag);
+        if !selected.contains(&item.hashtag.tag) {
+            selected.push(item.hashtag.tag);
+        }
         if selected.len() == count {
             break;
         }
@@ -173,7 +176,9 @@ fn select_balanced(scored: Vec<ScoredHashtag>, count: usize) -> Vec<String> {
 
     if selected.len() < count {
         for item in broad.iter().take(broad_cap) {
-            selected.push(item.hashtag.tag);
+            if !selected.contains(&item.hashtag.tag) {
+                selected.push(item.hashtag.tag);
+            }
             if selected.len() == count {
                 break;
             }
@@ -182,7 +187,9 @@ fn select_balanced(scored: Vec<ScoredHashtag>, count: usize) -> Vec<String> {
 
     if selected.len() < count {
         for item in broad.iter().skip(broad_cap) {
-            selected.push(item.hashtag.tag);
+            if !selected.contains(&item.hashtag.tag) {
+                selected.push(item.hashtag.tag);
+            }
             if selected.len() == count {
                 break;
             }
@@ -207,6 +214,15 @@ mod tests {
     #[test]
     fn keeps_output_within_required_bounds() {
         let input = "Product roadmap engineering developer leadership ai data";
+        let (min_count, max_count) = count_bounds();
+        let result = generate_hashtags(input, default_count());
+        assert!(result.len() >= min_count);
+        assert!(result.len() <= max_count);
+    }
+
+    #[test]
+    fn enforces_minimum_count_for_sparse_input() {
+        let input = "privacy";
         let (min_count, max_count) = count_bounds();
         let result = generate_hashtags(input, default_count());
         assert!(result.len() >= min_count);

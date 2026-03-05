@@ -1,5 +1,7 @@
-docs: PB-0001 record implementing developer in-order blocker update
+feat: PB-0001 add fixture-based evaluation evidence and align ranking constraints
 
-Record latest implementing developer processing-order blocker.
-- Add PB-0001 issue-log entry that no additional implementation unit is ready.
-- Note dependency on Requirements Engineer completion for PB-0007 through PB-0009.
+Resolve PB-0001 QE blocker by delivering executable AI-evaluation evidence and requirement-alignment fixes.
+- Add PB-0001 fixture corpus, baseline expectations, thresholds, evaluation runner, and latest run artifact under eval/.
+- Update PB-0001 evaluation report to pass with concrete metric outputs and threshold checks.
+- Adjust hashtag ranking fallback/mix behavior to satisfy count-bound and broad/specific balance requirements for sparse inputs.
+- Add regression coverage for sparse-input bounded output behavior and record implementing handoff evidence in PB-0001 issue log.

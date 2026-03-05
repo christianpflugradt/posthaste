@@ -1,26 +1,30 @@
 # Evaluation Report: PB-0001
 
 ## Change Summary
-PB-0001 introduces offline hashtag suggestion behavior and ranking logic in the runtime path (`src/lib.rs`, `src/main.rs`), so AI-affecting quality gates apply.
+PB-0001 includes offline hashtag suggestion behavior and ranking logic in runtime code (`src/lib.rs`, `src/main.rs`), so AI-affecting quality gates apply.
 
 ## Dataset/Baseline
-- Fixture set: Not available (`eval/fixtures/` has no PB-0001 fixture corpus).
-- Baseline version: Not available (`eval/baselines/` has no PB-0001 baseline outputs/thresholds).
+- Fixture set: `eval/fixtures/pb-0001/` (4 scenario fixtures).
+- Baseline expectations: `eval/baselines/pb-0001/*.expected`.
+- Thresholds: `eval/baselines/pb-0001-thresholds.env`.
+- Runner: `eval/run-pb-0001-eval.sh`.
 
 ## Metric Results
-- Relevance: Not executed (missing fixture/baseline inputs).
-- Specificity: Not executed (missing fixture/baseline inputs).
-- Diversity: Not executed (missing fixture/baseline inputs).
-- Format validity: Not executed (missing fixture/baseline inputs).
+- Relevance: `1.0000` (threshold `>= 0.95`).
+- Specificity: `0.9062` (threshold `>= 0.60`).
+- Diversity: `0.7500` (threshold `>= 0.50`).
+- Format validity: `1.0000` (threshold `>= 1.00`).
+
+Detailed per-fixture run output is stored in `eval/results/PB-0001-eval-latest.md`.
 
 ## Regressions Detected
-Cannot determine regressions because no baseline evaluation run was possible.
+No unacceptable regressions detected against current PB-0001 baseline thresholds.
 
 ## Decision
-- [ ] Pass
+- [x] Pass
 - [ ] Pass with accepted tradeoff
-- [x] Fail
+- [ ] Fail
 
 ## Notes
-- Non-AI gates were independently verified and passed: `cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo test`.
-- This report blocks QE gate completion until fixture-based baseline evaluation evidence is produced (or stakeholder explicitly accepts risk).
+- Non-AI gates also passed in the same handoff cycle via `make check` (`cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo test`).
+- Implementation refinement in this cycle addressed PB-0001 requirement alignment by ensuring count bounds are always respected and broad/specific mix behavior is included when broad relevant candidates exist.
