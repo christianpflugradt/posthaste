@@ -1,6 +1,7 @@
-docs: PB-0013 refine trigger-regression requirements and log blocker
+docs: PB-0014 refine checksum-verification requirements and log blocker
 
-Add RFC-0013 with deterministic trigger regression requirements,
-assumptions, acceptance mapping, and traceability for PB-0010 follow-up.
-Mark Requirements Engineer done and keep item shaped pending Architect.
+Add RFC-0014 defining verification scope, fail-closed semantics,
+assumptions, acceptance mapping, and traceability for release checksum
+verification. Mark Requirements Engineer done and keep item shaped
+pending Architect completion.
 Role: Requirements Engineer

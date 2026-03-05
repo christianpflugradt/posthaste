@@ -30,7 +30,7 @@ Release workflows verify checksums and block publication when mismatches occur.
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and RE handoff completed. |
 | Architect | pending | 2026-03-05 | Not started. |
-| Requirements Engineer | pending | 2026-03-05 | Next: define verification coverage and blocking semantics. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0014 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -59,3 +59,7 @@ Release workflows verify checksums and block publication when mismatches occur.
 | 2026-03-05 19:04 | Product Owner | status | Created PB-0014 to harden release integrity verification. | Product Owner: in-progress |
 | 2026-03-05 19:04 | Product Owner | status | Completed intake framing and moved PB-0014 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 19:04 | Product Owner | handoff | Handoff package ready for RE refinement on checksum verification behavior. | None |
+| 2026-03-05 19:15 | Requirements Engineer | status | Picked up PB-0014 refinement and transitioned role gate from `pending` to `in-progress` to define checksum verification scope/failure semantics. | Requirements Engineer: in-progress |
+| 2026-03-05 19:15 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: verification scope includes both snapshots and formal releases; release-note surfacing is deferred as optional follow-up. | None |
+| 2026-03-05 19:15 | Requirements Engineer | status | Completed PB-0014 requirements package in `docs/03-engineering/rfcs/RFC-0014-pb-0014-release-checksum-verification-step.md` with explicit scope, FR/NFR, assumptions, AC mapping, and traceability. | Requirements Engineer: done |
+| 2026-03-05 19:15 | Requirements Engineer | blocker | Cannot transition PB-0014 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |
