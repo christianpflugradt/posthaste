@@ -1,8 +1,8 @@
-docs: PB-0006 log architect in-order ineligibility check
+ci: PB-0011 fix macos snapshot checksum command portability
 
-Record Architect pickup check for top index item PB-0006.
-- Note Architect gate is already done
-- Note `Next Eligible Role(s)` is Reviewing Developer
-- Keep processing-order evidence in issue comment log
+Complete PB-0011 implementing developer work unit.
+- Replace non-portable checksum step in release-policy workflow with OS-specific Linux/macOS commands.
+- Preserve normalized checksum output format (`sha256  filename`) and hard-blocking checksum behavior before artifact upload.
+- Update PB-0011 role gate/status logs and index eligibility for QE/Security handoff.
 
-Role: Architect
+Role: Implementing Developer

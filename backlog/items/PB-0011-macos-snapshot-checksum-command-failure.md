@@ -23,7 +23,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 - 2
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -33,7 +33,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | Requirements Engineer | done | 2026-03-05 | Requirements package finalized in RFC-0011 with FR/NFR, assumptions, acceptance criteria mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Replaced non-portable checksum command with OS-specific Linux/macOS logic and preserved normalized output contract. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -71,3 +71,5 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 18:29 | Requirements Engineer | decision | Resolved intake questions with minimal-risk assumptions: checksum file format parity across OS targets is a hard requirement, and fix scope is PB-0011 snapshot path first with broader rollout as follow-up if needed. | None |
 | 2026-03-05 18:29 | Requirements Engineer | status | Finalized RE requirements in `docs/03-engineering/rfcs/RFC-0011-pb-0011-macos-snapshot-checksum-portability.md` with FR/NFR, assumptions, verification intent mapping, and requirement traceability notes. | Requirements Engineer: done |
 | 2026-03-05 18:29 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0011 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 18:36 | Implementing Developer | status | Transitioned PB-0011 from `ready` to `in-progress` and started checksum portability implementation work. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 18:36 | Implementing Developer | handoff | Updated `.github/workflows/release-policy.yml` checksum generation to use OS-specific native commands: Linux uses `sha256sum`, macOS uses `shasum -a 256` with normalized lower-case output formatted as `sha256  filename`; Windows path remains unchanged. Checksum generation remains hard-blocking before snapshot artifact upload. Validation evidence: `make check` passed. | Implementing Developer: done |

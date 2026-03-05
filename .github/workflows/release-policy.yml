@@ -76,11 +76,17 @@ jobs:
           Copy-Item "target/release/posthaste${{ matrix.binary_suffix }}" `
             "snapshot-dist/posthaste-${{ matrix.target_name }}-${{ steps.snapshot_id.outputs.value }}${{ matrix.binary_suffix }}"
 
-      - name: Generate checksum (non-Windows)
-        if: runner.os != 'Windows'
+      - name: Generate checksum (Linux)
+        if: runner.os == 'Linux'
         run: |
           cd snapshot-dist
           sha256sum * > checksums.txt
+
+      - name: Generate checksum (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          cd snapshot-dist
+          shasum -a 256 * | awk '{print tolower($1) "  " $2}' > checksums.txt
 
       - name: Generate checksum (Windows)
         if: runner.os == 'Windows'
