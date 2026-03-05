@@ -1,8 +1,7 @@
-docs: PB-0010 add high-priority ci trigger filtering backlog item
+docs: PB-0010 refine CI trigger requirements and log architect blocker
 
-Capture stakeholder-reported CI workflow over-triggering as highest-priority work.
-- Add PB-0010 intake brief and backlog item with Product Owner handoff
-- Add DEC-0001 stakeholder priority override decision record
-- Reorder backlog index with PB-0010 at top and RE as next eligible role
-
-Role: Product Owner
+Add RFC-0010 defining workflow path-filtering requirements, acceptance
+criteria, and traceability for CI trigger relevance boundaries.
+Update PB-0010 RE gate to done, log pickup/decision/blocker entries,
+and keep item shaped because Architect gate is still pending.
+Role: Requirements Engineer
