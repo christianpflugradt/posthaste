@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test tasks
+.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test tasks index-sync
 
 fmt:
 	cargo fmt --check
@@ -25,3 +25,6 @@ governance-guard-test:
 
 tasks:
 	./scripts/tasks.sh $(if $(ROLE),--role "$(ROLE)",) $(if $(LIMIT),--limit "$(LIMIT)",)
+
+index-sync:
+	./scripts/index_sync.sh
