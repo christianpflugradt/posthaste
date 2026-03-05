@@ -1,7 +1,10 @@
-docs: PB-0011 complete quality gate pass and handoff
+docs: sync index next eligible roles for PB-0008, PB-0009, and PB-0011
 
-Record Quality Engineer pass decision for PB-0011 after validating the
-macOS checksum portability fix in release-policy workflow, including
-normalized checksum output contract and independent make check evidence.
+Update backlog/index.md to match current issue gate state after completed
+Security Engineer work so preflight passes and role routing is deterministic.
 
-Role: Quality Engineer
+- set Next Eligible Role(s) to Reviewing Developer for PB-0008/PB-0009/PB-0011
+- clear stale blocker text to None for those three items
+- verify consistency with make preflight
+
+Role: Implementing Developer
