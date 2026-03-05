@@ -1,5 +1,5 @@
-docs: PB-0001 record review-entry blocker awaiting gates
+docs: PB-0001 block quality gate on missing AI evaluation evidence
 
-Capture Reviewing Developer in-order eligibility check for PB-0001.
-- Add issue-log blocker note that review cannot start yet.
-- Record pending Quality Engineer and Security Engineer gate dependency.
+Record QE gate decision for PB-0001 as blocked after validating local
+Rust quality checks. Add evaluation report artifact documenting missing
+fixture/baseline metrics required by AI quality gate policy.
