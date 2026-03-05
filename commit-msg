@@ -1,7 +1,6 @@
-docs: PB-0010 complete quality gate pass and handoff
+docs: PB-0010 complete security gate review
 
-Record Quality Engineer pass decision for PB-0010 after validating
-path-scoped CI workflow trigger filtering against RFC-0010, including
-fail-safe relevant-path inclusions and independent make check evidence.
+Record Security Engineer transition and pass decision for PB-0010
+with workflow trigger-path and permission-scope security evidence.
 
-Role: Quality Engineer
+Role: Security Engineer
