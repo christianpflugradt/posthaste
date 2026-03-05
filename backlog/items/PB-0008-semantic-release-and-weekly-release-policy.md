@@ -27,14 +27,14 @@ Semantic-release workflow is integrated with:
 - 3
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and handoff completed. |
 | Architect | done | 2026-03-05 | Orchestration policy defined in ADR-007. |
-| Requirements Engineer | pending | 2026-03-05 | Not started. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0008 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -62,3 +62,6 @@ Semantic-release workflow is integrated with:
 | 2026-03-05 11:45 | Architect | status | Derived implementation slice from architecture decisions. | Architect: done |
 | 2026-03-05 12:47 | Product Owner | status | Completed PB-0008 intake framing and recommendation; moved item from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 12:47 | Product Owner | handoff | Handoff package ready for Requirements Engineer specification work (architectural constraints already satisfied). | None |
+| 2026-03-05 15:29 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions for this slice: skipped weekly windows defer by default unless PO explicitly authorizes midweek release, and snapshot publication runs on every `main` merge. Assumptions documented in RFC-0008. | None |
+| 2026-03-05 15:29 | Requirements Engineer | status | Completed PB-0008 requirements package in `docs/03-engineering/rfcs/RFC-0008-pb-0008-semantic-release-and-weekly-policy.md` with explicit scope, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
+| 2026-03-05 15:29 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0008 from `shaped` to `ready`. | item status: ready |
