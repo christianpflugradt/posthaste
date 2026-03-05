@@ -64,6 +64,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Follow-up backlog items must include a parent/backlink to the originating issue.
 - Urgent role-created items must include issue-log notification to Product Owner.
 - For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector for the current role; `Role Owner` is informational only.
+- When a role updates an issue gate/status in `backlog/items/PB-*.md`, it must update the same issue row in `backlog/index.md` (`Status`, `Next Eligible Role(s)`, `Blocker`, `Updated`) before completing the work unit.
 - Backlog ordering must apply priority-first with aging-aware anti-starvation balancing; do not let newly created higher-priority items indefinitely block older open items without explicit stakeholder direction.
 
 ## Backlog Size and Refinement Policy

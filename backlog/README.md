@@ -50,6 +50,7 @@ This backlog is the single source of truth for active product work.
 - `Next Eligible Role(s)` is authoritative for agent pickup.
 - `Blocker` captures why other roles are not currently eligible.
 - `Updated` must be refreshed when status/gate state changes alter eligibility.
+- Any role that changes an issue gate/status in `backlog/items/PB-*.md` must sync that issue's row in `backlog/index.md` (`Status`, `Next Eligible Role(s)`, `Blocker`, `Updated`) in the same work unit.
 
 ## Required Artifacts Per Item
 - Backlog item file in `backlog/items/` using `templates/backlog-item.md`.

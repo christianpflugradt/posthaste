@@ -1,6 +1,11 @@
-docs: PB-0010 complete security gate review
+docs: enforce index sync on gate and status updates
 
-Record Security Engineer transition and pass decision for PB-0010
-with workflow trigger-path and permission-scope security evidence.
+Fix PB-0010 eligibility drift and harden process rules so backlog index
+state stays aligned with per-issue gate transitions.
 
-Role: Security Engineer
+- update PB-0010 next-eligible role to Reviewing Developer
+- require index row sync when issue gate/status changes
+- enforce sync fields: Status, Next Eligible Role(s), Blocker, Updated
+- align AGENTS, backlog operating model, and bootstrap prompt
+
+Role: Product Owner
