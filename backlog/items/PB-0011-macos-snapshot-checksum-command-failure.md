@@ -32,7 +32,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | Architect | done | 2026-03-05 | Portable checksum architecture policy finalized (ADR-010) with RFC + implementation-plan handoff artifacts. |
 | Requirements Engineer | done | 2026-03-05 | Requirements package finalized in RFC-0011 with FR/NFR, assumptions, acceptance criteria mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
-| Security Engineer | pending | 2026-03-05 | Not started. |
+| Security Engineer | done | 2026-03-05 | Security gate pass; checksum portability fix introduces no blocking security findings. |
 | Implementing Developer | done | 2026-03-05 | Replaced non-portable checksum command with OS-specific Linux/macOS logic and preserved normalized output contract. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
@@ -73,3 +73,5 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 18:29 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0011 from `shaped` to `ready`. | item status: ready |
 | 2026-03-05 18:36 | Implementing Developer | status | Transitioned PB-0011 from `ready` to `in-progress` and started checksum portability implementation work. | item status: in-progress; Implementing Developer: in-progress |
 | 2026-03-05 18:36 | Implementing Developer | handoff | Updated `.github/workflows/release-policy.yml` checksum generation to use OS-specific native commands: Linux uses `sha256sum`, macOS uses `shasum -a 256` with normalized lower-case output formatted as `sha256  filename`; Windows path remains unchanged. Checksum generation remains hard-blocking before snapshot artifact upload. Validation evidence: `make check` passed. | Implementing Developer: done |
+| 2026-03-05 18:42 | Security Engineer | status | Started Security Engineer gate evaluation for PB-0011 from pending state; reviewed RFC-0011 scope, checksum step changes in `.github/workflows/release-policy.yml`, and independent local verification evidence (`make check`). | Security Engineer: in-progress |
+| 2026-03-05 18:42 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: OS-specific checksum commands remove macOS tool-availability failure without broadening privileges or dependency surface, checksum output normalization maintains stable verification contract, and checksum generation remains blocking before artifact upload. Residual low risk: third-party action supply-chain exposure via version-tag references remains and should be hardened with commit-SHA pinning in follow-up work. | Security Engineer: done |
