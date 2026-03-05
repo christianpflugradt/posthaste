@@ -30,7 +30,7 @@ Expanded taxonomy improves relevance coverage across prioritized business domain
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and RE handoff completed. |
 | Architect | pending | 2026-03-05 | Not started. |
-| Requirements Engineer | pending | 2026-03-05 | Next: define domain priorities and coverage acceptance metrics. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0017 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -59,3 +59,7 @@ Expanded taxonomy improves relevance coverage across prioritized business domain
 | 2026-03-05 19:04 | Product Owner | status | Created PB-0017 for business-value relevance coverage expansion. | Product Owner: in-progress |
 | 2026-03-05 19:04 | Product Owner | status | Completed intake framing and moved PB-0017 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 19:04 | Product Owner | handoff | Handoff package ready for RE refinement on domain coverage and quality criteria. | None |
+| 2026-03-05 19:32 | Requirements Engineer | status | Picked up PB-0017 refinement and transitioned role gate from `pending` to `in-progress` to define domain priorities and coverage-validation requirements. | Requirements Engineer: in-progress |
+| 2026-03-05 19:32 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: first-priority domains are SaaS, hiring, and cybersecurity; ranking-weight retuning is deferred from this slice. | None |
+| 2026-03-05 19:32 | Requirements Engineer | status | Completed PB-0017 requirements package in `docs/03-engineering/rfcs/RFC-0017-pb-0017-hashtag-taxonomy-expansion-and-coverage.md` with explicit scope, FR/NFR, assumptions, AC mapping, and traceability. | Requirements Engineer: done |
+| 2026-03-05 19:32 | Requirements Engineer | blocker | Cannot transition PB-0017 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |
