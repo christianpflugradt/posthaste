@@ -1,6 +1,10 @@
-docs: PB-0007 complete security gate review
+docs: PB-0011 complete architect checksum-portability design package
 
-Record Security Engineer transition and pass decision for PB-0007
-with release workflow and checksum security evidence.
+Finalize Architect work unit for PB-0011 macOS snapshot checksum portability.
+- Add ADR-010 defining portable checksum strategy and output contract
+- Add RFC-0011 architecture baseline for checksum portability fix
+- Add PLAN-0011 implementation plan with constraints, risks, and verification intent
+- Mark Architect gate done on PB-0011 and hand next eligibility to Requirements Engineer
+- Update ADR index and backlog eligibility metadata
 
-Role: Security Engineer
+Role: Architect

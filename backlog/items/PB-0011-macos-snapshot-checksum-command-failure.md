@@ -29,7 +29,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing, urgent prioritization, and RE handoff completed. |
-| Architect | pending | 2026-03-05 | Not started. |
+| Architect | done | 2026-03-05 | Portable checksum architecture policy finalized (ADR-010) with RFC + implementation-plan handoff artifacts. |
 | Requirements Engineer | pending | 2026-03-05 | Next: refine portable checksum behavior and acceptance criteria. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
@@ -63,3 +63,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 16:17 | Product Owner | handoff | Handoff package ready for Requirements Engineer to refine exact portable checksum behavior and file-format expectations. | None |
 | 2026-03-05 16:23 | Product Owner | decision | Re-prioritized PB-0011 from `P0` to `P2` per stakeholder risk reassessment; PB-0010 remains higher urgency. Recorded in DEC-0003. | None |
 | 2026-03-05 16:23 | Product Owner | status | Reordered backlog to place PB-0011 after currently open items while preserving eligibility for future scheduling via aging-aware ordering policy. | item priority/order updated |
+| 2026-03-05 18:23 | Architect | status | Picked up PB-0011 Architect work unit and transitioned role gate from `pending` to `in-progress` for checksum portability architecture design. | Architect: in-progress |
+| 2026-03-05 18:23 | Architect | decision | Recorded portable checksum architecture policy in `docs/03-engineering/decision-records/ADR-010-portable-checksum-command-strategy-ci.md` including OS-specific command strategy, normalized output contract, and failure semantics. | None |
+| 2026-03-05 18:23 | Architect | handoff | Published architect artifacts for downstream work: `docs/03-engineering/rfcs/RFC-0011-pb-0011-macos-snapshot-checksum-portability.md` and `docs/03-engineering/implementation-plans/PLAN-0011-pb-0011-macos-snapshot-checksum-fix.md` with constraints, interface assumptions, and verification intent. | None |
+| 2026-03-05 18:23 | Architect | status | Architect gate complete for PB-0011 with no unresolved architecture ambiguity; Requirements Engineer can proceed with refinement and `ready` transition ownership when complete. | Architect: done |
