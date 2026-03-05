@@ -18,12 +18,8 @@ Replace `<ROLE>` with one of:
 ## Session Commands
 - Fresh context: `follow prompt.txt as <ROLE>`.
 - In active context: `go` means continue with the next eligible work unit for the current role after the previous one is complete.
-- On every `go`, read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md`.
-- Re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`) only when changelog has newer entries than your session last-seen or stakeholder explicitly requests full re-read.
-- On every `go`, run `make preflight ROLE="<Current Role>"`.
+- Active `go` execution steps are defined in `docs/00-governance/runtime-contract.md`.
 - Prefer `make go-ready ROLE="<Current Role>"` for one-command active-context pre-check.
-- On every `go`, re-read `backlog/index.md` before selecting work.
-- After selecting a candidate, re-read the corresponding issue file (`backlog/items/PB-*.md`) before acting.
 - Do not switch roles implicitly in active context; switch only on explicit stakeholder instruction.
 - If the agent asks a question mid-work, respond and the agent should resume the same work unit.
 
@@ -61,7 +57,7 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector for your curren
 - For non-trivial changes, create/maintain linked OpenSpec package under `openspec/changes/`.
 - Prefer repository skills for recurring operations (`skills/pickup-preflight`, `skills/index-sync`, `skills/openspec-change-bootstrap`).
 
-## Session Commands
+## Interaction Commands
 - `go`: execute the next eligible work unit.
 - `tasks`: return a brief, concise list of the next 5 tasks (backlog items and/or overdue proactive reviews).
 - For deterministic backlog output, use `make tasks ROLE="<Current Role>"` (optionally `LIMIT=5`).

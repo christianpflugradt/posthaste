@@ -52,13 +52,9 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
 - After a work unit is complete, agent auto-commits per commit policy.
 - After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
-- On every `go`, agents must read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md` first.
-- In active contexts, agents re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`) only when changelog entries are newer than session last-seen or stakeholder explicitly requests full re-read.
-- On every `go`, agents must re-read `backlog/index.md` before selecting the next work unit.
-- On every `go`, agents must run `make preflight ROLE="<Current Role>"` before selecting the next work unit.
-- Prefer `make go-ready ROLE="<Current Role>"` as the one-command active-context pre-check (runtime references + preflight + governance guard + deterministic tasks list).
+- Active `go` execution steps are defined in `docs/00-governance/runtime-contract.md`.
+- Preferred one-command pre-check: `make go-ready ROLE="<Current Role>"`.
 - For changes to pickup/preflight behavior, run `make preflight-test` before completion.
-- After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).
 - For deterministic backlog listing in active context, use `make tasks ROLE="<Current Role>"`.

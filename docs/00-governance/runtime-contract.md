@@ -2,6 +2,7 @@
 
 This is the compact operational contract for active execution (`go`) in existing contexts.
 Use this as the first reference before working; full governance docs remain authoritative.
+If wording conflicts with canonical governance sources (`AGENTS.md`, `backlog/README.md`, `prompt.txt`), canonical sources win.
 
 ## Active Context Rules
 - Keep the current role unless stakeholder explicitly switches roles.
