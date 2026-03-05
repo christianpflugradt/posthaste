@@ -1,6 +1,7 @@
-docs: PB-0011 complete security gate review
+docs: PB-0011 complete quality gate pass and handoff
 
-Record Security Engineer transition and pass decision for PB-0011
-with checksum-portability workflow security evidence.
+Record Quality Engineer pass decision for PB-0011 after validating the
+macOS checksum portability fix in release-policy workflow, including
+normalized checksum output contract and independent make check evidence.
 
-Role: Security Engineer
+Role: Quality Engineer
