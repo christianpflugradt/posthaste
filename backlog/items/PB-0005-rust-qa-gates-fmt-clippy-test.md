@@ -27,7 +27,7 @@ Repository and CI enforce:
 - 2
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -38,7 +38,7 @@ Repository and CI enforce:
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: local/CI Rust QA gates are enforced in required order with blocking behavior. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; CI workflow and QA automation changes introduce no blocking security risk. |
 | Implementing Developer | done | 2026-03-05 | Added local and CI QA gate enforcement for fmt, strict clippy, and test in required order. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-05 | Review completed with approved disposition; no findings. |
 
 ## Constraints
 - Clippy warnings are blocking.
@@ -74,3 +74,5 @@ Repository and CI enforce:
 | 2026-03-05 15:53 | Quality Engineer | status | In-order `go` check against `Next Eligible Role(s)`: PB-0005 now lists `Reviewing Developer`, so no QE action is eligible; proceeding to next backlog item. | None |
 | 2026-03-05 15:22 | Security Engineer | status | Started Security Engineer gate evaluation for PB-0005 from pending state; reviewed RFC-0005, `Makefile`, `.github/workflows/qa-gates.yml`, and independent local verification evidence (`make check`). | Security Engineer: in-progress |
 | 2026-03-05 15:22 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: no new runtime dependencies or secrets were introduced, QA workflow uses pinned major versions of standard GitHub Actions with non-privileged checks-only behavior, and local/CI gate commands are deterministic and fail-closed on warnings/errors. Residual low risk: third-party action supply-chain exposure remains (e.g., `dtolnay/rust-toolchain@stable`) and should be revisited with full commit-SHA pinning in a future hardening item. | Security Engineer: done |
+| 2026-03-05 17:46 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0005; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0005 traceability. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-05 17:46 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0005-review-report.md`. | Reviewing Developer: done |
