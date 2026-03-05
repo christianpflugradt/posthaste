@@ -1,6 +1,5 @@
-docs: PB-0001 record reviewing developer approved disposition
+docs: PB-0001 log post-unblock implementing developer eligibility state
 
-Complete Reviewing Developer work unit for PB-0001.
-- Add PB-0001 review report with no findings and approved disposition.
-- Transition PB-0001 status to review and mark Reviewing Developer gate done.
-- Sync backlog index owner/status for PB-0001 review stage.
+Record implementing developer go-check status after QE unblock.
+- Add issue-log entry confirming no remaining implementer-owned blocker on PB-0001.
+- Note that PB-0007 through PB-0009 remain ineligible until Requirements Engineer marks them ready.
