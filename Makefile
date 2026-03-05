@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check preflight
+.PHONY: fmt clippy test check preflight governance-guard
 
 fmt:
 	cargo fmt --check
@@ -13,3 +13,6 @@ check: fmt clippy test
 
 preflight:
 	./scripts/preflight.sh $(if $(ROLE),--role "$(ROLE)",)
+
+governance-guard:
+	./scripts/governance_guard.sh
