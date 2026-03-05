@@ -1,5 +1,6 @@
-docs: PB-0001 record implementing blocker state in issue log
+docs: PB-0001 reaffirm review blockage on unresolved QE gate
 
-Update PB-0001 issue history with the latest Implementing Developer blocker check.
-- add explicit log entry that no additional implementation unit is eligible due to downstream items not `ready`
-- keep role-state traceability aligned with one-work-unit and processing-order rules
+Record Reviewing Developer in-order blocker check for PB-0001.
+- Add latest issue-log note confirming review remains ineligible.
+- Capture that QE evaluation-evidence blocker is still unresolved.
+- Note Security gate is done but insufficient to enter review.
