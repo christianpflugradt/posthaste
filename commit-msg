@@ -1,5 +1,5 @@
-docs: PB-0006 complete quality gate pass and handoff
+docs: PB-0007 complete quality gate pass and handoff
 
-Record Quality Engineer pass decision for PB-0006 after verifying native
-CI target matrix coverage, ordered blocking QA gates, diagnostics retention,
-and independent local make check evidence.
+Record Quality Engineer pass decision for PB-0007 after verifying release
+artifact workflow coverage, deterministic checksum generation, and release-note
+checksum verification instructions, with independent make check evidence.
