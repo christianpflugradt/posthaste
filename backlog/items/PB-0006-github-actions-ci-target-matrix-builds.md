@@ -27,7 +27,7 @@ GitHub Actions workflow builds on native runners for:
 - 3
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -77,3 +77,4 @@ GitHub Actions workflow builds on native runners for:
 | 2026-03-05 18:35 | Architect | blocker | In-order `go` check: no Architect contribution is currently eligible on PB-0006 because Architect gate is already `done` and `Next Eligible Role(s)` is `Reviewing Developer`. | None |
 | 2026-03-05 18:37 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0006; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0006 traceability. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 18:37 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0006-review-report.md`. | Reviewing Developer: done |
+| 2026-03-05 18:38 | Reviewing Developer | status | Stakeholder confirmation received via `go`; transitioned PB-0006 from `review` to `done`. Product Owner archive move/index cleanup follow-up is now pending per backlog ownership policy. | item status: done |
