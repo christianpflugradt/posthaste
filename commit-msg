@@ -1,7 +1,4 @@
-chore: PB-0002 tighten work-unit flow and unblock priority rules
+docs: PB-0004 complete quality gate pass and handoff
 
-Refine global agent interaction and execution behavior for active sessions.
-- remove multi-issue wording and enforce one work unit per prompt
-- add `tasks` command behavior for concise next-5 task listing
-- add explicit unblock-priority rule so roles clear blockers they can resolve before unrelated work
-- align these rules across AGENTS.md, backlog README, and prompt bootstrap
+Record QE pass decision for PB-0004 with independent fmt/clippy/test
+evidence and deterministic unit-test scope validation.
