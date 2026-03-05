@@ -29,7 +29,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing and RE handoff completed. |
-| Architect | pending | 2026-03-05 | Not started. |
+| Architect | done | 2026-03-05 | SHA-pinning architecture policy finalized (ADR-011) with RFC + implementation-plan handoff artifacts. |
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0012 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
@@ -63,3 +63,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 19:15 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: monthly pin refresh cadence by default, and pin-refresh automation handled as separate follow-up backlog item. | None |
 | 2026-03-05 19:15 | Requirements Engineer | status | Completed PB-0012 requirements package in `docs/03-engineering/rfcs/RFC-0012-pb-0012-actions-sha-pinning-security-hardening.md` with explicit scope, FR/NFR, AC mapping, and traceability. | Requirements Engineer: done |
 | 2026-03-05 19:15 | Requirements Engineer | blocker | Cannot transition PB-0012 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |
+| 2026-03-05 21:02 | Architect | status | Picked up PB-0012 Architect work unit and transitioned role gate from `pending` to `in-progress` for action pinning architecture finalization. | Architect: in-progress |
+| 2026-03-05 21:02 | Architect | decision | Recorded SHA-pinning architecture policy in `docs/03-engineering/decision-records/ADR-011-github-actions-sha-pinning-policy.md` including immutable reference requirements, refresh cadence, and revisit triggers. | None |
+| 2026-03-05 21:02 | Architect | handoff | Published architect artifacts for implementation handoff: `docs/03-engineering/rfcs/RFC-0012-pb-0012-actions-sha-pinning-security-hardening.md` (constraints/interface assumptions) and `docs/03-engineering/implementation-plans/PLAN-0012-pb-0012-actions-sha-pinning-security-hardening.md` (task/risk/verification breakdown). | None |
+| 2026-03-05 21:02 | Architect | status | Architect gate complete for PB-0012 with no unresolved architecture ambiguity; Requirements Engineer can transition item to `ready` per ownership rules. | Architect: done |

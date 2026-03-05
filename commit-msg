@@ -1,8 +1,10 @@
-docs: rebalance backlog order for quality safety and business progression
+docs: PB-0012 complete architect actions-sha-pinning package
 
-Apply stakeholder-approved backlog sequence adjustments.
-- Move PB-0022 earlier to strengthen measurement before major model/ranking work
-- Move PB-0016 earlier to reduce reliability risk ahead of deeper capability expansion
-- Keep remaining ordering aligned to quality/safety/business balance
+Finalize Architect work unit for PB-0012 security hardening.
+- Add ADR-011 defining GitHub Actions SHA-pinning policy
+- Add PLAN-0012 implementation-plan constraints, risks, and verification intent
+- Update RFC-0012 with architecture constraints and architect handoff notes
+- Mark Architect gate done on PB-0012 and hand eligibility to Requirements Engineer for ready transition
+- Update ADR index and backlog eligibility metadata
 
-Role: Product Owner
+Role: Architect

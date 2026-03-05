@@ -33,6 +33,12 @@ Contributors and operators get more reproducible and security-hardened CI/releas
 - NFR-002: Maintenance overhead remains bounded via explicit cadence/ownership.
 - NFR-003: Requirements and AC trace to PB-0012 intake and security-hardening intent.
 
+## Architecture Constraints and Interface Assumptions
+- Workflow action references are the architecture boundary for this hardening slice.
+- All in-scope action references must use immutable commit SHAs; mixed tag/SHA state is out of policy.
+- Hardening must not alter workflow intent or required gate semantics defined in prior ADRs.
+- Policy governance is recorded in ADR-011.
+
 ## Assumptions
 - Assumption A1: Pin refresh uses fixed monthly cadence by default.
 - Assumption A2: Pin refresh automation is deferred to a dedicated follow-up item.
@@ -57,3 +63,7 @@ Contributors and operators get more reproducible and security-hardened CI/releas
 | FR-003, A1 | PB-0012 intake question on refresh cadence |
 | FR-004, A2 | PB-0012 intake question on automation follow-up |
 | NFR-003, AC-003 | PB-0012 backlog item and issue log |
+
+## Architect Handoff Notes
+- Implementation constraints are captured in `docs/03-engineering/implementation-plans/PLAN-0012-pb-0012-actions-sha-pinning-security-hardening.md`.
+- Architecture-impacting policy decision is captured in ADR-011.

@@ -18,3 +18,4 @@ Store ADRs in this directory as `ADR-001-<slug>.md`, `ADR-002-<slug>.md`, etc.
 - `ADR-008`: Dependency and Tooling Policy (`ADR-008-dependency-and-tooling-policy.md`) - Accepted
 - `ADR-009`: CI Workflow Trigger Path Scoping (`ADR-009-ci-workflow-trigger-path-scoping.md`) - Accepted
 - `ADR-010`: Portable Checksum Command Strategy for CI Workflows (`ADR-010-portable-checksum-command-strategy-ci.md`) - Accepted
+- `ADR-011`: GitHub Actions SHA Pinning Policy (`ADR-011-github-actions-sha-pinning-policy.md`) - Accepted
