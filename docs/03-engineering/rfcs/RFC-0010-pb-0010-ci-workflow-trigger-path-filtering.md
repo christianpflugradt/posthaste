@@ -40,6 +40,12 @@ Contributors receive higher-signal CI feedback with fewer redundant runs and low
 - Add include/exclude trigger rules with explicit always-trigger exceptions.
 - Validate behavior with representative change-set scenarios.
 
+## Architecture Constraints and Interface Assumptions
+- Trigger filtering must be defined per workflow and reviewed as part of workflow architecture, not hidden in ad hoc scripts.
+- Workflow event configuration is the contract boundary; no runtime/CLI code changes are required for this item.
+- Changes to `.github/workflows/**` are treated as globally relevant to in-scope workflows.
+- Trigger filtering policy is governed by ADR-009 and remains consistent with ADR-002 (GitHub platform) and ADR-006 (CI gate integrity).
+
 ## Risks
 - Over-filtering can suppress required validation on meaningful changes.
 - Under-filtering can leave CI churn mostly unchanged.
@@ -76,3 +82,7 @@ Contributors receive higher-signal CI feedback with fewer redundant runs and low
 | FR-004, A2 | PB-0010 intake open question on `.github/workflows/` behavior |
 | FR-005, NFR-002 | PB-0010 constraint: RE refines exact per-workflow trigger patterns |
 | NFR-003, AC-003 | PB-0010 backlog item, DEC-0001 priority override decision |
+
+## Architect Handoff Notes
+- Implementation constraints are documented in `docs/03-engineering/implementation-plans/PLAN-0010-pb-0010-ci-workflow-trigger-path-filtering.md`.
+- Architecture-impacting trigger policy is recorded in ADR-009.

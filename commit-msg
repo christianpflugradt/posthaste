@@ -1,10 +1,10 @@
-docs: require fresh backlog reads on every go
+docs: PB-0010 complete architect trigger-filtering architecture package
 
-Prevent stale-state execution by requiring agents to refresh backlog
-state at pickup time in active contexts.
+Finalize Architect work unit for PB-0010 CI trigger path filtering.
+- Add ADR-009 for CI workflow trigger path-scoping policy
+- Add PLAN-0010 implementation plan with constraints, risks, and verification intent
+- Update RFC-0010 with architecture constraints and architect handoff notes
+- Mark Architect gate done on PB-0010 and hand eligibility to Requirements Engineer for ready transition
+- Update ADR index and backlog eligibility metadata
 
-- require re-reading backlog/index.md on each go
-- require re-reading selected PB item file before acting
-- align AGENTS, backlog operating model, and bootstrap prompt
-
-Role: Product Owner
+Role: Architect

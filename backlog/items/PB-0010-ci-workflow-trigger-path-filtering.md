@@ -29,7 +29,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing, priority override, and RE handoff completed. |
-| Architect | pending | 2026-03-05 | Not started. |
+| Architect | done | 2026-03-05 | Architecture constraints and trigger-scoping policy finalized in ADR-009 and implementation plan artifact. |
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0010 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
@@ -65,3 +65,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | 2026-03-05 16:11 | Requirements Engineer | decision | Resolved intake questions with minimal-risk assumptions for this slice: root-level build/config files (`Cargo.toml`, `Cargo.lock`, `Makefile`) always trigger workflows, and edits under `.github/workflows/**` trigger all workflows in scope. Assumptions documented in RFC-0010. | None |
 | 2026-03-05 16:11 | Requirements Engineer | status | Completed PB-0010 requirements package in `docs/03-engineering/rfcs/RFC-0010-pb-0010-ci-workflow-trigger-path-filtering.md` with explicit scope, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
 | 2026-03-05 16:11 | Requirements Engineer | blocker | Cannot transition PB-0010 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion per backlog blocking rules. | None |
+| 2026-03-05 16:14 | Architect | status | Picked up PB-0010 Architect work unit and transitioned role gate from `pending` to `in-progress` for architecture constraint finalization. | Architect: in-progress |
+| 2026-03-05 16:14 | Architect | decision | Recorded architecture-impacting trigger policy in `docs/03-engineering/decision-records/ADR-009-ci-workflow-trigger-path-scoping.md` to define per-workflow path scoping, fail-safe inclusions, and drift revisit triggers. | None |
+| 2026-03-05 16:14 | Architect | handoff | Completed Architect technical outputs: updated `RFC-0010` with architecture constraints/interface assumptions and published implementation plan `docs/03-engineering/implementation-plans/PLAN-0010-pb-0010-ci-workflow-trigger-path-filtering.md` for implementation constraints, risk notes, and verification guidance. | None |
+| 2026-03-05 16:14 | Architect | status | Architect gate complete for PB-0010 with no unresolved architecture ambiguity; Requirements Engineer can now execute `shaped` -> `ready` transition per ownership rules. | Architect: done |
