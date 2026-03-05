@@ -43,4 +43,12 @@ if [[ "$CANONICAL_CHANGED" -eq 1 || "$DERIVED_RUNTIME_CHANGED" -eq 1 ]]; then
   fi
 fi
 
+if [[ "$CANONICAL_CHANGED" -eq 1 && "$DERIVED_RUNTIME_CHANGED" -ne 1 ]]; then
+  echo "FAIL: canonical governance files changed without runtime-contract sync."
+  echo "Required file: docs/00-governance/runtime-contract.md"
+  echo "Changed files:"
+  printf "%s\n" "$CHANGED"
+  exit 1
+fi
+
 echo "OK: governance guard checks passed."

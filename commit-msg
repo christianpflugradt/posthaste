@@ -1,11 +1,11 @@
-fix: restore missing go rules in runtime contract
+fix: enforce runtime-contract sync in governance guard
 
-Bring runtime-contract back in sync with mandatory active-context
-execution policy from AGENTS.
+Align automated governance checks with the sync-map contract by
+requiring runtime-contract updates whenever canonical governance files
+change.
 
-- add required policy-changelog read on every go
-- add full-governance re-read trigger on newer changelog entries
-- add required make preflight ROLE="<Current Role>" step
-- append policy changelog entry for this runtime fix
+- add guard failure for canonical changes without runtime-contract sync
+- keep changelog enforcement for policy/runtime updates
+- append policy changelog entry for this guard hardening
 
 Role: Product Owner
