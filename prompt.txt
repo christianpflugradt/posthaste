@@ -44,6 +44,7 @@ Replace `<ROLE>` with one of:
 - One work unit per prompt (one role on one issue).
 - Next eligible work unit follows `backlog/index.md` order.
 - Check proactive review cadence first; if overdue (regular >=3 days, deep >=7 days), run proactive review work unit first.
+- If a current item is blocked by a deliverable your role can provide, prioritize that unblock work unit before unrelated work.
 
 ## Session Commands
 - `go`: execute the next eligible work unit.

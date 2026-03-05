@@ -1,6 +1,7 @@
-ci: PB-0005 enforce rust qa gates locally and in github actions
+chore: PB-0002 tighten work-unit flow and unblock priority rules
 
-Complete PB-0005 implementing developer work unit.
-- Add Makefile gate sequence with ordered `fmt`, strict `clippy`, and `test` targets.
-- Add GitHub Actions workflow enforcing the same ordered blocking gates on push/pull_request.
-- Record PB-0005 status transition and implementation handoff evidence in backlog artifacts.
+Refine global agent interaction and execution behavior for active sessions.
+- remove multi-issue wording and enforce one work unit per prompt
+- add `tasks` command behavior for concise next-5 task listing
+- add explicit unblock-priority rule so roles clear blockers they can resolve before unrelated work
+- align these rules across AGENTS.md, backlog README, and prompt bootstrap

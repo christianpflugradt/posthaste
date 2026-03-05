@@ -152,6 +152,7 @@ Before acting, an agent must:
 - Next eligible work unit is selected from `backlog/index.md` order.
 - Order authority belongs to Product Owner.
 - If the active role cannot contribute to the current issue, document the reason in that issue comment log and select the next eligible issue in index order.
+- If the current issue is blocked by a missing deliverable that the active role can provide, the active role must prioritize unblocking that issue before taking unrelated work.
 
 ## Interaction Commands
 - `go`: execute the next eligible work unit.

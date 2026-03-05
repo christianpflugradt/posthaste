@@ -24,6 +24,12 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Example: Implementing Developer work unit is complete only when implementation is finished and required quality checks for that implementation pass.
 - After completion and commit decision, stakeholder command `go` starts the next eligible work unit.
 
+## Unblock Priority Rule
+- If a high-priority item is blocked due to missing evidence/deliverable from an upstream role, and that role is currently able to provide it, that role must prioritize the unblocking work unit before starting unrelated items.
+- Roles may move to another item only when:
+  - they are not the role capable of unblocking, or
+  - a hard blocker prevents unblocking, and the blocker is logged explicitly.
+
 ## Commit Automation Policy
 - File `commit-msg` at repo root stores the commit message for the completed work unit.
 - Agent updates `commit-msg` only when the current work unit is fully complete.
