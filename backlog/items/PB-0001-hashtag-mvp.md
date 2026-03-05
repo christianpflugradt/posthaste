@@ -2,6 +2,7 @@
 
 ## Source
 - Stakeholder request (2026-03-05): build a local CLI tool that suggests relevant and commonly used LinkedIn hashtags from post text.
+- Intake brief: `docs/01-product/intake/PB-0001-stakeholder-intake.md`.
 
 ## Problem Statement
 Solo creators need fast, relevant hashtag suggestions without manual research and without relying on paid infrastructure.
@@ -16,12 +17,12 @@ Given post text input, output ordered hashtags that balance relevance with commo
 - P0.
 
 ## Status
-- intake.
+- shaped.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
-| Product Owner | in-progress | 2026-03-05 | Discovery and scope shaping active. |
+| Product Owner | done | 2026-03-05 | Intake framing, recommendation, and handoff package completed. |
 | Architect | pending | 2026-03-05 | Awaiting role-spec finalization and kickoff. |
 | Requirements Engineer | pending | 2026-03-05 | Not started. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
@@ -56,3 +57,5 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | 2026-03-05 12:08 | Security Engineer | decision | Proactive review (regular+deep) completed: reviewed dependency/security posture and control-coverage/residual-risk trend across open work; repository currently has no source code, runtime dependencies, or CI pipelines, security baseline policies/ADRs remain internally consistent, and no immediate security hardening follow-up item is required. | None |
 | 2026-03-05 12:12 | Implementing Developer | decision | Proactive review (regular+deep) completed: ran implementation consistency/maintainability and technical-debt/duplication hotspot scan; repository currently has no source/build artifacts, so no implementation drift or debt hotspots were found. Implementation remains blocked until an item reaches `ready` after Architect + Requirements Engineer completion. | None |
 | 2026-03-05 12:12 | Reviewing Developer | decision | Proactive review (regular+deep) completed: performed finding-pattern/severity-consistency pass and rubric-calibration/follow-up-aging review across open backlog and review templates; no implementation review artifacts exist yet, no severity-calibration drift detected, and no aging follow-ups require escalation. | None |
+| 2026-03-05 12:14 | Product Owner | status | Completed intake framing artifact and recommendation; moved PB-0001 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
+| 2026-03-05 12:14 | Product Owner | handoff | Provided intake brief package and proceed recommendation for Architect + Requirements Engineer specification workflow. | None |

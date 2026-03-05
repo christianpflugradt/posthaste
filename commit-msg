@@ -1,6 +1,7 @@
-docs: PB-0001 record reviewing developer proactive review completion
+docs: PB-0001 complete product owner intake framing
 
-Update reviewing developer proactive review tracking and evidence.
-- Set regular and deep review timestamps for Reviewing Developer in proactive review schedule.
-- Add Reviewing Developer proactive review note to PB-0001 issue comment log.
-- Record no current review finding-pattern drift or follow-up aging risks.
+Finalize Product Owner framing outputs for PB-0001.
+- Add stakeholder intake brief artifact for PB-0001
+- Transition PB-0001 status from intake to shaped
+- Mark Product Owner gate done and log handoff to Architect and Requirements Engineer
+- Sync backlog index role owner/status for PB-0001
