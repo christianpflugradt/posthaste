@@ -1,5 +1,4 @@
-docs: PB-0002 record architect proactive review baseline
+docs: PB-0001 record requirements proactive review completion
 
-Complete Architect regular and deep proactive review cadence setup.
-- Update proactive review schedule timestamps and notes
-- Log proactive review findings in PB-0002 issue comment log
+Update Requirements Engineer proactive-review cadence tracking and log
+the completed regular+deep review outcome in the PB-0001 issue comment log.
