@@ -17,14 +17,14 @@ Given post text input, output ordered hashtags that balance relevance with commo
 - P0.
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Intake framing, recommendation, and handoff package completed. |
 | Architect | done | 2026-03-05 | Architecture baseline finalized via ADR-001..ADR-008 and PB-0002 handoff artifacts. |
-| Requirements Engineer | pending | 2026-03-05 | Not started. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0002 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -64,3 +64,5 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | 2026-03-05 12:39 | Architect | status | Started Architect PB-0001 work unit and validated architecture scope alignment to parent technical discovery item PB-0002. | Architect: in-progress |
 | 2026-03-05 12:39 | Architect | handoff | Architecture package for PB-0001 is complete and implementation-ready via ADR-001..ADR-008 plus `docs/03-engineering/rfcs/RFC-0001-mvp-cli-foundation.md` and `docs/03-engineering/implementation-plans/PLAN-0001-pb-0002-architecture-slices.md`; constraints include offline-first, Rust/Cargo baseline, stdlib-first dependencies, file-path input MVP, fail-fast errors, and GitHub-native CI/release. | None |
 | 2026-03-05 12:39 | Architect | status | Architect gate complete for PB-0001 with no unresolved architecture ambiguity; Requirements Engineer can proceed with testable acceptance criteria and `ready` transition gating when complete. | Architect: done |
+| 2026-03-05 12:51 | Requirements Engineer | status | Completed PB-0001 requirements package in `docs/03-engineering/rfcs/RFC-0002-pb-0001-mvp-hashtag-requirements.md` with explicit scope boundaries, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links to ADR-001..ADR-008. | Requirements Engineer: done |
+| 2026-03-05 12:51 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0001 from `shaped` to `ready`. | item status: ready |

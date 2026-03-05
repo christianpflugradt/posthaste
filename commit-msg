@@ -1,6 +1,6 @@
-docs: PB-0001 complete architect technical handoff
+docs: PB-0001 finalize mvp requirements and set ready
 
-Finalize Architect contribution for PB-0001 using approved architecture baseline.
-- Mark Architect gate done and log architecture handoff constraints
-- Reference ADR-001..ADR-008 and RFC/implementation-plan artifacts
-- Hand backlog role owner for PB-0001 to Requirements Engineer
+Add a dedicated PB-0001 requirements RFC with explicit scope boundaries,
+functional/non-functional requirements, acceptance criteria, verification
+intent mapping, and traceability links. Mark Requirements Engineer done
+and transition PB-0001 from shaped to ready.

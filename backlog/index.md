@@ -4,7 +4,7 @@ Only open items are listed here.
 
 | ID | Title | Priority | Status | Role Owner | Updated | Item |
 | --- | --- | --- | --- | --- | --- | --- |
-| PB-0001 | MVP: CLI text to ordered LinkedIn hashtags (offline-first) | P0 | shaped | Requirements Engineer | 2026-03-05 | [PB-0001](./items/PB-0001-hashtag-mvp.md) |
+| PB-0001 | MVP: CLI text to ordered LinkedIn hashtags (offline-first) | P0 | ready | Implementing Developer | 2026-03-05 | [PB-0001](./items/PB-0001-hashtag-mvp.md) |
 | PB-0002 | Architecture foundation discussion, ADR derivation, and implementation-slice planning | P0 | review | Reviewing Developer | 2026-03-05 | [PB-0002](./items/PB-0002-architecture-foundation-and-adrs.md) |
 | PB-0003 | Rust hello-world binary foundation | P0 | shaped | Requirements Engineer | 2026-03-05 | [PB-0003](./items/PB-0003-rust-hello-world-binary-foundation.md) |
 | PB-0004 | Hello-world unit test baseline | P0 | shaped | Requirements Engineer | 2026-03-05 | [PB-0004](./items/PB-0004-hello-world-unit-test-baseline.md) |
