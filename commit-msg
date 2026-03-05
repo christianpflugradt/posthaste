@@ -1,8 +1,10 @@
-docs: PB-0004 transition reviewed item to done
+docs: clarify go is role-sticky in active contexts
 
-Record Reviewing Developer closeout after stakeholder confirmation.
-- Move PB-0004 status from review to done.
-- Add issue-log entry for stakeholder-confirmed completion.
-- Remove PB-0004 from open backlog index.
+Clarify pickup behavior to prevent implicit role switching after doc
+re-reads and go commands.
 
-Role: Reviewing Developer
+- define go as next eligible work unit for current role
+- require explicit stakeholder instruction for any role change
+- align AGENTS, backlog operating rules, prompt, and README wording
+
+Role: Product Owner

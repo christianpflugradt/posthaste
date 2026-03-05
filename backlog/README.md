@@ -164,7 +164,8 @@ Before acting, an agent must:
 ## Processing Order Rule
 - Next eligible work unit is selected from `backlog/index.md` order.
 - Order authority belongs to Product Owner.
-- Agents must select work by `Next Eligible Role(s)` in index order; `Role Owner` is informational only.
+- Agents must select work by `Next Eligible Role(s)` in index order for the current active role; `Role Owner` is informational only.
+- Agents must not self-switch roles while processing `go`; role changes require explicit stakeholder instruction.
 - If the active role cannot contribute to the current issue, document the reason in that issue comment log and select the next eligible issue in index order.
 - If the current issue is blocked by a missing deliverable that the active role can provide, the active role must prioritize unblocking that issue before taking unrelated work.
 

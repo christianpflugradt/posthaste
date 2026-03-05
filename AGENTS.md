@@ -44,7 +44,8 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Fresh context start command: `follow prompt.txt as <role>`.
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
 - After a work unit is complete, agent auto-commits per commit policy.
-- After auto-commit, stakeholder command `go` means: start the next eligible work unit according to role/backlog/proactive rules.
+- After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
+- In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).
 - This interaction behavior applies to all roles.
 
@@ -60,7 +61,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Product Owner prioritizes and orders backlog items; Product Owner is not the default item author.
 - Follow-up backlog items must include a parent/backlink to the originating issue.
 - Urgent role-created items must include issue-log notification to Product Owner.
-- For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector; `Role Owner` is informational only.
+- For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector for the current role; `Role Owner` is informational only.
 
 ## Backlog Size and Refinement Policy
 - Target backlog item size is `1-3 SP`; maximum is `5 SP`.

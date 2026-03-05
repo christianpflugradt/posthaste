@@ -17,7 +17,8 @@ Replace `<ROLE>` with one of:
 
 ## Session Commands
 - Fresh context: `follow prompt.txt as <ROLE>`.
-- In active context: `go` means continue with the next eligible work unit after the previous one is complete.
+- In active context: `go` means continue with the next eligible work unit for the current role after the previous one is complete.
+- Do not switch roles implicitly in active context; switch only on explicit stakeholder instruction.
 - If the agent asks a question mid-work, respond and the agent should resume the same work unit.
 
 ## Mandatory Startup Steps
@@ -39,7 +40,7 @@ Replace `<ROLE>` with one of:
 - Reviewing Developer: `docs/00-governance/roles/reviewing-developer.md`
 
 3. Identify the active backlog item(s) from `backlog/index.md` in listed order.
-Use `Next Eligible Role(s)` as the authoritative pickup selector; treat `Role Owner` as informational only.
+Use `Next Eligible Role(s)` as the authoritative pickup selector for your current role; treat `Role Owner` as informational only.
 
 4. Respect scope rules:
 - One work unit per prompt (one role on one issue).

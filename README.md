@@ -48,7 +48,7 @@ Roles:
 go
 ```
 
-to start the next eligible work unit.
+to start the next eligible work unit for the current role (no implicit role switch).
 - Prompt:
 
 ```text
