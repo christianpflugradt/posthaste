@@ -23,7 +23,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 - 3
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -69,3 +69,4 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | 2026-03-05 16:14 | Architect | decision | Recorded architecture-impacting trigger policy in `docs/03-engineering/decision-records/ADR-009-ci-workflow-trigger-path-scoping.md` to define per-workflow path scoping, fail-safe inclusions, and drift revisit triggers. | None |
 | 2026-03-05 16:14 | Architect | handoff | Completed Architect technical outputs: updated `RFC-0010` with architecture constraints/interface assumptions and published implementation plan `docs/03-engineering/implementation-plans/PLAN-0010-pb-0010-ci-workflow-trigger-path-filtering.md` for implementation constraints, risk notes, and verification guidance. | None |
 | 2026-03-05 16:14 | Architect | status | Architect gate complete for PB-0010 with no unresolved architecture ambiguity; Requirements Engineer can now execute `shaped` -> `ready` transition per ownership rules. | Architect: done |
+| 2026-03-05 16:15 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0010 from `shaped` to `ready`. | item status: ready |
