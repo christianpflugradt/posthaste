@@ -1,6 +1,7 @@
-docs: PB-0008 complete security gate review
+docs: PB-0006 log product owner in-order eligibility check
 
-Record Security Engineer transition and pass decision for PB-0008
-with release-policy and semantic-release security evidence.
+Record Product Owner go-processing outcome for PB-0006.
+- Add issue-log note that no Product Owner action is currently eligible
+- Document dependency on Reviewing Developer eligibility for next progress
 
-Role: Security Engineer
+Role: Product Owner
