@@ -27,7 +27,7 @@ Semantic-release workflow is integrated with:
 - 3
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -76,3 +76,4 @@ Semantic-release workflow is integrated with:
 | 2026-03-05 18:42 | Security Engineer | status | In-order `go` check selected PB-0008 again from index, but Security gate remains `done` with no new blocker owned by Security; proceeded to next eligible item per processing-order rule. | None |
 | 2026-03-05 18:48 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0008; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0008 traceability. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 18:48 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0008-review-report.md`. | Reviewing Developer: done |
+| 2026-03-05 18:49 | Reviewing Developer | status | Stakeholder confirmation received via `go`; transitioned PB-0008 from `review` to `done`. Product Owner archive move/index cleanup follow-up is now pending per backlog ownership policy. | item status: done |
