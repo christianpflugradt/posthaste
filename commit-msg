@@ -1,4 +1,7 @@
-docs: PB-0004 complete quality gate pass and handoff
+ci: PB-0006 add native github actions matrix for target builds
 
-Record QE pass decision for PB-0004 with independent fmt/clippy/test
-evidence and deterministic unit-test scope validation.
+Complete PB-0006 implementing developer work unit.
+- Upgrade QA workflow to a native matrix across Linux x86_64, Windows x86_64, and macOS arm64 runners.
+- Enforce ordered blocking gates (`fmt`, strict `clippy`, `test`) in every matrix job.
+- Add per-target diagnostics collection and artifact upload for debugging retention.
+- Record PB-0006 status transition and implementation handoff evidence in backlog artifacts.

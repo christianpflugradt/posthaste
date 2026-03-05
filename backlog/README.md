@@ -123,6 +123,11 @@ Required role gates:
 - Minimum required checks are defined by issue risk (not one fixed global checklist).
 - Accepted security risk requires stakeholder consultation and explicit issue/decision log record.
 
+## Blocker Ownership Rule
+- When the highest-priority open item has a blocker, the role capable of providing the missing deliverable owns the next work unit for that blocker, even if that role gate was previously `done`.
+- In that case, the role re-opens its gate (`in-progress`) for blocker resolution, logs the unblock action, and completes the missing deliverable before taking unrelated items.
+- If blocker ownership is ambiguous, consult stakeholder immediately and record the decision in the issue comment log.
+
 ## Status Ownership
 - `done` transition is owned by Reviewing Developer after stakeholder confirms no further action is required.
 - `deferred` transition is owned by Product Owner only.
