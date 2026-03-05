@@ -1,6 +1,5 @@
-docs: PB-0003 record reviewing developer approved disposition
+docs: PB-0001 remove done item from open backlog index
 
-Complete Reviewing Developer work unit for PB-0003.
-- Add PB-0003 review report with no findings and approved disposition.
-- Transition PB-0003 status to review and mark Reviewing Developer gate done.
-- Sync backlog index owner/status for PB-0003 review stage.
+Fix backlog index consistency after PB-0001 completion.
+- Remove PB-0001 from open backlog index because item status is done.
+- Keep open index limited to non-done statuses per backlog operating model.
