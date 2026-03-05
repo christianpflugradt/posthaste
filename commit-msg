@@ -1,7 +1,5 @@
-docs: PB-0004 complete product owner intake framing
+chore: PB-0001 log implementing developer eligibility blocker
 
-Finalize Product Owner framing outputs for PB-0004.
-- Add stakeholder intake brief artifact for PB-0004
-- Transition PB-0004 status from intake to shaped
-- Mark Product Owner gate done and log handoff for Requirements Engineer
-- Sync backlog index role owner/status for PB-0004
+Record current Implementing Developer execution blocker in PB-0001.
+- Add issue-log entry noting no ready implementation work unit in backlog order.
+- Capture dependency on Architect + Requirements Engineer completion before implementation can start.
