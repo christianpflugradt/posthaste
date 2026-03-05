@@ -21,6 +21,7 @@ Replace `<ROLE>` with one of:
 - On every `go`, read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md`.
 - Re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`) only when changelog has newer entries than your session last-seen or stakeholder explicitly requests full re-read.
 - On every `go`, run `make preflight ROLE="<Current Role>"`.
+- Prefer `make go-ready ROLE="<Current Role>"` for one-command active-context pre-check.
 - On every `go`, re-read `backlog/index.md` before selecting work.
 - After selecting a candidate, re-read the corresponding issue file (`backlog/items/PB-*.md`) before acting.
 - Do not switch roles implicitly in active context; switch only on explicit stakeholder instruction.

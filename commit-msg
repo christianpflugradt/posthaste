@@ -1,11 +1,12 @@
-feat: add index-sync tool for deterministic backlog row updates
+feat: add go-ready one-command active pre-check
 
-Add a helper to compute and apply index row fields from per-issue gate
-state, reducing manual drift in backlog/index.md.
+Add a single command to run the standard active-context readiness checks
+before selecting the next work unit.
 
-- add scripts/index_sync.sh
-- derive status, next eligible roles, blocker, and updated date
-- support optional PB filter via environment variable
-- add make index-sync target
+- add scripts/go_ready.sh
+- add make go-ready ROLE="<Current Role>" target
+- include runtime refs check, preflight, governance guard, and tasks preview
+- document go-ready usage in interaction/runtime guidance
+- append policy changelog entry for this workflow addition
 
 Role: Product Owner

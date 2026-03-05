@@ -56,6 +56,7 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - In active contexts, agents re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`) only when changelog entries are newer than session last-seen or stakeholder explicitly requests full re-read.
 - On every `go`, agents must re-read `backlog/index.md` before selecting the next work unit.
 - On every `go`, agents must run `make preflight ROLE="<Current Role>"` before selecting the next work unit.
+- Prefer `make go-ready ROLE="<Current Role>"` as the one-command active-context pre-check (runtime references + preflight + governance guard + deterministic tasks list).
 - For changes to pickup/preflight behavior, run `make preflight-test` before completion.
 - After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
