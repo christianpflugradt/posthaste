@@ -1,11 +1,12 @@
-chore: add governance guard for policy change hygiene
+test: add regression harness for preflight consistency checks
 
-Automate policy-change hygiene by enforcing changelog updates whenever
-canonical governance or runtime-contract files are modified.
+Stabilize pickup validation behavior with automated regression tests and
+hook test execution into governance guidance for preflight logic changes.
 
-- add scripts/governance_guard.sh
-- add make governance-guard target
-- require governance-guard in AGENTS/backlog/prompt guidance
-- append policy changelog entry for guard introduction
+- add scripts/test_preflight.sh with valid and failure-path cases
+- add PREFLIGHT_ROOT support in preflight script for isolated test roots
+- add make preflight-test target
+- require preflight-test for pickup/preflight behavior changes
+- append policy changelog entry for this quality hardening
 
 Role: Product Owner
