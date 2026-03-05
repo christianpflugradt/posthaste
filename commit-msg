@@ -1,6 +1,8 @@
-docs: PB-0023 refine practical-cli requirements and log blocker
+docs: rebalance backlog order for quality safety and business progression
 
-Add RFC-0023 defining practical mode priorities, output-context
-assumptions, acceptance mapping, and traceability for CLI usability.
-Mark Requirements Engineer done and keep item shaped pending Architect.
-Role: Requirements Engineer
+Apply stakeholder-approved backlog sequence adjustments.
+- Move PB-0022 earlier to strengthen measurement before major model/ranking work
+- Move PB-0016 earlier to reduce reliability risk ahead of deeper capability expansion
+- Keep remaining ordering aligned to quality/safety/business balance
+
+Role: Product Owner
