@@ -1,5 +1,5 @@
-docs: PB-0001 refresh implementing developer in-order blocker status
+docs: PB-0001 clear quality blocker with verified eval evidence
 
-Record current implementing developer eligibility status after PB-0001 evidence handoff.
-- Add PB-0001 issue-log note confirming no additional ready implementation work unit.
-- Capture dependency on Requirements Engineer completion for PB-0007 through PB-0009.
+Update PB-0001 Quality Engineer gate from blocked to done after
+independent rerun of make check and fixture-baseline evaluation.
+Record pass metrics and review handoff in issue log.
