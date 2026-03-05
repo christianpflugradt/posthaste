@@ -1,12 +1,8 @@
-docs: condense duplicated active-command instructions
+docs: PB-0005 transition reviewed item to done
 
-Reduce redundant governance wording by centralizing detailed active
-`go` steps in runtime-contract while keeping canonical intent explicit.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0005 status from review to done.
+- Add issue-log entry for stakeholder-confirmed completion.
+- Remove PB-0005 from open backlog index.
 
-- trim repeated `go` execution bullets in AGENTS and prompt
-- keep one clear pointer to runtime-contract for operational detail
-- rename duplicate prompt section heading for clarity
-- simplify README active-context guidance to prefer go-ready
-- append policy changelog entry for this condensation pass
-
-Role: Product Owner
+Role: Reviewing Developer

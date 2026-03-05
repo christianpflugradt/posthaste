@@ -27,7 +27,7 @@ Repository and CI enforce:
 - 2
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -76,3 +76,4 @@ Repository and CI enforce:
 | 2026-03-05 15:22 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: no new runtime dependencies or secrets were introduced, QA workflow uses pinned major versions of standard GitHub Actions with non-privileged checks-only behavior, and local/CI gate commands are deterministic and fail-closed on warnings/errors. Residual low risk: third-party action supply-chain exposure remains (e.g., `dtolnay/rust-toolchain@stable`) and should be revisited with full commit-SHA pinning in a future hardening item. | Security Engineer: done |
 | 2026-03-05 17:46 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0005; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, and RFC-0005 traceability. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 17:46 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0005-review-report.md`. | Reviewing Developer: done |
+| 2026-03-05 18:19 | Reviewing Developer | status | Stakeholder confirmation received via `go`; transitioned PB-0005 from `review` to `done`. Product Owner archive move/index cleanup follow-up is now pending per backlog ownership policy. | item status: done |
