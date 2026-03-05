@@ -1,0 +1,39 @@
+# --- Rust build artifacts ---
+/target/
+**/*.rs.bk
+
+# Keep Cargo.lock for binaries/apps (this repo is an app)
+# (Do not ignore Cargo.lock)
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+out/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs / temp ---
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Coverage / test artifacts ---
+coverage/
+*.profraw
+*.profdata
+
+# --- Release artifacts generated locally ---
+dist/
+release/
+
+# --- Misc tooling caches ---
+.cache/
