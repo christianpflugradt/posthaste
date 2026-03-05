@@ -41,9 +41,7 @@ Roles:
 
 ### Active AI Context
 - If the agent asks a question while working, answer it; the agent should continue the same work unit.
-- When the agent finishes a work unit, it asks whether to auto-commit:
-  - `y` -> agent runs `./commit.sh`
-  - `n` -> you commit manually
+- When the agent finishes a work unit, it auto-runs `./commit.sh` (commit + push to `origin/main`).
 - After that, prompt:
 
 ```text

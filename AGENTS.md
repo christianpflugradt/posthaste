@@ -22,7 +22,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - A work unit is typically: one role acting on one issue until that role's expected output is complete.
 - The agent must complete the unit end-to-end, including required checks for that role.
 - Example: Implementing Developer work unit is complete only when implementation is finished and required quality checks for that implementation pass.
-- After completion and commit decision, stakeholder command `go` starts the next eligible work unit.
+- After completion and auto-commit, stakeholder command `go` starts the next eligible work unit.
 
 ## Unblock Priority Rule
 - If a high-priority item is blocked due to missing evidence/deliverable from an upstream role, and that role is currently able to provide it, that role must prioritize the unblocking work unit before starting unrelated items.
@@ -36,16 +36,14 @@ Applies to all repository work: product decisions, design, implementation, revie
 - If agent asks questions during the work unit, it does not update `commit-msg` until completion.
 - Script `./commit.sh` performs commit and push to `origin/main` using `commit-msg`.
 - Commit message content must follow `docs/03-engineering/commit-message-guidelines.md`.
-- At end of a completed work unit, agent must offer to run commit:
-  - stakeholder `y`: agent runs `./commit.sh`.
-  - stakeholder `n`: stakeholder commits manually.
+- At end of a completed work unit, agent runs `./commit.sh` automatically.
 - This policy applies to all roles.
 
 ## Interaction Control Policy
 - Fresh context start command: `follow prompt.txt as <role>`.
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
-- After a work unit is complete, agent asks for commit confirmation (`y`/`n`) per commit policy.
-- After commit step (`y` or `n`), stakeholder command `go` means: start the next eligible work unit according to role/backlog/proactive rules.
+- After a work unit is complete, agent auto-commits per commit policy.
+- After auto-commit, stakeholder command `go` means: start the next eligible work unit according to role/backlog/proactive rules.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).
 - This interaction behavior applies to all roles.
 

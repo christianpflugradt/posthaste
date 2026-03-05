@@ -60,9 +60,7 @@ Replace `<ROLE>` with one of:
 - Follow backlog size policy: target `1-3 SP`, max `5 SP`; split if larger.
 - On completed work unit: update `commit-msg` (repo root) only when fully done.
 - Commit message content must follow `docs/03-engineering/commit-message-guidelines.md`.
-- Then offer stakeholder whether to run `./commit.sh`:
-  - `y`: run `./commit.sh` (commit + push to `origin/main`).
-  - `n`: do not run it; stakeholder will commit manually.
+- Then run `./commit.sh` automatically (commit + push to `origin/main`).
 - If questions interrupt work, do not update `commit-msg` yet.
 
 ## Role Output Expectations
