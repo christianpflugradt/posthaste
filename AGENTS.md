@@ -59,6 +59,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Product Owner prioritizes and orders backlog items; Product Owner is not the default item author.
 - Follow-up backlog items must include a parent/backlink to the originating issue.
 - Urgent role-created items must include issue-log notification to Product Owner.
+- For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector; `Role Owner` is informational only.
 
 ## Backlog Size and Refinement Policy
 - Target backlog item size is `1-3 SP`; maximum is `5 SP`.

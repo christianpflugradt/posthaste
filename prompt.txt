@@ -39,6 +39,7 @@ Replace `<ROLE>` with one of:
 - Reviewing Developer: `docs/00-governance/roles/reviewing-developer.md`
 
 3. Identify the active backlog item(s) from `backlog/index.md` in listed order.
+Use `Next Eligible Role(s)` as the authoritative pickup selector; treat `Role Owner` as informational only.
 
 4. Respect scope rules:
 - One work unit per prompt (one role on one issue).

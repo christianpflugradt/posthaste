@@ -41,6 +41,12 @@ This backlog is the single source of truth for active product work.
 ## Ordering
 - `backlog/index.md` is manually ordered by Product Owner judgment (not auto-sorted).
 
+## Index Columns
+- `Role Owner` is informational and may reflect the role that most recently drove status progression.
+- `Next Eligible Role(s)` is authoritative for agent pickup.
+- `Blocker` captures why other roles are not currently eligible.
+- `Updated` must be refreshed when status/gate state changes alter eligibility.
+
 ## Required Artifacts Per Item
 - Backlog item file in `backlog/items/` using `templates/backlog-item.md`.
 - Stakeholder intake reference.
@@ -115,6 +121,8 @@ Required role gates:
 - Review can start only when Implementing Developer, Quality Engineer, and Security Engineer are `done` for implementation issues.
 - Quality Engineer owns quality-gate pass/fail/block decision before review starts.
 - Security Engineer owns security-gate pass/fail/block decision before review starts.
+- Quality Engineer and Security Engineer are parallel-eligible when both gates are pending in `in-progress` state; no ordering is required between them.
+- `review` becomes eligible only when all required pre-review gates are `done`.
 - `review` status transition is owned by Reviewing Developer.
 - Reviewing Developer blocks disposition on unresolved `P0`/`P1` findings unless stakeholder explicitly accepts risk.
 - `P2`/`P3` findings may be approved with follow-ups; follow-ups must be added as backlog items for Product Owner prioritization.
@@ -156,6 +164,7 @@ Before acting, an agent must:
 ## Processing Order Rule
 - Next eligible work unit is selected from `backlog/index.md` order.
 - Order authority belongs to Product Owner.
+- Agents must select work by `Next Eligible Role(s)` in index order; `Role Owner` is informational only.
 - If the active role cannot contribute to the current issue, document the reason in that issue comment log and select the next eligible issue in index order.
 - If the current issue is blocked by a missing deliverable that the active role can provide, the active role must prioritize unblocking that issue before taking unrelated work.
 

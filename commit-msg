@@ -1,8 +1,11 @@
-ci: PB-0008 implement semantic-release policy and snapshot channel
+docs: make next eligible roles authoritative for backlog pickup
 
-Complete PB-0008 implementing developer work unit.
-- Add semantic-release configuration for formal semver releases on main.
-- Add release-policy workflow that separates snapshot and formal channels.
-- Publish traceable snapshot artifacts on every main merge across supported targets.
-- Enforce PO-approved workflow-dispatch formal releases with weekly-default policy and explicit midweek override path.
-- Record PB-0008 status transition and implementation handoff evidence in backlog artifacts.
+Update backlog operating model and index format so agents choose work
+from an explicit eligibility signal instead of relying on ambiguous
+role-owner labels.
+
+- add Next Eligible Role(s) and Blocker columns to backlog/index.md
+- populate current open items with eligibility and blocker context
+- define Role Owner as informational in backlog/README.md
+- formalize parallel QE/SE pre-review eligibility behavior
+- require pickup by Next Eligible Role(s) in AGENTS.md and prompt.txt
