@@ -1,4 +1,5 @@
-docs: PB-0003 complete security gate review
+docs: PB-0001 record architect go-eligibility check
 
-Record Security Engineer transition and pass decision for PB-0003
-with independent stdlib/dependency and input-handling evidence.
+Log Architect in-order processing check for PB-0001.
+- Confirm Architect gate remains done
+- Note remaining work is downstream Reviewing Developer flow
