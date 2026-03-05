@@ -58,6 +58,7 @@ This backlog is the single source of truth for active product work.
 - Priority and status.
 - Recommendation rationale.
 - Parent/backlink reference is required for follow-up items (for example `Parent: PB-0007`).
+- For non-trivial changes (architecture-impacting, cross-cutting, or multi-role uncertainty), linked OpenSpec package under `openspec/changes/chg-<pb-id>-.../` with `proposal.md`, `design.md`, `tasks.md`, `spec-delta.md`.
 
 ## Backlog Contribution Rules
 - Each role may create backlog items directly when it identifies required follow-up work.
@@ -162,6 +163,8 @@ Before acting, an agent must:
 4. Confirm their role is `in-progress` or transition it from `pending`.
 5. Add a comment for any status transition.
 
+Recommended reusable workflow: `skills/pickup-preflight/SKILL.md`.
+
 ## Work Unit Scope Rule
 - Scope is one work unit per prompt.
 - Work unit definition: one role completing its contribution for one issue.
@@ -175,6 +178,7 @@ Before acting, an agent must:
 - Agents must not self-switch roles while processing `go`; role changes require explicit stakeholder instruction.
 - If the active role cannot contribute to the current issue, document the reason in that issue comment log and select the next eligible issue in index order.
 - If the current issue is blocked by a missing deliverable that the active role can provide, the active role must prioritize unblocking that issue before taking unrelated work.
+- If issue gate/status changed, sync `backlog/index.md` row in the same work unit (see `skills/index-sync/SKILL.md`).
 
 ## Interaction Commands
 - `go`: execute the next eligible work unit.

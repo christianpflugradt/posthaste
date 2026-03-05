@@ -27,6 +27,8 @@ Replace `<ROLE>` with one of:
 1. Read these files first:
 - `AGENTS.md`
 - `backlog/README.md`
+- `openspec/README.md`
+- `skills/README.md`
 - `docs/00-governance/project-charter.md`
 - `docs/00-governance/role-definitions.md`
 - `docs/00-governance/proactive-review-schedule.md`
@@ -50,6 +52,8 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector for your curren
 - Check proactive review cadence first; if overdue (regular >=3 days, deep >=7 days), run proactive review work unit first.
 - If a current item is blocked by a deliverable your role can provide, prioritize that unblock work unit before unrelated work.
 - If your role previously marked `done` on that item, re-open to `in-progress`, resolve the blocker, then close again.
+- For non-trivial changes, create/maintain linked OpenSpec package under `openspec/changes/`.
+- Prefer repository skills for recurring operations (`skills/pickup-preflight`, `skills/index-sync`, `skills/openspec-change-bootstrap`).
 
 ## Session Commands
 - `go`: execute the next eligible work unit.

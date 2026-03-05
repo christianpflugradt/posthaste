@@ -7,6 +7,11 @@ It defines roles, handoffs, constraints, and mandatory quality gates.
 ## Scope
 Applies to all repository work: product decisions, design, implementation, review, and release.
 
+## Hybrid Development Model
+- Backlog remains the execution source of truth (`backlog/index.md` + issue files).
+- OpenSpec artifacts are used for non-trivial change packaging (`openspec/changes/...`).
+- Repository skills are reusable execution workflows (`skills/.../SKILL.md`) and should be used when applicable.
+
 ## Authority
 - Stakeholder: `@cpf`.
 - Final decision rights are defined in `docs/00-governance/project-charter.md`.
@@ -78,6 +83,7 @@ Applies to all repository work: product decisions, design, implementation, revie
 - Any change affecting CI/CD pipeline, source code, or build artifact must be linked to an explicit backlog item.
 - Markdown-only/process documentation updates may be handled outside explicit backlog items.
 - If classification is unclear, the active role must consult stakeholder first, then update its role definition/rules to capture the clarified policy.
+- If a change is non-trivial (architecture/cross-cutting/multi-role uncertainty), the active role must create and maintain an OpenSpec package under `openspec/changes/` linked from the backlog issue.
 
 ## Role Definitions
 
@@ -154,9 +160,10 @@ Required outputs:
 ## Workflow Contract
 1. Stakeholder intake and product framing.
 2. Architecture and requirements specification.
-3. Implementation and verification.
-4. Review and disposition.
-5. Release decision and release execution.
+3. OpenSpec packaging for non-trivial changes (proposal/design/tasks/spec-delta).
+4. Implementation and verification.
+5. Review and disposition.
+6. Release decision and release execution.
 
 Detailed phase guidance: `docs/03-engineering/feature-lifecycle.md`.
 

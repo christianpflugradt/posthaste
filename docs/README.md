@@ -7,6 +7,17 @@
 - `backlog/decisions/`: priority/override decisions.
 - `backlog/archive/`: completed and deferred history.
 
+## Hybrid Change Model
+- `openspec/README.md`: OpenSpec integration model and usage rules.
+- `openspec/changes/`: per-change packages linked from backlog items.
+- `openspec/templates/`: proposal/design/tasks/spec-delta templates.
+
+## Repository Skills
+- `skills/README.md`: available local reusable workflows.
+- `skills/pickup-preflight/SKILL.md`
+- `skills/index-sync/SKILL.md`
+- `skills/openspec-change-bootstrap/SKILL.md`
+
 ## 00 Governance
 - `docs/00-governance/project-charter.md`: authority, scope, and decision rights.
 - `docs/00-governance/role-definitions.md`: role responsibilities and handoffs.

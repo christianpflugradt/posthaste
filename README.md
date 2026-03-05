@@ -67,5 +67,12 @@ to get a brief list of the next 5 tasks the agent would do (backlog and/or overd
 Start here:
 - `AGENTS.md`
 - `backlog/README.md`
+- `openspec/README.md`
+- `skills/README.md`
 - `docs/README.md`
 - `prompt.txt`
+
+## Hybrid Execution
+- Backlog drives execution order and role eligibility.
+- OpenSpec packages non-trivial changes (`openspec/changes/...`).
+- Repository skills reduce repeated coordination work (`skills/.../SKILL.md`).

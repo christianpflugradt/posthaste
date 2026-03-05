@@ -1,7 +1,12 @@
-docs: PB-0010 log product owner in-order eligibility check
+docs: add OpenSpec + skills hybrid execution foundation
 
-Record Product Owner in-order go processing outcome for PB-0010.
-- Add issue-log note that no Product Owner action is currently eligible
-- Capture dependency on stakeholder confirmation for Reviewing Developer done transition
+Introduce a hybrid operating model that keeps backlog-driven execution
+while adding structured OpenSpec change packaging and reusable local
+skills for recurring agent workflows.
+
+- add openspec scaffold with README, changes index, and templates
+- add repository skills for pickup preflight, index sync, and change bootstrap
+- integrate hybrid model into AGENTS, backlog rules, prompt, and README docs
+- index hybrid resources in docs/README for discoverability
 
 Role: Product Owner
