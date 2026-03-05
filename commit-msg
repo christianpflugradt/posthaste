@@ -1,4 +1,4 @@
-docs: PB-0004 complete security gate review
+docs: PB-0005 complete security gate review
 
-Record Security Engineer transition and pass decision for PB-0004
-with independent verification and no blocking findings.
+Record Security Engineer transition and pass decision for PB-0005
+with CI workflow and dependency-surface security evidence.
