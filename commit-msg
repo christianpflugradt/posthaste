@@ -1,7 +1,6 @@
-feat: PB-0001 implement offline hashtag suggestion cli mvp
+docs: PB-0003 finalize requirements and set ready
 
-Implement PB-0001 MVP runtime behavior and implementation evidence.
-- Add Rust CLI project scaffold with stdlib-only dependency policy.
-- Implement file-path input, deterministic hashtag ranking, plain-text hashtag output, and fail-fast error handling.
-- Add unit tests for determinism, count bounds, generic/specific balance behavior, and invalid/unreadable/empty input handling.
-- Record Implementing Developer status transition and QE/Security handoff evidence in PB-0001.
+Add RFC-0003 for Rust hello-world binary foundation with explicit
+scope boundaries, FR/NFR requirements, assumptions, acceptance criteria,
+verification mapping, and traceability notes. Mark Requirements Engineer
+done and transition PB-0003 from shaped to ready.
