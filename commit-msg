@@ -1,7 +1,8 @@
-docs: archive all done backlog items from active list
+docs: add PB-0012 through PB-0017 prioritized technical backlog stories
 
-Clean up backlog state by moving completed items to done archive.
-- Move PB-0001 and PB-0003 through PB-0011 from backlog/items to backlog/archive/done/2026-03
-- Leave backlog/index restricted to open-item header/table only
+Create the next prioritized technical story set with Product Owner intake artifacts.
+- Add PB-0012 to PB-0017 backlog items (P1 then P2) in shaped state
+- Add stakeholder intake briefs for each new item
+- Update backlog index ordering and next-eligible role metadata
 
 Role: Product Owner
