@@ -20,6 +20,7 @@
 
 ## 00 Governance
 - `docs/00-governance/runtime-contract.md`: compact operational rules for active `go` execution.
+- `docs/00-governance/policy-changelog.md`: incremental policy updates for delta refresh in active contexts.
 - `docs/00-governance/project-charter.md`: authority, scope, and decision rights.
 - `docs/00-governance/role-definitions.md`: role responsibilities and handoffs.
 - `docs/00-governance/stakeholder-conversation-protocol.md`: how raw ideas become build-ready proposals.

@@ -1,11 +1,11 @@
-chore: add preflight consistency checks for backlog pickup
+docs: add policy changelog and delta refresh workflow
 
-Add deterministic preflight validation to catch stale or inconsistent
-work-selection state before each go work unit.
+Reduce repeated full-document reloads in active contexts by introducing
+an incremental policy refresh mechanism.
 
-- add scripts/preflight.sh for index/item consistency checks
-- add Makefile preflight target with optional ROLE filter
-- require preflight in AGENTS, backlog pickup rules, prompt, and README guidance
-- sync existing index drifts so preflight passes on current backlog
+- add docs/00-governance/policy-changelog.md with usage rules and entries
+- require runtime-contract + policy-changelog read on each go
+- limit full governance re-read to new changelog entries or explicit request
+- align AGENTS, prompt, backlog model, docs index, and README guidance
 
 Role: Product Owner

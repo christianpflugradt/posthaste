@@ -157,12 +157,13 @@ Use one entry per update:
 
 ## Agent Pickup Rule
 Before acting, an agent must:
-1. Run `make preflight ROLE="<Current Role>"` on each `go`.
-2. Re-read `backlog/index.md` on each `go` to get the latest ordering/eligibility state.
-3. Select the candidate item by `Next Eligible Role(s)` in index order for the current role.
-4. Re-read the selected issue file and its latest role gate matrix/comments before acting.
-5. Confirm their role is `in-progress` or transition it from `pending`.
-6. Add a comment for any status transition.
+1. Read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md` on each `go`.
+2. Run `make preflight ROLE="<Current Role>"` on each `go`.
+3. Re-read `backlog/index.md` on each `go` to get the latest ordering/eligibility state.
+4. Select the candidate item by `Next Eligible Role(s)` in index order for the current role.
+5. Re-read the selected issue file and its latest role gate matrix/comments before acting.
+6. Confirm their role is `in-progress` or transition it from `pending`.
+7. Add a comment for any status transition.
 
 Recommended reusable workflow: `skills/pickup-preflight/SKILL.md`.
 

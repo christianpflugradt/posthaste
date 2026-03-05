@@ -51,6 +51,8 @@ Operational quick-reference for active contexts: `docs/00-governance/runtime-con
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
 - After a work unit is complete, agent auto-commits per commit policy.
 - After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
+- On every `go`, agents must read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md` first.
+- In active contexts, agents re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`) only when changelog entries are newer than session last-seen or stakeholder explicitly requests full re-read.
 - On every `go`, agents must re-read `backlog/index.md` before selecting the next work unit.
 - On every `go`, agents must run `make preflight ROLE="<Current Role>"` before selecting the next work unit.
 - After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
@@ -72,6 +74,7 @@ Operational quick-reference for active contexts: `docs/00-governance/runtime-con
 - Urgent role-created items must include issue-log notification to Product Owner.
 - For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector for the current role; `Role Owner` is informational only.
 - When a role updates an issue gate/status in `backlog/items/PB-*.md`, it must update the same issue row in `backlog/index.md` (`Status`, `Next Eligible Role(s)`, `Blocker`, `Updated`) before completing the work unit.
+- When a work unit updates policy/process behavior, it must append an entry to `docs/00-governance/policy-changelog.md` in the same work unit.
 - Backlog ordering must apply priority-first with aging-aware anti-starvation balancing; do not let newly created higher-priority items indefinitely block older open items without explicit stakeholder direction.
 
 ## Backlog Size and Refinement Policy
