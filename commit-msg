@@ -1,8 +1,8 @@
-docs: PB-0011 record reviewing developer approved disposition
+docs: PB-0011 transition reviewed item to done
 
-Complete Reviewing Developer work unit for PB-0011.
-- Add PB-0011 review report with no findings and approved disposition.
-- Transition PB-0011 status to review and mark Reviewing Developer gate done.
-- Sync backlog index row for PB-0011 review eligibility state.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0011 status from review to done.
+- Add issue-log entry for stakeholder-confirmed completion.
+- Remove PB-0011 from open backlog index.
 
 Role: Reviewing Developer
