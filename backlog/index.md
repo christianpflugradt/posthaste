@@ -4,6 +4,7 @@ Only open items are listed here.
 
 | ID | Title | Priority | Status | Role Owner | Next Eligible Role(s) | Blocker | Updated | Item |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PB-0011 | Fix macOS snapshot checksum command failure in release-policy workflow | P0 | shaped | Requirements Engineer | Requirements Engineer | Awaiting RE refinement of portable checksum behavior and output compatibility | 2026-03-05 | [PB-0011](./items/PB-0011-macos-snapshot-checksum-command-failure.md) |
 | PB-0010 | CI workflow trigger path filtering to stop redundant runs | P0 | shaped | Architect | Architect | Awaiting Architect gate completion before `ready` transition (RE refinement complete) | 2026-03-05 | [PB-0010](./items/PB-0010-ci-workflow-trigger-path-filtering.md) |
 | PB-0005 | Rust QA gates (fmt, clippy, test) | P0 | in-progress | Implementing Developer | Reviewing Developer | None | 2026-03-05 | [PB-0005](./items/PB-0005-rust-qa-gates-fmt-clippy-test.md) |
 | PB-0006 | GitHub Actions CI target matrix builds | P0 | in-progress | Implementing Developer | Reviewing Developer | None | 2026-03-05 | [PB-0006](./items/PB-0006-github-actions-ci-target-matrix-builds.md) |
