@@ -27,7 +27,7 @@ Repository and CI enforce:
 - 2
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -37,7 +37,7 @@ Repository and CI enforce:
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0005 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Added local and CI QA gate enforcement for fmt, strict clippy, and test in required order. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -64,3 +64,5 @@ Repository and CI enforce:
 | 2026-03-05 13:08 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions for this slice: clippy zero-warning policy is absolute from first merge, and broad local pre-flight documentation is primarily handled under PB-0009 with minimal immediate guidance captured in PB-0005 requirements. | None |
 | 2026-03-05 13:08 | Requirements Engineer | status | Completed PB-0005 requirements package in `docs/03-engineering/rfcs/RFC-0005-pb-0005-rust-qa-gates.md` with explicit scope, FR/NFR set, acceptance criteria, verification intent mapping, and traceability links. | Requirements Engineer: done |
 | 2026-03-05 13:08 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned PB-0005 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 13:52 | Implementing Developer | status | Transitioned PB-0005 from `ready` to `in-progress` and started implementation work. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 13:52 | Implementing Developer | handoff | Implemented QA gate enforcement artifacts: `Makefile` (`check` runs `fmt -> clippy -> test`) and `.github/workflows/qa-gates.yml` with ordered blocking steps (`cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo test`) on push/PR. Evidence package for QE/Security: local gate run `make check` passed; no dependency additions required. | Implementing Developer: done |

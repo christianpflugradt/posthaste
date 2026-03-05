@@ -1,5 +1,6 @@
-docs: PB-0003 complete quality gate pass and review handoff
+ci: PB-0005 enforce rust qa gates locally and in github actions
 
-Record QE pass decision for PB-0003 with independent fmt/clippy/test
-and runtime smoke evidence. Also log PB-0001 remains blocked without
-new fixture-baseline evaluation inputs.
+Complete PB-0005 implementing developer work unit.
+- Add Makefile gate sequence with ordered `fmt`, strict `clippy`, and `test` targets.
+- Add GitHub Actions workflow enforcing the same ordered blocking gates on push/pull_request.
+- Record PB-0005 status transition and implementation handoff evidence in backlog artifacts.
