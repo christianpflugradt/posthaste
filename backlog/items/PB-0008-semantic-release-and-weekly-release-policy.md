@@ -3,6 +3,7 @@
 ## Source
 - Parent item: PB-0002.
 - Derived from ADR-007.
+- Intake brief: `docs/01-product/intake/PB-0008-stakeholder-intake.md`.
 
 ## Parent Link
 - PB-0002
@@ -26,12 +27,12 @@ Semantic-release workflow is integrated with:
 - 3
 
 ## Status
-- intake.
+- shaped.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
-| Product Owner | pending | 2026-03-05 | Release ownership/policy already defined. |
+| Product Owner | done | 2026-03-05 | Intake framing and handoff completed. |
 | Architect | done | 2026-03-05 | Orchestration policy defined in ADR-007. |
 | Requirements Engineer | pending | 2026-03-05 | Not started. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
@@ -59,3 +60,5 @@ Semantic-release workflow is integrated with:
 | Time | Role | Type | Note | Status Impact |
 | --- | --- | --- | --- | --- |
 | 2026-03-05 11:45 | Architect | status | Derived implementation slice from architecture decisions. | Architect: done |
+| 2026-03-05 12:47 | Product Owner | status | Completed PB-0008 intake framing and recommendation; moved item from `intake` to `shaped`. | Product Owner: done; item status: shaped |
+| 2026-03-05 12:47 | Product Owner | handoff | Handoff package ready for Requirements Engineer specification work (architectural constraints already satisfied). | None |
