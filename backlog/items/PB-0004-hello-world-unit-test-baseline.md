@@ -3,6 +3,7 @@
 ## Source
 - Parent item: PB-0002.
 - Derived from ADR-006.
+- Intake brief: `docs/01-product/intake/PB-0004-stakeholder-intake.md`.
 
 ## Parent Link
 - PB-0002
@@ -23,12 +24,12 @@ At least one meaningful unit test exists for the hello-world baseline and passes
 - 1
 
 ## Status
-- intake.
+- shaped.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
-| Product Owner | pending | 2026-03-05 | Awaiting prioritization. |
+| Product Owner | done | 2026-03-05 | Intake framing and handoff completed. |
 | Architect | done | 2026-03-05 | Test baseline decision exists. |
 | Requirements Engineer | pending | 2026-03-05 | Not started. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
@@ -55,3 +56,5 @@ At least one meaningful unit test exists for the hello-world baseline and passes
 | Time | Role | Type | Note | Status Impact |
 | --- | --- | --- | --- | --- |
 | 2026-03-05 11:45 | Architect | status | Derived implementation slice from architecture decisions. | Architect: done |
+| 2026-03-05 12:22 | Product Owner | status | Completed PB-0004 intake framing and recommendation; moved item from `intake` to `shaped`. | Product Owner: done; item status: shaped |
+| 2026-03-05 12:22 | Product Owner | handoff | Handoff package ready for Requirements Engineer specification work (architectural constraints already satisfied). | None |
