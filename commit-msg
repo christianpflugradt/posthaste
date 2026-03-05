@@ -1,6 +1,6 @@
-test: PB-0004 add hello-world unit test success and failure baseline
+docs: PB-0001 record review blocker on QE gate failure
 
-Complete PB-0004 implementing developer unit-test baseline scope.
-- Add deterministic argument-dispatch unit tests for hello-world success and failure paths.
-- Refactor CLI argument handling into testable unit functions without adding non-unit test modalities.
-- Record PB-0004 status transition and implementation handoff evidence in backlog artifacts.
+Update Reviewing Developer eligibility status for PB-0001.
+- Add issue-log blocker entry after re-checking review prerequisites.
+- Record that review cannot start while Quality Engineer gate remains blocked.
+- Note Security Engineer gate is done but insufficient for review entry.
