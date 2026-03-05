@@ -1,10 +1,6 @@
-docs: PB-0012 complete architect actions-sha-pinning package
+docs: PB-0012 transition item to ready after architect completion
 
-Finalize Architect work unit for PB-0012 security hardening.
-- Add ADR-011 defining GitHub Actions SHA-pinning policy
-- Add PLAN-0012 implementation-plan constraints, risks, and verification intent
-- Update RFC-0012 with architecture constraints and architect handoff notes
-- Mark Architect gate done on PB-0012 and hand eligibility to Requirements Engineer for ready transition
-- Update ADR index and backlog eligibility metadata
-
-Role: Architect
+Apply the Requirements Engineer owned shaped-to-ready transition for
+PB-0012 after confirming Architect and Requirements Engineer gates are
+done, and update backlog index eligibility to Implementing Developer.
+Role: Requirements Engineer

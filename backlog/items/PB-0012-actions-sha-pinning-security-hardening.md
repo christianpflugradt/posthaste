@@ -23,7 +23,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 - 2
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -67,3 +67,4 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 21:02 | Architect | decision | Recorded SHA-pinning architecture policy in `docs/03-engineering/decision-records/ADR-011-github-actions-sha-pinning-policy.md` including immutable reference requirements, refresh cadence, and revisit triggers. | None |
 | 2026-03-05 21:02 | Architect | handoff | Published architect artifacts for implementation handoff: `docs/03-engineering/rfcs/RFC-0012-pb-0012-actions-sha-pinning-security-hardening.md` (constraints/interface assumptions) and `docs/03-engineering/implementation-plans/PLAN-0012-pb-0012-actions-sha-pinning-security-hardening.md` (task/risk/verification breakdown). | None |
 | 2026-03-05 21:02 | Architect | status | Architect gate complete for PB-0012 with no unresolved architecture ambiguity; Requirements Engineer can transition item to `ready` per ownership rules. | Architect: done |
+| 2026-03-05 21:03 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0012 from `shaped` to `ready`. | item status: ready |

@@ -4,7 +4,7 @@ Only open items are listed here.
 
 | ID | Title | Priority | Status | Role Owner | Next Eligible Role(s) | Blocker | Updated | Item |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| PB-0012 | Security hardening by pinning GitHub Actions to commit SHAs | P1 | shaped | Requirements Engineer | Requirements Engineer | Awaiting Requirements Engineer `shaped` -> `ready` transition now that Architect gate is complete | 2026-03-05 | [PB-0012](./items/PB-0012-actions-sha-pinning-security-hardening.md) |
+| PB-0012 | Security hardening by pinning GitHub Actions to commit SHAs | P1 | ready | Implementing Developer | Implementing Developer | Awaiting implementation start (`ready` -> `in-progress`) | 2026-03-05 | [PB-0012](./items/PB-0012-actions-sha-pinning-security-hardening.md) |
 | PB-0013 | CI trigger regression tests for workflow path filtering | P1 | shaped | Architect | Architect | Awaiting Architect gate completion before `ready` transition (RE refinement complete) | 2026-03-05 | [PB-0013](./items/PB-0013-ci-trigger-regression-tests.md) |
 | PB-0014 | Add automated checksum verification step to release workflows | P1 | shaped | Architect | Architect | Awaiting Architect gate completion before `ready` transition (RE refinement complete) | 2026-03-05 | [PB-0014](./items/PB-0014-release-checksum-verification-step.md) |
 | PB-0022 | Local evaluation expansion using stakeholder fixture corpus | P2 | shaped | Architect | Architect | Awaiting Architect gate completion before `ready` transition (RE refinement complete) | 2026-03-05 | [PB-0022](./items/PB-0022-local-evaluation-expansion.md) |
