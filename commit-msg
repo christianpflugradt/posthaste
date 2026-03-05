@@ -1,6 +1,6 @@
-docs: PB-0015 refine cli help-contract requirements and log blocker
+docs: PB-0016 refine large-input safety requirements and log blocker
 
-Add RFC-0015 defining CLI help/usage requirements, assumptions,
-acceptance mapping, and traceability for UX contract baseline.
+Add RFC-0016 defining streaming/size-limit requirements, assumptions,
+acceptance mapping, and traceability for safer large-input handling.
 Mark Requirements Engineer done and keep item shaped pending Architect.
 Role: Requirements Engineer
