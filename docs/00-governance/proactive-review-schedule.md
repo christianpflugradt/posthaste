@@ -34,7 +34,7 @@ This file tracks proactive role reviews.
 | Role | Regular Last Done | Deep Last Done | Notes |
 | --- | --- | --- | --- |
 | Product Owner | 2026-03-05 | 2026-03-05 | Completed backlog health + roadmap coherence proactive review; no priority/sizing/deferred drift found. |
-| Architect | TBD | TBD |  |
+| Architect | 2026-03-05 | 2026-03-05 | Completed ADR drift check and architecture consistency/coupling review across open backlog items; no drift or new coupling risks found. |
 | Requirements Engineer | TBD | TBD |  |
 | Quality Engineer | TBD | TBD |  |
 | Security Engineer | TBD | TBD |  |

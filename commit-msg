@@ -1,5 +1,5 @@
-docs: PB-0001 record product owner proactive review baseline
+docs: PB-0002 record architect proactive review baseline
 
-Complete Product Owner regular and deep proactive review cadence setup.
+Complete Architect regular and deep proactive review cadence setup.
 - Update proactive review schedule timestamps and notes
-- Log proactive review findings in PB-0001 issue comment log
+- Log proactive review findings in PB-0002 issue comment log
