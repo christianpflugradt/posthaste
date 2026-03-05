@@ -1,10 +1,8 @@
-docs: sync index next eligible roles for PB-0008, PB-0009, and PB-0011
+docs: PB-0007 transition reviewed item to done
 
-Update backlog/index.md to match current issue gate state after completed
-Security Engineer work so preflight passes and role routing is deterministic.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0007 status from review to done.
+- Add issue-log entry for stakeholder-confirmed completion.
+- Remove PB-0007 from open backlog index.
 
-- set Next Eligible Role(s) to Reviewing Developer for PB-0008/PB-0009/PB-0011
-- clear stale blocker text to None for those three items
-- verify consistency with make preflight
-
-Role: Implementing Developer
+Role: Reviewing Developer
