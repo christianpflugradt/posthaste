@@ -37,3 +37,6 @@ jobs:
 
       - name: Run governance guard
         run: make governance-guard
+
+      - name: Run tasks helper regression tests
+        run: make tasks-test
