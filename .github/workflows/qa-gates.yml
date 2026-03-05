@@ -2,9 +2,21 @@ name: QA Gates
 
 on:
   pull_request:
+    paths:
+      - "src/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "Makefile"
+      - ".github/workflows/**"
   push:
     branches:
       - main
+    paths:
+      - "src/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "Makefile"
+      - ".github/workflows/**"
 
 jobs:
   qa-matrix:

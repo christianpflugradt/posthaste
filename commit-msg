@@ -1,6 +1,8 @@
-docs: PB-0010 transition item to ready after architect completion
+ci: PB-0010 scope workflow triggers to relevant paths
 
-Apply the Requirements Engineer owned shaped-to-ready transition for
-PB-0010 after confirming Architect and Requirements Engineer gates are
-done, and update backlog index eligibility to Implementing Developer.
-Role: Requirements Engineer
+Complete PB-0010 implementing developer work unit.
+- Add per-workflow path filters to QA and release-policy workflows to suppress redundant runs on backlog/docs/eval-only changes.
+- Preserve fail-safe trigger coverage for source/build files and workflow config changes.
+- Update PB-0010 gate/status logs and index eligibility to hand off to QE and Security.
+
+Role: Implementing Developer

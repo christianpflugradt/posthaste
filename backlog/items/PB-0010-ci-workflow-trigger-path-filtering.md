@@ -23,7 +23,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 - 3
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -33,7 +33,7 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0010 with FR/NFR, acceptance criteria, verification mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Implemented per-workflow path-scoped triggers with fail-safe inclusions and validated local quality gates. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -70,3 +70,5 @@ Workflow triggers are filtered by relevant paths so non-impacting changes do not
 | 2026-03-05 16:14 | Architect | handoff | Completed Architect technical outputs: updated `RFC-0010` with architecture constraints/interface assumptions and published implementation plan `docs/03-engineering/implementation-plans/PLAN-0010-pb-0010-ci-workflow-trigger-path-filtering.md` for implementation constraints, risk notes, and verification guidance. | None |
 | 2026-03-05 16:14 | Architect | status | Architect gate complete for PB-0010 with no unresolved architecture ambiguity; Requirements Engineer can now execute `shaped` -> `ready` transition per ownership rules. | Architect: done |
 | 2026-03-05 16:15 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0010 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 16:18 | Implementing Developer | status | Transitioned PB-0010 from `ready` to `in-progress` and started implementation work for workflow trigger-path scoping. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 16:18 | Implementing Developer | handoff | Implemented path-scoped triggers in `.github/workflows/qa-gates.yml` and `.github/workflows/release-policy.yml` so irrelevant-only edits under `backlog/**`, `docs/**`, and `eval/**` no longer trigger these workflows, while preserving fail-safe inclusions for `src/**`, `Cargo.toml`, `Cargo.lock`, `Makefile`, and `.github/workflows/**` (plus `.releaserc.json` for release-policy). Validation evidence: `make check` passed. No runtime/CLI behavior changes and no dependency additions. | Implementing Developer: done |

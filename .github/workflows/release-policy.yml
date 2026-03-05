@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "src/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "Makefile"
+      - ".releaserc.json"
+      - ".github/workflows/**"
   workflow_dispatch:
     inputs:
       po_approved:
