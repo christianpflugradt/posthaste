@@ -1,12 +1,11 @@
-test: add regression harness for preflight consistency checks
+fix: restore missing go rules in runtime contract
 
-Stabilize pickup validation behavior with automated regression tests and
-hook test execution into governance guidance for preflight logic changes.
+Bring runtime-contract back in sync with mandatory active-context
+execution policy from AGENTS.
 
-- add scripts/test_preflight.sh with valid and failure-path cases
-- add PREFLIGHT_ROOT support in preflight script for isolated test roots
-- add make preflight-test target
-- require preflight-test for pickup/preflight behavior changes
-- append policy changelog entry for this quality hardening
+- add required policy-changelog read on every go
+- add full-governance re-read trigger on newer changelog entries
+- add required make preflight ROLE="<Current Role>" step
+- append policy changelog entry for this runtime fix
 
 Role: Product Owner

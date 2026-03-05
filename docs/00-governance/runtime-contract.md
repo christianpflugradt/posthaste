@@ -6,7 +6,10 @@ Use this as the first reference before working; full governance docs remain auth
 ## Active Context Rules
 - Keep the current role unless stakeholder explicitly switches roles.
 - One work unit per prompt.
+- On every `go`, read `docs/00-governance/runtime-contract.md` and `docs/00-governance/policy-changelog.md`.
+- If policy-changelog has entries newer than your session last-seen, re-read full governance docs (`AGENTS.md`, `backlog/README.md`, `prompt.txt`).
 - On every `go`, re-read `backlog/index.md`.
+- On every `go`, run `make preflight ROLE="<Current Role>"`.
 - Select candidate by `Next Eligible Role(s)` in index order for the current role.
 - Re-read selected issue file (`backlog/items/PB-*.md`) before acting.
 
