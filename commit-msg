@@ -1,6 +1,7 @@
-docs: PB-0021 refine output-quality requirements and log blocker
+docs: PB-0022 refine local-evaluation requirements and log blocker
 
-Add RFC-0021 defining dedupe/diversity/suppression requirements,
-assumptions, acceptance mapping, and traceability for output guardrails.
-Mark Requirements Engineer done and keep item shaped pending Architect.
+Add RFC-0022 defining fixture-category expansion requirements,
+threshold-policy assumptions, acceptance mapping, and traceability for
+stakeholder-centric local evaluation. Mark Requirements Engineer done
+and keep item shaped pending Architect.
 Role: Requirements Engineer
