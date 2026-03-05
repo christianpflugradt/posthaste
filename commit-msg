@@ -1,7 +1,4 @@
-ci: PB-0007 add release artifact and checksum publishing workflow
+docs: PB-0004 complete security gate review
 
-Complete PB-0007 implementing developer work unit.
-- Add GitHub Actions release workflow that builds native binaries for Linux x86_64, Windows x86_64, and macOS arm64.
-- Publish deterministic per-target binaries plus consolidated checksums.txt in GitHub Releases.
-- Include checksum verification instructions in generated release notes.
-- Record PB-0007 status transition and implementation handoff evidence in backlog artifacts.
+Record Security Engineer transition and pass decision for PB-0004
+with independent verification and no blocking findings.
