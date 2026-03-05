@@ -1,6 +1,6 @@
-docs: PB-0017 refine taxonomy-coverage requirements and log blocker
+docs: PB-0021 refine output-quality requirements and log blocker
 
-Add RFC-0017 defining domain-priority expansion requirements,
-assumptions, acceptance mapping, and traceability for coverage quality.
+Add RFC-0021 defining dedupe/diversity/suppression requirements,
+assumptions, acceptance mapping, and traceability for output guardrails.
 Mark Requirements Engineer done and keep item shaped pending Architect.
 Role: Requirements Engineer
