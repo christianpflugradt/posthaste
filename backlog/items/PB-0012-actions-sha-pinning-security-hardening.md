@@ -23,7 +23,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 - 2
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -33,7 +33,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0012 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-05 | Pinned in-scope workflow actions to immutable SHAs and validated behavior parity via local quality gates. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -68,3 +68,5 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 21:02 | Architect | handoff | Published architect artifacts for implementation handoff: `docs/03-engineering/rfcs/RFC-0012-pb-0012-actions-sha-pinning-security-hardening.md` (constraints/interface assumptions) and `docs/03-engineering/implementation-plans/PLAN-0012-pb-0012-actions-sha-pinning-security-hardening.md` (task/risk/verification breakdown). | None |
 | 2026-03-05 21:02 | Architect | status | Architect gate complete for PB-0012 with no unresolved architecture ambiguity; Requirements Engineer can transition item to `ready` per ownership rules. | Architect: done |
 | 2026-03-05 21:03 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0012 from `shaped` to `ready`. | item status: ready |
+| 2026-03-05 21:08 | Implementing Developer | status | Transitioned PB-0012 from `ready` to `in-progress` and started workflow action SHA-pinning implementation. | item status: in-progress; Implementing Developer: in-progress |
+| 2026-03-05 21:08 | Implementing Developer | handoff | Replaced moving-tag action references with immutable commit SHAs across in-scope workflows (`qa-gates.yml`, `release-artifacts.yml`, `release-policy.yml`, `governance-checks.yml`) for `actions/checkout`, `actions/upload-artifact`, `actions/download-artifact`, `actions/setup-node`, `softprops/action-gh-release`, `cycjimmy/semantic-release-action`, and `dtolnay/rust-toolchain`. Behavior-preservation evidence: `make check` passed with no runtime or dependency changes. | Implementing Developer: done |

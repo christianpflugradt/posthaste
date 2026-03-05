@@ -1,6 +1,8 @@
-docs: PB-0012 transition item to ready after architect completion
+ci: PB-0012 pin workflow actions to immutable commit SHAs
 
-Apply the Requirements Engineer owned shaped-to-ready transition for
-PB-0012 after confirming Architect and Requirements Engineer gates are
-done, and update backlog index eligibility to Implementing Developer.
-Role: Requirements Engineer
+Complete PB-0012 implementing developer work unit.
+- Replace moving-tag GitHub Action references with immutable commit SHAs across in-scope workflows.
+- Preserve existing workflow behavior and gate semantics while reducing action supply-chain drift risk.
+- Update PB-0012 role/status logs and index eligibility for QE and Security handoff.
+
+Role: Implementing Developer

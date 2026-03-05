@@ -29,10 +29,10 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
 
       - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@631a55b12751854ce901bb631d5902ceb48146f7
 
       - name: Build release binary
         run: cargo build --release
@@ -51,7 +51,7 @@ jobs:
           Copy-Item "target/release/posthaste${{ matrix.binary_suffix }}" "dist/posthaste-${{ matrix.target_name }}${{ matrix.binary_suffix }}"
 
       - name: Upload binary artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: binary-${{ matrix.target_name }}
           path: dist/posthaste-${{ matrix.target_name }}${{ matrix.binary_suffix }}
@@ -63,7 +63,7 @@ jobs:
       contents: write
     steps:
       - name: Download matrix binaries
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           path: release-assets
           pattern: binary-*
@@ -109,7 +109,7 @@ jobs:
           EOF
 
       - name: Publish GitHub release with binaries and checksums
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b
         with:
           tag_name: ${{ steps.tag.outputs.value }}
           body_path: release-body.md
