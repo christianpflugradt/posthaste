@@ -1,8 +1,8 @@
-docs: add PB-0012 through PB-0017 prioritized technical backlog stories
+docs: add PB-0018 through PB-0023 product-forward parent stories
 
-Create the next prioritized technical story set with Product Owner intake artifacts.
-- Add PB-0012 to PB-0017 backlog items (P1 then P2) in shaped state
-- Add stakeholder intake briefs for each new item
-- Update backlog index ordering and next-eligible role metadata
+Create business-capability parent stories aligned to MVP direction.
+- Add PB-0018..PB-0023 backlog items and intake briefs
+- Prioritize NLP/popularity/ranking progression ahead of secondary P2 work
+- Encode explicit RE split expectation so large scopes are broken into 1-5 SP slices before ready
 
 Role: Product Owner
