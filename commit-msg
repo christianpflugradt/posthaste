@@ -1,7 +1,9 @@
-docs: PB-0004 log architect in-order ineligibility
+docs: PB-0004 complete reviewing developer disposition
 
-Record Architect pickup check for top backlog item PB-0004.
-- Note Architect gate is already done
-- Note next eligible role is Reviewing Developer
+Finalize Reviewing Developer review work unit for PB-0004.
+- Add PB-0004 review report with evidence and approved disposition
+- Transition PB-0004 status from in-progress to review
+- Mark Reviewing Developer gate done and record review decision in issue log
+- Sync backlog index eligibility/blocker for stakeholder confirmation phase
 
-Role: Architect
+Role: Reviewing Developer
