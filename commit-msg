@@ -1,7 +1,6 @@
-docs: PB-0002 finalize architect architecture handoff artifacts
+docs: PB-0002 finalize requirements package and set ready
 
-Complete Architect PB-0002 work unit with implementation-ready architecture outputs.
-- Add RFC-0001 MVP CLI foundation architecture document
-- Add PLAN-0001 implementation-plan technical breakdown
-- Mark Architect gate done in PB-0002 and log RE handoff notes
-- Sync backlog index role owner for PB-0002 to Requirements Engineer
+Complete Requirements Engineer output for PB-0002 by updating RFC-0001
+with explicit FR/NFR definitions, acceptance criteria, verification intent,
+and traceability notes. Mark PB-0002 Requirements Engineer gate done and
+transition item status to ready after confirming Architect is done.

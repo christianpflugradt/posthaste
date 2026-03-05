@@ -15,10 +15,25 @@ Implementation cannot proceed safely without explicit architecture constraints, 
 - Establish traceable architecture decisions for language, CI, artifacts, and release flow.
 - Define module boundaries that enable future evolution to richer local intelligence.
 
+## Functional Requirements
+- FR-001: The architecture baseline must define a Rust/Cargo-only implementation path for MVP runtime and build operations.
+- FR-002: The architecture baseline must define an offline hashtag strategy for MVP using deterministic rules plus curated static data.
+- FR-003: The architecture baseline must define a ranking approach that combines curated popularity priors and text relevance signals.
+- FR-004: The architecture baseline must define the MVP CLI contract as file-path input and plain-text ordered hashtag output.
+- FR-005: The architecture baseline must define CI and release constraints required for derived slices PB-0003 through PB-0009.
+
+## Non-Functional Requirements
+- NFR-001: Architecture decisions must be traceable to durable ADR artifacts and linked to PB-0002.
+- NFR-002: Build and release flow must be deterministic and GitHub-native for supported targets (no cross-compilation helper layer for MVP).
+- NFR-003: Quality gates must be explicit and blocking when they fail (`fmt`, `clippy -D warnings`, `test`).
+- NFR-004: Dependency policy must remain stdlib-first and open-source-first, with explicit justification required before adding external crates.
+- NFR-005: Architecture must preserve an extensibility seam for future Option B intelligence without requiring CLI contract rewrite.
+
 ## Non-Goals
 - Cloud-hosted inference or paid tooling.
 - JSON-first automation interface in MVP.
 - Artifact signing in MVP (deferred until key-management policy exists).
+- Stdin input support in MVP.
 
 ## Proposed Approach
 - Runtime and platform:
@@ -65,7 +80,27 @@ Implementation cannot proceed safely without explicit architecture constraints, 
 - What curated hashtag seed governance process should be used after MVP launch?
 - At what threshold should stdin input support be added relative to file-path-only MVP input?
 
+## Assumptions
+- Current MVP target audience and evaluation remain English-first and stakeholder-usefulness driven.
+- Native runner availability on GitHub for selected matrix targets remains stable.
+- Weekly formal release window is PO-controlled and may be skipped/held when quality evidence is insufficient.
+
 ## Acceptance Criteria
-- Architecture baseline is fully traceable to ADR-001 through ADR-008.
-- Derived slices PB-0003..PB-0009 are implementation-ready from an architecture perspective.
-- No unresolved architecture ambiguity blocks Requirements Engineer from setting `ready` on derived slices.
+- AC-001: Architecture baseline is fully traceable to ADR-001 through ADR-008.
+- AC-002: Derived slices PB-0003..PB-0009 are implementation-ready from an architecture perspective.
+- AC-003: No unresolved architecture ambiguity remains that blocks Requirements Engineer from `ready` transitions on derived slices.
+
+## Verification Intent Mapping
+| Acceptance Criterion | Verification Intent |
+| --- | --- |
+| AC-001 | Document inspection confirms links and consistency across RFC-0001 and ADR-001..ADR-008. |
+| AC-002 | Backlog inspection confirms PB-0003..PB-0009 exist with clear scope, constraints, and architecture lineage to PB-0002/ADRs. |
+| AC-003 | Issue-log and role-gate inspection confirms Architect handoff states no unresolved architecture blockers. |
+
+## Requirement Traceability Notes
+| Requirement | Traceability |
+| --- | --- |
+| FR-001, NFR-004 | ADR-001, ADR-008 |
+| FR-002, FR-003, NFR-005 | ADR-003, ADR-004 |
+| FR-004 | ADR-003, Architect decision log entries in PB-0002 (plain text output, file-path input, fail-fast errors) |
+| FR-005, NFR-002, NFR-003 | ADR-002, ADR-005, ADR-006, ADR-007 |

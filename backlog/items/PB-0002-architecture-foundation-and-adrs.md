@@ -23,14 +23,14 @@ A completed architecture discussion record that can be transformed into concrete
 - 3
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
 | --- | --- | --- | --- |
 | Product Owner | done | 2026-03-05 | Request accepted and linked to parent item. |
 | Architect | done | 2026-03-05 | ADR set complete; RFC + implementation plan artifacts published for handoff. |
-| Requirements Engineer | pending | 2026-03-05 | Will shape acceptance details for derived slices. |
+| Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0001 with explicit FR/NFR, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Will validate derived CI/QA implications. |
 | Security Engineer | pending | 2026-03-05 | Will validate dependency/release security implications. |
 | Implementing Developer | pending | 2026-03-05 | Not started. |
@@ -86,3 +86,5 @@ A completed architecture discussion record that can be transformed into concrete
 | 2026-03-05 12:00 | Architect | status | Proactive review (regular+deep) completed: checked ADR drift and architecture consistency/coupling across all open backlog items; no drift, no new coupling hotspots, and no additional ADR required. | None |
 | 2026-03-05 12:17 | Architect | handoff | Published architecture artifacts: `docs/03-engineering/rfcs/RFC-0001-mvp-cli-foundation.md` and `docs/03-engineering/implementation-plans/PLAN-0001-pb-0002-architecture-slices.md` with constraints, interface assumptions, and risk notes for RE shaping. | None |
 | 2026-03-05 12:17 | Architect | status | Architect work unit complete for PB-0002; no unresolved architecture ambiguity remains for derived slices PB-0003..PB-0009. | Architect: done |
+| 2026-03-05 12:19 | Requirements Engineer | status | Requirements shaping completed in RFC-0001: added functional/non-functional requirements, explicit out-of-scope coverage, acceptance criteria, verification intent mapping, and traceability notes. | Requirements Engineer: done |
+| 2026-03-05 12:19 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; transitioned item status from `shaped` to `ready`. | item status: ready |
