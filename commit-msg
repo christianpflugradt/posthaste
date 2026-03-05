@@ -1,7 +1,5 @@
-feat: PB-0003 add deterministic hello-world baseline path
+docs: PB-0001 record review-entry blocker awaiting gates
 
-Complete PB-0003 implementing developer work unit.
-- Add no-argument hello-world execution path with stable output string.
-- Add unit test locking hello-world output contract.
-- Record PB-0003 status transition and implementing handoff evidence.
-- Update backlog index to reflect PB-0003 in-progress state.
+Capture Reviewing Developer in-order eligibility check for PB-0001.
+- Add issue-log blocker note that review cannot start yet.
+- Record pending Quality Engineer and Security Engineer gate dependency.
