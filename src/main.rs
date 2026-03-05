@@ -2,17 +2,28 @@ use std::env;
 use std::fs;
 use std::process;
 
+#[derive(Debug)]
+enum Command {
+    Hello,
+    FilePath(String),
+}
+
 fn fail(message: &str) -> ! {
     eprintln!("err: {message}");
     process::exit(1);
 }
 
-fn run(args: &[String]) -> Result<Vec<String>, String> {
+fn parse_args(args: &[String]) -> Result<Command, String> {
+    if args.len() == 1 {
+        return Ok(Command::Hello);
+    }
     if args.len() != 2 {
         return Err("expected exactly one file-path argument".to_string());
     }
+    Ok(Command::FilePath(args[1].clone()))
+}
 
-    let path = &args[1];
+fn run(path: &str) -> Result<Vec<String>, String> {
     let content =
         fs::read_to_string(path).map_err(|_| format!("cannot read input file: {path}"))?;
     if content.trim().is_empty() {
@@ -31,24 +42,27 @@ fn hello_message() -> &'static str {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() == 1 {
-        println!("{}", hello_message());
-        return;
-    }
-
-    match run(&args) {
-        Ok(hashtags) => {
-            for hashtag in hashtags {
-                println!("{hashtag}");
-            }
+    match parse_args(&args) {
+        Ok(Command::Hello) => {
+            println!("{}", hello_message());
         }
-        Err(message) => fail(&message),
+        Ok(Command::FilePath(path)) => match run(&path) {
+            Ok(hashtags) => {
+                for hashtag in hashtags {
+                    println!("{hashtag}");
+                }
+            }
+            Err(message) => fail(&message),
+        },
+        Err(message) => {
+            fail(&message);
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{hello_message, run};
+    use super::{hello_message, parse_args, run, Command};
     use std::fs;
     use std::path::PathBuf;
     use std::time::{SystemTime, UNIX_EPOCH};
@@ -62,9 +76,20 @@ mod tests {
     }
 
     #[test]
-    fn rejects_missing_argument() {
+    fn parse_args_no_arg_path_is_hello_success() {
         let args = vec!["posthaste".to_string()];
-        let err = run(&args).expect_err("expected missing argument to fail");
+        let cmd = parse_args(&args).expect("expected hello command");
+        assert!(matches!(cmd, Command::Hello));
+    }
+
+    #[test]
+    fn parse_args_rejects_extra_arguments() {
+        let args = vec![
+            "posthaste".to_string(),
+            "input.txt".to_string(),
+            "extra".to_string(),
+        ];
+        let err = parse_args(&args).expect_err("expected extra args to fail");
         assert_eq!(err, "expected exactly one file-path argument");
     }
 
@@ -75,11 +100,8 @@ mod tests {
 
     #[test]
     fn rejects_unreadable_path() {
-        let args = vec![
-            "posthaste".to_string(),
-            "/path/that/does/not/exist.txt".to_string(),
-        ];
-        let err = run(&args).expect_err("expected unreadable path to fail");
+        let err =
+            run("/path/that/does/not/exist.txt").expect_err("expected unreadable path to fail");
         assert!(err.starts_with("cannot read input file:"));
     }
 
@@ -87,11 +109,8 @@ mod tests {
     fn rejects_empty_input() {
         let file_path = temp_file_path("empty");
         fs::write(&file_path, "   \n\t  ").expect("should write test fixture");
-        let args = vec![
-            "posthaste".to_string(),
-            file_path.to_string_lossy().to_string(),
-        ];
-        let err = run(&args).expect_err("expected empty input to fail");
+        let err =
+            run(file_path.to_string_lossy().as_ref()).expect_err("expected empty input to fail");
         assert_eq!(err, "input file is empty");
         fs::remove_file(file_path).expect("should remove test fixture");
     }
@@ -104,11 +123,8 @@ mod tests {
             "Product roadmap with ai insights for engineering and devops teams",
         )
         .expect("should write test fixture");
-        let args = vec![
-            "posthaste".to_string(),
-            file_path.to_string_lossy().to_string(),
-        ];
-        let tags = run(&args).expect("expected valid input to succeed");
+        let tags =
+            run(file_path.to_string_lossy().as_ref()).expect("expected valid input to succeed");
         assert!(!tags.is_empty());
         assert!(tags.iter().all(|tag| tag.starts_with('#')));
         fs::remove_file(file_path).expect("should remove test fixture");

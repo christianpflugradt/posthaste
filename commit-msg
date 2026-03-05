@@ -1,6 +1,6 @@
-docs: PB-0006 finalize requirements and set ready
+test: PB-0004 add hello-world unit test success and failure baseline
 
-Add RFC-0006 for CI target matrix builds with explicit scope, FR/NFR
-requirements, assumptions, acceptance criteria, verification mapping,
-and traceability notes. Mark Requirements Engineer done and transition
-PB-0006 from shaped to ready.
+Complete PB-0004 implementing developer unit-test baseline scope.
+- Add deterministic argument-dispatch unit tests for hello-world success and failure paths.
+- Refactor CLI argument handling into testable unit functions without adding non-unit test modalities.
+- Record PB-0004 status transition and implementation handoff evidence in backlog artifacts.
