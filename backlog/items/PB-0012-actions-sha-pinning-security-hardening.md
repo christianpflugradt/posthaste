@@ -32,7 +32,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | Architect | done | 2026-03-05 | SHA-pinning architecture policy finalized (ADR-011) with RFC + implementation-plan handoff artifacts. |
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0012 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: in-scope workflow actions are SHA-pinned and behavior-preservation evidence is sufficient. |
-| Security Engineer | pending | 2026-03-05 | Not started. |
+| Security Engineer | done | 2026-03-05 | Security gate pass; SHA-pinning hardening introduces no blocking security findings. |
 | Implementing Developer | done | 2026-03-05 | Pinned in-scope workflow actions to immutable SHAs and validated behavior parity via local quality gates. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
@@ -73,3 +73,5 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 21:11 | Quality Engineer | status | Started QE gate evaluation for PB-0012 from pending state; validated RFC-0012 acceptance intent against workflow pinning changes and independent local verification evidence. | Quality Engineer: in-progress |
 | 2026-03-05 21:11 | Quality Engineer | decision | Quality gate decision: `pass`. Independent verification passed via `make check`, and in-scope workflow inspection confirms action references use immutable commit SHAs (no moving tags) across `qa-gates.yml`, `release-artifacts.yml`, `release-policy.yml`, and `governance-checks.yml`. No behavior-regression signal observed in local parity checks. AI evaluation report not required because this slice changes CI/release security hardening configuration only. | Quality Engineer: done |
 | 2026-03-05 21:11 | Quality Engineer | handoff | QE handoff to Reviewing Developer: no blocking quality evidence gaps found for PB-0012; item is quality-ready for downstream security/review sequencing. | None |
+| 2026-03-05 21:12 | Security Engineer | status | Started Security Engineer gate evaluation for PB-0012 from pending state; reviewed RFC-0012 scope, in-scope workflow action references, and independent local verification evidence (`make check`). | Security Engineer: in-progress |
+| 2026-03-05 21:12 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: in-scope workflows now use immutable action commit SHAs across checkout/toolchain/artifact/release steps, removing moving-tag drift exposure while preserving functional behavior. Residual low risk: pinned SHAs still require periodic rotation for upstream security updates; monthly refresh policy is documented and should be enforced consistently. | Security Engineer: done |

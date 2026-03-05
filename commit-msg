@@ -1,7 +1,6 @@
-docs: PB-0012 complete quality gate pass and handoff
+docs: PB-0012 complete security gate review
 
-Record Quality Engineer pass decision for PB-0012 after validating
-GitHub Actions SHA pinning coverage in-scope and confirming behavior
-parity with independent make check evidence.
+Record Security Engineer transition and pass decision for PB-0012
+with action-SHA pinning security evidence and residual-risk note.
 
-Role: Quality Engineer
+Role: Security Engineer
