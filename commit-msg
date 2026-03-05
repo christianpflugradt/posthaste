@@ -1,7 +1,6 @@
-docs: PB-0005 complete product owner intake framing
+docs: PB-0002 record reviewing developer approval disposition
 
-Finalize Product Owner framing outputs for PB-0005.
-- Add stakeholder intake brief artifact for PB-0005
-- Transition PB-0005 status from intake to shaped
-- Mark Product Owner gate done and log handoff for Requirements Engineer
-- Sync backlog index role owner/status for PB-0005
+Finalize Reviewing Developer work unit for PB-0002 architecture scope.
+- Add formal review report with no findings and approved disposition.
+- Transition PB-0002 status to review and mark Reviewing Developer gate done.
+- Record review start/decision entries and sync backlog index ownership/status.
