@@ -1,6 +1,6 @@
-docs: PB-0018 refine nlp extraction requirements and log blocker
+docs: PB-0019 refine popularity-ingestion requirements and log blocker
 
-Add RFC-0018 with local NLP extraction requirements, assumptions,
-acceptance mapping, and traceability. Mark Requirements Engineer done
-and keep item shaped pending Architect completion before ready.
+Add RFC-0019 defining ingestion/cache requirements, assumptions,
+acceptance mapping, and traceability for popularity signal integration.
+Mark Requirements Engineer done and keep item shaped pending Architect.
 Role: Requirements Engineer
