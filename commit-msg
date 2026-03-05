@@ -1,5 +1,4 @@
-docs: PB-0002 complete quality gate review and handoff
+docs: PB-0002 complete security gate for architecture baseline
 
-Record Quality Engineer gate pass for PB-0002 architecture artifacts,
-including evidence-based decision and review handoff notes.
-Also log PB-0001 ineligibility note per processing-order rules.
+Record Security Engineer status transition and security-gate pass
+for PB-0002 after ADR/RFC/plan dependency and release risk review.
