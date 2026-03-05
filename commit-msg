@@ -1,11 +1,11 @@
-ci: add governance consistency workflow checks
+test: add regression tests for governance guard behavior
 
-Add a dedicated GitHub Actions workflow to enforce governance-related
-consistency checks on pull requests and main pushes.
+Add a dedicated test harness for governance_guard.sh to prevent policy
+hygiene regressions as guard logic evolves.
 
-- run make preflight
-- run make preflight-test
-- run make governance-guard
-- trigger on governance/backlog/scripts/workflow changes
+- add scripts/test_governance_guard.sh with pass/fail matrix
+- validate canonical/runtime/changelog coupling rules
+- validate parser safety for changed paths containing spaces
+- add make governance-guard-test target
 
 Role: Product Owner

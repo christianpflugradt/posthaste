@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check preflight preflight-test governance-guard
+.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test
 
 fmt:
 	cargo fmt --check
@@ -19,3 +19,6 @@ preflight-test:
 
 governance-guard:
 	./scripts/governance_guard.sh
+
+governance-guard-test:
+	./scripts/test_governance_guard.sh
