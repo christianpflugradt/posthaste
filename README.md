@@ -51,6 +51,7 @@ go
 to start the next eligible work unit for the current role (no implicit role switch).
 - Agents should run `make preflight ROLE="<Current Role>"` as part of `go` pickup.
 - Agents should read `docs/00-governance/runtime-contract.md` + `docs/00-governance/policy-changelog.md` on each `go`; full governance re-read is only needed when policy changelog has newer entries or you request it.
+- For a deterministic top-5 backlog list, use `make tasks ROLE="<Current Role>"`.
 - Prompt:
 
 ```text

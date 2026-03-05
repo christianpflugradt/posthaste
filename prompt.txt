@@ -63,6 +63,7 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector for your curren
 ## Session Commands
 - `go`: execute the next eligible work unit.
 - `tasks`: return a brief, concise list of the next 5 tasks (backlog items and/or overdue proactive reviews).
+- For deterministic backlog output, use `make tasks ROLE="<Current Role>"` (optionally `LIMIT=5`).
 
 ## Execution Rules (Do Not Violate)
 - Always assume exactly one primary role before acting.

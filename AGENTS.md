@@ -60,6 +60,7 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).
+- For deterministic backlog listing in active context, use `make tasks ROLE="<Current Role>"`.
 - This interaction behavior applies to all roles.
 
 ## Proactive Review Policy

@@ -37,3 +37,4 @@ Use this as the first reference before working; full governance docs remain auth
   - `skills/pickup-preflight/SKILL.md`
   - `skills/index-sync/SKILL.md`
   - `skills/openspec-change-bootstrap/SKILL.md`
+- For deterministic backlog listing, run `make tasks ROLE="<Current Role>"`.

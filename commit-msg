@@ -1,11 +1,11 @@
-test: add regression tests for governance guard behavior
+feat: add deterministic tasks helper for backlog pickup visibility
 
-Add a dedicated test harness for governance_guard.sh to prevent policy
-hygiene regressions as guard logic evolves.
+Add a lightweight tasks helper so agents can produce a concise,
+repeatable top-5 backlog view for the active role without ad-hoc parsing.
 
-- add scripts/test_governance_guard.sh with pass/fail matrix
-- validate canonical/runtime/changelog coupling rules
-- validate parser safety for changed paths containing spaces
-- add make governance-guard-test target
+- add scripts/tasks.sh (role-filtered deterministic listing)
+- add make tasks target with ROLE/LIMIT parameters
+- wire helper into interaction docs and runtime contract
+- append policy changelog entry for this productivity improvement
 
 Role: Product Owner

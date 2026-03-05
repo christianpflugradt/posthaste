@@ -185,4 +185,5 @@ Recommended reusable workflow: `skills/pickup-preflight/SKILL.md`.
 ## Interaction Commands
 - `go`: execute the next eligible work unit.
 - `tasks`: return a brief, concise list of the next 5 tasks (backlog items and/or overdue proactive reviews).
+- `make tasks ROLE="<Current Role>"`: deterministic top-5 backlog tasks for current role from `backlog/index.md`.
 - `make governance-guard`: validate policy-file changes include required changelog updates.
