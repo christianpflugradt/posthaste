@@ -1,8 +1,6 @@
-docs: PB-0007 record reviewing developer approved disposition
+docs: PB-0009 complete security gate review
 
-Complete Reviewing Developer work unit for PB-0007.
-- Add PB-0007 review report with no findings and approved disposition.
-- Transition PB-0007 status to review and mark Reviewing Developer gate done.
-- Sync backlog index row for PB-0007 review eligibility state.
+Record Security Engineer transition and pass decision for PB-0009
+with README security evidence and in-order eligibility note handling.
 
-Role: Reviewing Developer
+Role: Security Engineer
