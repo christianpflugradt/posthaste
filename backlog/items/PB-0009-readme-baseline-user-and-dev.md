@@ -28,7 +28,7 @@ README includes:
 - 2
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -76,3 +76,4 @@ README includes:
 | 2026-03-05 18:43 | Quality Engineer | status | In-order `go` check moved past PB-0009 because Quality Engineer gate is already `done` and no new blocker/deliverable is pending for Quality on this item. | None |
 | 2026-03-05 18:50 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0009; transitioned item status to `review` and validated implementation, QE/Security handoff evidence, README content, and RFC-0009 traceability. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 18:50 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent verification rerun passed (`make check`), and review artifact recorded at `docs/04-quality/review-reports/PB-0009-review-report.md`. | Reviewing Developer: done |
+| 2026-03-05 18:51 | Reviewing Developer | status | Stakeholder confirmation received via `go`; transitioned PB-0009 from `review` to `done`. Product Owner archive move/index cleanup follow-up is now pending per backlog ownership policy. | item status: done |
