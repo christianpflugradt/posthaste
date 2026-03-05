@@ -17,7 +17,7 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 - High.
 
 ## Priority
-- P0.
+- P2.
 
 ## Story Points
 - 2
@@ -61,3 +61,5 @@ macOS snapshot workflow succeeds and emits valid checksum output with platform-c
 | 2026-03-05 16:17 | Product Owner | decision | Prioritized PB-0011 as highest-priority P0 due repeated release workflow failure impact; added override decision DEC-0002. | None |
 | 2026-03-05 16:17 | Product Owner | status | Completed intake framing and transitioned PB-0011 from `intake` to `shaped`. | Product Owner: done; item status: shaped |
 | 2026-03-05 16:17 | Product Owner | handoff | Handoff package ready for Requirements Engineer to refine exact portable checksum behavior and file-format expectations. | None |
+| 2026-03-05 16:23 | Product Owner | decision | Re-prioritized PB-0011 from `P0` to `P2` per stakeholder risk reassessment; PB-0010 remains higher urgency. Recorded in DEC-0003. | None |
+| 2026-03-05 16:23 | Product Owner | status | Reordered backlog to place PB-0011 after currently open items while preserving eligibility for future scheduling via aging-aware ordering policy. | item priority/order updated |

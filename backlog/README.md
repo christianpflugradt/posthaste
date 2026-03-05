@@ -40,6 +40,10 @@ This backlog is the single source of truth for active product work.
 
 ## Ordering
 - `backlog/index.md` is manually ordered by Product Owner judgment (not auto-sorted).
+- Ordering must use priority and aging together:
+  - Priority remains the primary signal (`P0` before `P1` before `P2` before `P3`) unless stakeholder directs otherwise.
+  - Age is the anti-starvation secondary signal: older open items should be promoted ahead of newer items of similar or moderately higher priority when deferral has become prolonged.
+  - New incoming items must not indefinitely preempt older open items solely by being newer and higher priority; Product Owner should rebalance index order to preserve forward progress on aged items.
 
 ## Index Columns
 - `Role Owner` is informational and may reflect the role that most recently drove status progression.

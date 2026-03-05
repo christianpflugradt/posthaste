@@ -1,8 +1,8 @@
-docs: PB-0011 add urgent macos snapshot checksum bug item
+docs: PB-0011 lower priority and add aging-aware backlog ordering
 
-Capture stakeholder-reported macOS checksum command failure as highest-priority backlog work.
-- Add PB-0011 intake brief and backlog item linked to PB-0008
-- Add DEC-0002 stakeholder priority override decision record
-- Reorder backlog index with PB-0011 at top and RE as next eligible role
+Apply stakeholder reprioritization for PB-0011 and persist anti-starvation ordering guidance.
+- Change PB-0011 from P0 to P2 and move it below current open items
+- Add DEC-0003 documenting the priority change and ordering rationale
+- Update backlog and agent governance docs with priority-plus-aging ordering policy
 
 Role: Product Owner
