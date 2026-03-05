@@ -45,6 +45,8 @@ Applies to all repository work: product decisions, design, implementation, revie
 - In active context, if agent is mid-work and asks a question, it resumes the same work unit after stakeholder reply.
 - After a work unit is complete, agent auto-commits per commit policy.
 - After auto-commit, stakeholder command `go` means: start the next eligible work unit for the current role according to role/backlog/proactive rules.
+- On every `go`, agents must re-read `backlog/index.md` before selecting the next work unit.
+- After selecting a candidate item from `backlog/index.md`, agents must re-read that issue file (`backlog/items/PB-*.md`) before taking action.
 - In active context, agents must not switch roles implicitly; role changes require explicit stakeholder instruction.
 - Stakeholder command `tasks` means: return a brief list of the next 5 tasks the agent would do (backlog items and/or overdue proactive reviews).
 - This interaction behavior applies to all roles.

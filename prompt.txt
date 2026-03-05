@@ -18,6 +18,8 @@ Replace `<ROLE>` with one of:
 ## Session Commands
 - Fresh context: `follow prompt.txt as <ROLE>`.
 - In active context: `go` means continue with the next eligible work unit for the current role after the previous one is complete.
+- On every `go`, re-read `backlog/index.md` before selecting work.
+- After selecting a candidate, re-read the corresponding issue file (`backlog/items/PB-*.md`) before acting.
 - Do not switch roles implicitly in active context; switch only on explicit stakeholder instruction.
 - If the agent asks a question mid-work, respond and the agent should resume the same work unit.
 

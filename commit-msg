@@ -1,8 +1,10 @@
-docs: PB-0011 lower priority and add aging-aware backlog ordering
+docs: require fresh backlog reads on every go
 
-Apply stakeholder reprioritization for PB-0011 and persist anti-starvation ordering guidance.
-- Change PB-0011 from P0 to P2 and move it below current open items
-- Add DEC-0003 documenting the priority change and ordering rationale
-- Update backlog and agent governance docs with priority-plus-aging ordering policy
+Prevent stale-state execution by requiring agents to refresh backlog
+state at pickup time in active contexts.
+
+- require re-reading backlog/index.md on each go
+- require re-reading selected PB item file before acting
+- align AGENTS, backlog operating model, and bootstrap prompt
 
 Role: Product Owner

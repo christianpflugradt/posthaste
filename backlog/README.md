@@ -155,9 +155,11 @@ Use one entry per update:
 
 ## Agent Pickup Rule
 Before acting, an agent must:
-1. Read the issue role gate matrix and latest comments.
-2. Confirm their role is `in-progress` or transition it from `pending`.
-3. Add a comment for any status transition.
+1. Re-read `backlog/index.md` on each `go` to get the latest ordering/eligibility state.
+2. Select the candidate item by `Next Eligible Role(s)` in index order for the current role.
+3. Re-read the selected issue file and its latest role gate matrix/comments before acting.
+4. Confirm their role is `in-progress` or transition it from `pending`.
+5. Add a comment for any status transition.
 
 ## Work Unit Scope Rule
 - Scope is one work unit per prompt.
