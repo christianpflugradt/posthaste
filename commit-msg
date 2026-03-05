@@ -1,4 +1,6 @@
-docs: PB-0005 complete security gate review
+docs: PB-0001 transition reviewed item to done
 
-Record Security Engineer transition and pass decision for PB-0005
-with CI workflow and dependency-surface security evidence.
+Record Reviewing Developer closeout after stakeholder confirmation.
+- Move PB-0001 status from review to done.
+- Add issue-log entry for stakeholder-confirmed completion.
+- Note Product Owner archive/index cleanup follow-up ownership.

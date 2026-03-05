@@ -17,7 +17,7 @@ Given post text input, output ordered hashtags that balance relevance with commo
 - P0.
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -90,3 +90,4 @@ Given post text input, output ordered hashtags that balance relevance with commo
 | 2026-03-05 14:58 | Architect | blocker | `go` processing check: no Architect contribution is currently eligible on PB-0001 because Architect gate is already `done` and remaining work is downstream role sequencing (`Reviewing Developer` transition/disposition). | None |
 | 2026-03-05 15:00 | Reviewing Developer | status | Started Reviewing Developer work unit for PB-0001; transitioned item status to `review` and began independent validation of runtime code, QE/Security handoff evidence, and PB-0001 requirement traceability. | item status: review; Reviewing Developer: in-progress |
 | 2026-03-05 15:00 | Reviewing Developer | decision | Review complete with disposition `approved` and no findings (P0-P3 none). Independent evidence rerun passed (`make check`, `./eval/run-pb-0001-eval.sh`), and review artifact recorded at `docs/04-quality/review-reports/PB-0001-review-report.md`. | Reviewing Developer: done |
+| 2026-03-05 15:24 | Reviewing Developer | status | Stakeholder confirmation received; transitioned PB-0001 from `review` to `done`. Product Owner archive/index cleanup is pending per backlog archive ownership policy. | item status: done |
