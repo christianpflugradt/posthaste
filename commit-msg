@@ -1,7 +1,7 @@
-docs: complete PB-0012 review disposition
+docs: PB-0012 log quality ineligibility after gate completion
 
-- add PB-0012 review report with independent evidence and no findings
-- transition PB-0012 status to review and mark Reviewing Developer gate done
-- sync open backlog index row and blocker for stakeholder confirmation
+Record in-order Quality Engineer `go` check on PB-0012 noting that
+Quality work is already complete and item is in review awaiting
+stakeholder confirmation for final done transition.
 
-Role: Reviewing Developer
+Role: Quality Engineer
