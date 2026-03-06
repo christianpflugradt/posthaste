@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "src/**"
+      - "scripts/**"
       - "Cargo.toml"
       - "Cargo.lock"
       - "Makefile"
@@ -13,6 +14,7 @@ on:
       - main
     paths:
       - "src/**"
+      - "scripts/**"
       - "Cargo.toml"
       - "Cargo.lock"
       - "Makefile"
@@ -46,6 +48,9 @@ jobs:
 
       - name: Cargo test
         run: cargo test
+
+      - name: Trigger regression checks
+        run: ./scripts/check_ci_trigger_filters.sh
 
       - name: Collect diagnostics (non-Windows)
         if: runner.os != 'Windows'

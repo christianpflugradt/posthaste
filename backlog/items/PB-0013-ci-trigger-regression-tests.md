@@ -23,7 +23,7 @@ Deterministic checks validate both trigger and non-trigger path scenarios for in
 - 2
 
 ## Status
-- ready.
+- in-progress.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -33,7 +33,7 @@ Deterministic checks validate both trigger and non-trigger path scenarios for in
 | Requirements Engineer | done | 2026-03-05 | Requirements package completed in RFC-0013 with FR/NFR, assumptions, AC mapping, and traceability notes. |
 | Quality Engineer | pending | 2026-03-05 | Not started. |
 | Security Engineer | pending | 2026-03-05 | Not started. |
-| Implementing Developer | pending | 2026-03-05 | Not started. |
+| Implementing Developer | done | 2026-03-06 | Implemented deterministic trigger regression checks and passed required implementation checks. |
 | Reviewing Developer | pending | 2026-03-05 | Not started. |
 
 ## Constraints
@@ -68,3 +68,6 @@ Deterministic checks validate both trigger and non-trigger path scenarios for in
 | 2026-03-06 18:48 | Architect | handoff | Published architect artifacts for implementation handoff: `docs/03-engineering/rfcs/RFC-0013-pb-0013-ci-trigger-regression-tests.md` (architecture constraints/interface assumptions) and `docs/03-engineering/implementation-plans/PLAN-0013-pb-0013-ci-trigger-regression-tests.md` (task/risk/verification breakdown). | None |
 | 2026-03-06 18:48 | Architect | status | Architect gate complete for PB-0013 with no unresolved architecture ambiguity; Requirements Engineer can now transition item to `ready` per ownership rules. | Architect: done |
 | 2026-03-06 18:52 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0013 from `shaped` to `ready`. | item status: ready |
+| 2026-03-06 18:56 | Implementing Developer | status | Picked up PB-0013 implementation and transitioned item from `ready` to `in-progress` per ownership policy. | Implementing Developer: in-progress; item status: in-progress |
+| 2026-03-06 18:56 | Implementing Developer | handoff | Implemented deterministic trigger regression coverage via `scripts/check_ci_trigger_filters.sh` with fixture set `scripts/fixtures/ci_trigger_scenarios.tsv`; wired checks into `make check` and `qa-gates` workflow execution path. | None |
+| 2026-03-06 18:56 | Implementing Developer | status | Completed implementation verification: `make check` passed and mutation proof `./scripts/check_ci_trigger_filters.sh --mutate-first` failed as expected (`exit=1`). | Implementing Developer: done |

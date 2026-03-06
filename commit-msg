@@ -1,6 +1,13 @@
-docs: PB-0013 transition item to ready after architect completion
+ci: PB-0013 add deterministic CI trigger regression checks
 
-Apply the Requirements Engineer owned shaped-to-ready transition for
-PB-0013 after confirming Architect and Requirements Engineer gates are
-done, and update backlog index eligibility to Implementing Developer.
-Role: Requirements Engineer
+Implement deterministic workflow path-filter regression checks for qa-gates and
+release-policy using fixture-driven scenarios.
+- Add scripts/check_ci_trigger_filters.sh with pass/fail mismatch reporting and
+  mutation mode for failure-path proof.
+- Add scripts/fixtures/ci_trigger_scenarios.tsv with positive and negative trigger
+  cases for both in-scope workflows.
+- Wire trigger checks into make check and qa-gates workflow execution.
+- Sync PB-0013 issue/index status for Implementing Developer completion and
+  QE/Security handoff.
+
+Role: Implementing Developer

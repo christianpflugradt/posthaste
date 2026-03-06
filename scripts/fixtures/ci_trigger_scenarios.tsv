@@ -1,0 +1,11 @@
+# workflow|event|changed_path|expected
+qa-gates|push|src/lib.rs|trigger
+qa-gates|push|docs/README.md|no-trigger
+qa-gates|push|Cargo.toml|trigger
+qa-gates|pull_request|backlog/index.md|no-trigger
+qa-gates|pull_request|.github/workflows/qa-gates.yml|trigger
+release-policy|push|src/main.rs|trigger
+release-policy|push|eval/results/PB-0001-eval-latest.md|no-trigger
+release-policy|push|.releaserc.json|trigger
+release-policy|push|.github/workflows/release-policy.yml|trigger
+release-policy|push|backlog/items/PB-0001-hashtag-mvp.md|no-trigger

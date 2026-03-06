@@ -1,4 +1,4 @@
-.PHONY: fmt clippy test check preflight preflight-test governance-guard governance-guard-test tasks tasks-test index-sync go-ready go-all-ready hooks-install
+.PHONY: fmt clippy test trigger-check check preflight preflight-test governance-guard governance-guard-test tasks tasks-test index-sync go-ready go-all-ready hooks-install
 
 fmt:
 	cargo fmt --check
@@ -9,7 +9,10 @@ clippy:
 test:
 	cargo test
 
-check: fmt clippy test
+trigger-check:
+	./scripts/check_ci_trigger_filters.sh
+
+check: fmt clippy test trigger-check
 
 preflight:
 	./scripts/preflight.sh $(if $(ROLE),--role "$(ROLE)",)
