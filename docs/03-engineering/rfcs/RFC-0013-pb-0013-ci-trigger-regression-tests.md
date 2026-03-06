@@ -33,6 +33,12 @@ Workflow trigger changes become safer and auditable with clear pass/fail signals
 - NFR-002: Verification artifacts are simple to review and update alongside workflow changes.
 - NFR-003: Requirements and AC are traceable to PB-0013 and PB-0010 trigger-policy intent.
 
+## Architecture Constraints and Interface Assumptions
+- Trigger regression verification must remain script-and-fixture based in this slice.
+- Verification boundary is workflow trigger configuration behavior; runtime application behavior is out of scope.
+- Each in-scope workflow must have explicit positive and negative scenario coverage.
+- Strategy governance is defined by ADR-012 and aligned with ADR-009 path-scoping policy.
+
 ## Assumptions
 - Assumption A1: Use script-based fixture checks (not new external linter/tool) in this slice.
 - Assumption A2: Verification scope is current workflows only.
@@ -57,3 +63,7 @@ Workflow trigger changes become safer and auditable with clear pass/fail signals
 | FR-004, A1 | PB-0013 intake question on script fixtures vs dedicated tool |
 | FR-005, A2 | PB-0013 intake question on current vs template workflow scope |
 | NFR-003, AC-003 | PB-0013 parent link to PB-0010 and backlog-item handoff requirements |
+
+## Architect Handoff Notes
+- Implementation constraints and risk notes are captured in `docs/03-engineering/implementation-plans/PLAN-0013-pb-0013-ci-trigger-regression-tests.md`.
+- Architecture-impacting verification policy decision is captured in ADR-012.

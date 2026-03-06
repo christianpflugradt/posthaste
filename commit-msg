@@ -1,7 +1,10 @@
-docs: close PB-0012 after stakeholder confirmation
+docs: PB-0013 complete architect trigger-regression design package
 
-- transition PB-0012 from review to done in issue record
-- remove PB-0012 from open backlog index
-- log closure handoff noting Product Owner archive ownership
+Finalize Architect work unit for PB-0013 CI trigger regression coverage.
+- Add ADR-012 defining trigger-regression verification strategy
+- Add PLAN-0013 implementation-plan constraints, risks, and verification intent
+- Update RFC-0013 with architecture constraints and architect handoff notes
+- Mark Architect gate done on PB-0013 and hand eligibility to Requirements Engineer for ready transition
+- Update ADR index and backlog eligibility metadata
 
-Role: Reviewing Developer
+Role: Architect
