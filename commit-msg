@@ -1,9 +1,5 @@
-docs: reset backlog to nlp-first viability and remove linkedin api dependency
+docs: mark project as discontinued in readme
 
-Re-scope open roadmap after stakeholder product-direction reassessment.
-- Add DEC-0004 codifying NLP-first scope and no LinkedIn API/scraping dependency
-- Promote PB-0022 to a P0 viability gate against 30-second manual baseline
-- Reframe PB-0019 and PB-0020 around local curated popularity priors
-- Rename PB-0019 item/intake artifacts and rebalance backlog ordering
+Update root README with stakeholder-discontinued project status notice.
 
 Role: Product Owner

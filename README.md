@@ -1,5 +1,9 @@
 # posthaste
 
+## Project Status
+This project has been discontinued by the stakeholder as of 2026-03-06.
+No further development is planned.
+
 `posthaste` is an offline-first Rust CLI that suggests relevant LinkedIn hashtags from post text.
 
 ## Quick Start (Users)
