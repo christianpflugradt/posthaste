@@ -1,7 +1,7 @@
-docs: PB-0012 log quality ineligibility after gate completion
+docs: close PB-0012 after stakeholder confirmation
 
-Record in-order Quality Engineer `go` check on PB-0012 noting that
-Quality work is already complete and item is in review awaiting
-stakeholder confirmation for final done transition.
+- transition PB-0012 from review to done in issue record
+- remove PB-0012 from open backlog index
+- log closure handoff noting Product Owner archive ownership
 
-Role: Quality Engineer
+Role: Reviewing Developer

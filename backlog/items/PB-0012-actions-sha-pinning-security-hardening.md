@@ -23,7 +23,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 - 2
 
 ## Status
-- review.
+- done.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -79,3 +79,5 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-06 07:46 | Reviewing Developer | decision | Review completed with no P0/P1/P2/P3 findings. Verified in-scope workflows use immutable commit SHAs and reran `make check` successfully; see `docs/04-quality/review-reports/PB-0012-review-report.md`. | Reviewing Developer: done |
 | 2026-03-06 07:46 | Reviewing Developer | handoff | Review disposition is approved. Awaiting stakeholder confirmation before final `done` transition per status ownership policy. | None |
 | 2026-03-06 07:47 | Quality Engineer | status | In-order `go` check: no additional QE action is eligible on PB-0012 because QE gate is already `done` and item is in review awaiting stakeholder confirmation. | None |
+| 2026-03-06 07:48 | Reviewing Developer | status | Stakeholder confirmed no further action required; transitioned PB-0012 from `review` to `done` per status ownership rules. | item status: done |
+| 2026-03-06 07:48 | Reviewing Developer | handoff | Item completed from Reviewing Developer perspective. Product Owner may perform archive move to `backlog/archive/done/YYYY-MM/` per backlog archive ownership rules. | None |
