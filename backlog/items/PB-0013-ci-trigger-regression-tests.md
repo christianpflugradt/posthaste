@@ -23,7 +23,7 @@ Deterministic checks validate both trigger and non-trigger path scenarios for in
 - 2
 
 ## Status
-- shaped.
+- ready.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -67,3 +67,4 @@ Deterministic checks validate both trigger and non-trigger path scenarios for in
 | 2026-03-06 18:48 | Architect | decision | Recorded CI trigger regression verification policy in `docs/03-engineering/decision-records/ADR-012-ci-trigger-regression-verification-strategy.md` including positive/negative scenario coverage, drift-fail semantics, and scope boundaries. | None |
 | 2026-03-06 18:48 | Architect | handoff | Published architect artifacts for implementation handoff: `docs/03-engineering/rfcs/RFC-0013-pb-0013-ci-trigger-regression-tests.md` (architecture constraints/interface assumptions) and `docs/03-engineering/implementation-plans/PLAN-0013-pb-0013-ci-trigger-regression-tests.md` (task/risk/verification breakdown). | None |
 | 2026-03-06 18:48 | Architect | status | Architect gate complete for PB-0013 with no unresolved architecture ambiguity; Requirements Engineer can now transition item to `ready` per ownership rules. | Architect: done |
+| 2026-03-06 18:52 | Requirements Engineer | status | Confirmed Architect + Requirements Engineer gates are both `done`; resolved prior RE blocker and transitioned PB-0013 from `shaped` to `ready`. | item status: ready |

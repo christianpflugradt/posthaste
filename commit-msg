@@ -1,10 +1,6 @@
-docs: PB-0013 complete architect trigger-regression design package
+docs: PB-0013 transition item to ready after architect completion
 
-Finalize Architect work unit for PB-0013 CI trigger regression coverage.
-- Add ADR-012 defining trigger-regression verification strategy
-- Add PLAN-0013 implementation-plan constraints, risks, and verification intent
-- Update RFC-0013 with architecture constraints and architect handoff notes
-- Mark Architect gate done on PB-0013 and hand eligibility to Requirements Engineer for ready transition
-- Update ADR index and backlog eligibility metadata
-
-Role: Architect
+Apply the Requirements Engineer owned shaped-to-ready transition for
+PB-0013 after confirming Architect and Requirements Engineer gates are
+done, and update backlog index eligibility to Implementing Developer.
+Role: Requirements Engineer
