@@ -59,6 +59,7 @@ Quality Engineer work is complete when:
 - AI-affecting changes include evaluation evidence.
 - Reviewing Developer can start with clear quality context.
 - QE gate state is updated; `review` status transition remains Reviewing Developer ownership.
+- After QE gate state updates (`done` or `blocked`), `PB=<PB-ID> make index-sync` and `make preflight ROLE="Quality Engineer"` both pass in the same work unit.
 
 ## Anti-Patterns
 - Approving based on intuition without evidence.

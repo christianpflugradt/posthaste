@@ -1,12 +1,10 @@
-feat: add repo-managed pre-commit hook installation
+docs: require QE/SE index-sync and preflight after gate updates
 
-Add a tracked pre-commit hook that runs `make preflight` and provide an
-installer command so local manual commits are blocked on backlog/index
-sync drift.
+Tighten role execution rules to reduce backlog/index drift caused by
+parallel QE/SE gate completion.
 
-- add .githooks/pre-commit
-- add scripts/install_hooks.sh
-- add make hooks-install target
-- document hook installation in README
+- add explicit QE/SE post-gate commands in AGENTS, backlog, runtime contract, and prompt
+- update QE and Security role specs done criteria with required sync/validation
+- record policy update in governance changelog
 
 Role: Implementing Developer

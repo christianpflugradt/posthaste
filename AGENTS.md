@@ -78,6 +78,7 @@ Governance sync contract: `docs/00-governance/governance-sync-map.md`.
 - Urgent role-created items must include issue-log notification to Product Owner.
 - For pickup decisions, agents must use `Next Eligible Role(s)` in `backlog/index.md` as the authoritative selector for the current role; `Role Owner` is informational only.
 - When a role updates an issue gate/status in `backlog/items/PB-*.md`, it must update the same issue row in `backlog/index.md` (`Status`, `Next Eligible Role(s)`, `Blocker`, `Updated`) before completing the work unit.
+- When Quality Engineer or Security Engineer completes a gate decision (`done` or `blocked`), they must run `PB=<PB-ID> make index-sync` followed by `make preflight ROLE="<Current Role>"` before completing the work unit.
 - When a work unit updates policy/process behavior, it must append an entry to `docs/00-governance/policy-changelog.md` in the same work unit.
 - For policy/governance updates, run `make governance-guard` before completion.
 - Backlog ordering must apply priority-first with aging-aware anti-starvation balancing; do not let newly created higher-priority items indefinitely block older open items without explicit stakeholder direction.

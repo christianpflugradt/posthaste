@@ -23,6 +23,7 @@ If wording conflicts with canonical governance sources (`AGENTS.md`, `backlog/RE
   - `Next Eligible Role(s)`
   - `Blocker`
   - `Updated`
+- If Quality Engineer or Security Engineer sets a gate to `done` or `blocked`, run `PB=<PB-ID> make index-sync` and `make preflight ROLE="<Current Role>"` before completing the work unit.
 - Record role transitions and blockers in issue comment log.
 
 ## Completion Rules

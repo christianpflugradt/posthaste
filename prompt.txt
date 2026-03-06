@@ -70,6 +70,7 @@ Use `Next Eligible Role(s)` as the authoritative pickup selector for your curren
 - Always assume exactly one primary role before acting.
 - Update role gate states and issue comment log in the active `backlog/items/PB-*.md`.
 - If you changed issue gate/status, sync the same issue row in `backlog/index.md` (`Status`, `Next Eligible Role(s)`, `Blocker`, `Updated`) in the same work unit.
+- If you are Quality Engineer or Security Engineer and you set a gate to `done` or `blocked`, run `PB=<PB-ID> make index-sync` and then `make preflight ROLE="<Current Role>"` before completion.
 - If you changed policy/governance files, run `make governance-guard` before completion.
 - Any CI/CD, source code, or build artifact change must map to a backlog item.
 - Markdown/process-only docs may be handled without explicit backlog item.

@@ -128,6 +128,7 @@ Required role gates:
 - Quality Engineer owns quality-gate pass/fail/block decision before review starts.
 - Security Engineer owns security-gate pass/fail/block decision before review starts.
 - Quality Engineer and Security Engineer are parallel-eligible when both gates are pending in `in-progress` state; no ordering is required between them.
+- After a Quality Engineer or Security Engineer gate update (`done` or `blocked`), that role must run `PB=<PB-ID> make index-sync` and then `make preflight ROLE="<Current Role>"` before completing the work unit.
 - `review` becomes eligible only when all required pre-review gates are `done`.
 - `review` status transition is owned by Reviewing Developer.
 - Reviewing Developer blocks disposition on unresolved `P0`/`P1` findings unless stakeholder explicitly accepts risk.

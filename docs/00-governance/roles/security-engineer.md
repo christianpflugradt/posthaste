@@ -61,6 +61,7 @@ Security Engineer work is complete when:
 - Required mitigations are either implemented or explicitly blocking.
 - Reviewing Developer receives clear security context for review.
 - Any accepted residual risk has stakeholder consultation noted in issue comments/decision record.
+- After Security gate state updates (`done` or `blocked`), `PB=<PB-ID> make index-sync` and `make preflight ROLE="Security Engineer"` both pass in the same work unit.
 
 ## Anti-Patterns
 - Treating security as optional for externally connected behavior.
