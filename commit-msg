@@ -1,13 +1,7 @@
-ci: PB-0013 add deterministic CI trigger regression checks
+docs: PB-0013 log qa-matrix portability failure from stakeholder report
 
-Implement deterministic workflow path-filter regression checks for qa-gates and
-release-policy using fixture-driven scenarios.
-- Add scripts/check_ci_trigger_filters.sh with pass/fail mismatch reporting and
-  mutation mode for failure-path proof.
-- Add scripts/fixtures/ci_trigger_scenarios.tsv with positive and negative trigger
-  cases for both in-scope workflows.
-- Wire trigger checks into make check and qa-gates workflow execution.
-- Sync PB-0013 issue/index status for Implementing Developer completion and
-  QE/Security handoff.
+Capture stakeholder-reported CI failure in PB-0013 issue log for review-time fix.
+- Record mapfile command-not-found error details from qa-matrix run
+- Mark as blocker note to drive rework before review disposition
 
-Role: Implementing Developer
+Role: Product Owner
