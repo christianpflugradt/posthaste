@@ -1,10 +1,12 @@
-fix: enforce preflight in commit script before commit/push
+feat: add repo-managed pre-commit hook installation
 
-Prevent out-of-sync backlog/index state from being committed via the
-standard automation path by running `make preflight` at the start of
-`./commit.sh`.
+Add a tracked pre-commit hook that runs `make preflight` and provide an
+installer command so local manual commits are blocked on backlog/index
+sync drift.
 
-Also synced PB-0012 index row so the repository returns to a passing
-preflight baseline.
+- add .githooks/pre-commit
+- add scripts/install_hooks.sh
+- add make hooks-install target
+- document hook installation in README
 
 Role: Implementing Developer

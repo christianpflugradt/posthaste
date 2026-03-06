@@ -118,7 +118,13 @@ to get a brief list of the next 5 tasks the agent would do (backlog and/or overd
 
 ## Commit Workflow
 - `commit-msg` holds the commit message for a completed work unit.
-- `commit.sh` commits all staged changes and pushes to `origin/main`.
+- `commit.sh` runs `make preflight`, then commits all staged changes and pushes to `origin/main`.
+- Install local Git hooks once per clone to enforce the same preflight gate on manual commits:
+
+```bash
+make hooks-install
+```
+
 - Commit message format follows:
   - `docs/03-engineering/commit-message-guidelines.md`
 
