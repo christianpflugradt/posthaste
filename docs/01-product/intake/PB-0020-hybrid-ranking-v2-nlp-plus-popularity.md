@@ -1,7 +1,7 @@
 # Stakeholder Intake Brief
 
 ## Raw Stakeholder Input
-Build the planned hybrid ranking version that combines NLP relevance with LinkedIn popularity.
+Build the planned hybrid ranking version that combines NLP relevance with compliant local popularity priors.
 
 ## Why Now
 This is core MVP product logic and central to stakeholder success criteria.
@@ -10,10 +10,10 @@ This is core MVP product logic and central to stakeholder success criteria.
 Existing ranking does not yet integrate richer NLP and refreshed popularity signals in a cohesive scoring model.
 
 ## Target User Outcome
-Users receive ordered hashtags that better balance semantic relevance and real-world popularity.
+Users receive ordered hashtags that better balance semantic relevance and practical popularity priors.
 
 ## Proposed Feature Slice
-Define and implement hybrid ranking v2 scoring contract using NLP extraction outputs and popularity inputs.
+Define and implement hybrid ranking v2 scoring contract using NLP extraction outputs and local curated popularity priors.
 
 ## Non-Goals
 - Fully automated model training pipeline.
@@ -22,7 +22,7 @@ Define and implement hybrid ranking v2 scoring contract using NLP extraction out
 ## Constraints
 - Time: define as parent scope expected to split during RE refinement.
 - Quality: ranking changes require measurable evaluation against baseline fixtures.
-- Technical: preserve deterministic offline execution for core use path.
+- Technical: preserve deterministic offline execution and no scraping/API dependency assumptions.
 
 ## Risks and Unknowns
 - Weight tuning can overfit small fixture sets.

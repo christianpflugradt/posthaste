@@ -1,23 +1,23 @@
-# PB-0022: Local evaluation expansion using stakeholder fixture corpus
+# PB-0022: NLP viability gate versus 30-second manual baseline
 
 ## Source
-- Product direction update (2026-03-05): expand local evaluation as primary feedback/success mechanism.
+- Product direction update (2026-03-05): run explicit go/no-go viability gate before further roadmap expansion.
 - Intake brief: `docs/01-product/intake/PB-0022-local-evaluation-expansion.md`.
 
 ## Parent Link
 - PB-0001
 
 ## Problem Statement
-Evaluation coverage is too narrow for upcoming ranking and NLP changes.
+If pure NLP output quality does not beat stakeholder 30-second manual tagging, product premise is not viable.
 
 ## Desired Outcome
-Expanded local fixtures/thresholds provide reliable stakeholder-centric quality signal.
+Deterministic benchmark evidence enables explicit continue/stop decision on product direction.
 
 ## Vision Alignment
 - High.
 
 ## Priority
-- P2.
+- P0.
 
 ## Story Points
 - 5
@@ -39,13 +39,13 @@ Expanded local fixtures/thresholds provide reliable stakeholder-centric quality 
 ## Constraints
 - Time: parent scope expected to split during RE refinement.
 - Cost: no paid core tooling/services.
-- Technical: keep evaluation deterministic and CI-compatible.
+- Technical: evaluate pure local NLP quality without LinkedIn API/scraping assumptions.
 
 ## Recommendation
 - Proceed.
 
 ## Acceptance Signal
-- Stakeholder can use expanded local evaluation as go/no-go signal for quality changes.
+- Stakeholder has clear benchmark result versus 30-second baseline and can issue explicit go/no-go decision.
 
 ## Handoff Target
 - Product Owner -> Requirements Engineer + Architect.
@@ -63,3 +63,4 @@ Expanded local fixtures/thresholds provide reliable stakeholder-centric quality 
 | 2026-03-05 19:42 | Requirements Engineer | decision | Resolved intake questions with minimal assumptions: initial expansion targets 4 additional fixture categories, and thresholds are enforced both per-category and aggregate. | None |
 | 2026-03-05 19:42 | Requirements Engineer | status | Completed PB-0022 requirements package in `docs/03-engineering/rfcs/RFC-0022-pb-0022-local-evaluation-expansion.md` with explicit scope, FR/NFR, assumptions, AC mapping, and traceability. | Requirements Engineer: done |
 | 2026-03-05 19:42 | Requirements Engineer | blocker | Cannot transition PB-0022 to `ready` yet because Architect gate is still `pending`; item remains `shaped` pending Architect completion. | None |
+| 2026-03-06 19:06 | Product Owner | decision | Scope reset per DEC-0004: repurposed PB-0022 as hard NLP viability gate against stakeholder 30-second manual baseline and raised priority to `P0`. | item priority/scope updated |

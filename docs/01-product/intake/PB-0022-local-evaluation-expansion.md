@@ -1,19 +1,19 @@
 # Stakeholder Intake Brief
 
 ## Raw Stakeholder Input
-Expand local evaluation coverage using stakeholder-owned real-post fixtures as the primary success measure.
+Run a hard viability evaluation for pure local NLP output quality against stakeholder 30-second manual baseline.
 
 ## Why Now
-As ranking logic evolves, confidence depends on broader fixture coverage and clear acceptance thresholds.
+Before further roadmap investment, product viability must be validated against a strict "better than manual in 30 seconds" standard.
 
 ## Problem Statement
-Current evaluation baseline is useful but limited for upcoming NLP/popularity/ranking changes.
+If pure NLP output cannot beat quick manual hashtaging quality, core product premise is likely invalid.
 
 ## Target User Outcome
-Stakeholder can measure quality progress locally and consistently across meaningful post scenarios.
+Stakeholder can make an objective go/no-go decision with local benchmark evidence.
 
 ## Proposed Feature Slice
-Extend fixtures, expected outputs, and threshold policy for local evaluation workflow aligned to stakeholder feedback loop.
+Define benchmark fixture set, scoring rubric, and hard go/no-go thresholds for pure NLP output quality.
 
 ## Non-Goals
 - External user analytics platform.
@@ -22,14 +22,14 @@ Extend fixtures, expected outputs, and threshold policy for local evaluation wor
 ## Constraints
 - Time: define as parent scope expected to split during RE refinement.
 - Quality: evaluation must remain deterministic/repeatable.
-- Technical: keep evaluation runnable locally and in CI.
+- Technical: evaluate pure local NLP quality without LinkedIn API/scraping assumptions.
 
 ## Risks and Unknowns
 - Fixture expectation drift can create maintenance burden.
-- Thresholds may need recalibration during rapid algorithm iteration.
+- Thresholds may need recalibration during rapid algorithm iteration, but initial gate must stay strict.
 
 ## Success Signal
-Stakeholder can use evaluation runs as primary go/no-go signal for relevance improvements.
+Stakeholder can issue explicit continue/stop decision based on objective benchmark outcomes.
 
 ## Recommendation
 - [x] Proceed to RFC
@@ -38,5 +38,5 @@ Stakeholder can use evaluation runs as primary go/no-go signal for relevance imp
 - [ ] Need clarification
 
 ## Questions for Stakeholder
-1. How many additional fixture categories should initial expansion target?
-2. Do you want pass/fail thresholds per category or aggregate only?
+1. What minimum "use-as-is" win rate versus your 30-second baseline should define go/no-go?
+2. Should failure against threshold immediately pause/de-scope downstream NLP roadmap items?
