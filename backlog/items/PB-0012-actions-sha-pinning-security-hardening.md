@@ -23,7 +23,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 - 2
 
 ## Status
-- in-progress.
+- review.
 
 ## Role Gate Matrix
 | Role | State | Updated | Notes |
@@ -34,7 +34,7 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | Quality Engineer | done | 2026-03-05 | Quality gate pass: in-scope workflow actions are SHA-pinned and behavior-preservation evidence is sufficient. |
 | Security Engineer | done | 2026-03-05 | Security gate pass; SHA-pinning hardening introduces no blocking security findings. |
 | Implementing Developer | done | 2026-03-05 | Pinned in-scope workflow actions to immutable SHAs and validated behavior parity via local quality gates. |
-| Reviewing Developer | pending | 2026-03-05 | Not started. |
+| Reviewing Developer | done | 2026-03-06 | Completed independent review; approved with no findings and documented evidence in `docs/04-quality/review-reports/PB-0012-review-report.md`. |
 
 ## Constraints
 - Preserve current workflow behavior.
@@ -75,3 +75,6 @@ All in-scope workflow actions are pinned to immutable SHAs with a clear update p
 | 2026-03-05 21:11 | Quality Engineer | handoff | QE handoff to Reviewing Developer: no blocking quality evidence gaps found for PB-0012; item is quality-ready for downstream security/review sequencing. | None |
 | 2026-03-05 21:12 | Security Engineer | status | Started Security Engineer gate evaluation for PB-0012 from pending state; reviewed RFC-0012 scope, in-scope workflow action references, and independent local verification evidence (`make check`). | Security Engineer: in-progress |
 | 2026-03-05 21:12 | Security Engineer | decision | Security findings summary: `none`. Security gate decision: `pass`. Evidence: in-scope workflows now use immutable action commit SHAs across checkout/toolchain/artifact/release steps, removing moving-tag drift exposure while preserving functional behavior. Residual low risk: pinned SHAs still require periodic rotation for upstream security updates; monthly refresh policy is documented and should be enforced consistently. | Security Engineer: done |
+| 2026-03-06 07:46 | Reviewing Developer | status | Transitioned PB-0012 from `in-progress` to `review` and started independent review against rubric evidence set. | item status: review; Reviewing Developer: in-progress |
+| 2026-03-06 07:46 | Reviewing Developer | decision | Review completed with no P0/P1/P2/P3 findings. Verified in-scope workflows use immutable commit SHAs and reran `make check` successfully; see `docs/04-quality/review-reports/PB-0012-review-report.md`. | Reviewing Developer: done |
+| 2026-03-06 07:46 | Reviewing Developer | handoff | Review disposition is approved. Awaiting stakeholder confirmation before final `done` transition per status ownership policy. | None |
