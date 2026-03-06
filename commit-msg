@@ -1,6 +1,10 @@
-docs: PB-0012 complete security gate review
+fix: enforce preflight in commit script before commit/push
 
-Record Security Engineer transition and pass decision for PB-0012
-with action-SHA pinning security evidence and residual-risk note.
+Prevent out-of-sync backlog/index state from being committed via the
+standard automation path by running `make preflight` at the start of
+`./commit.sh`.
 
-Role: Security Engineer
+Also synced PB-0012 index row so the repository returns to a passing
+preflight baseline.
+
+Role: Implementing Developer

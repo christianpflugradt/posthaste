@@ -19,6 +19,9 @@ if [[ -z "$(tr -d '[:space:]' < commit-msg)" ]]; then
   exit 1
 fi
 
+echo "Running preflight checks before commit..."
+make preflight
+
 git add -A
 
 if git diff --cached --quiet; then
